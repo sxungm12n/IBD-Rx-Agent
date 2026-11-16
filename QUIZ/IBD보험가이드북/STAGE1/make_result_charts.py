@@ -7,6 +7,8 @@
   02_정확도_네유형평균.png   모델별 네 유형 평균 + 세 모델 평균
   03_틀린이유.png            RAG 추가 후 틀린 문항(374 중): 페이지를 못 찾음 vs 페이지 있는데 틀림
   04_안전오답.png            '높음 · 안전' 오답 문항 수(C·D), 기본 AI vs RAG 추가
+  정확도_A·A2·C·D.jpg       유형마다 한 장씩 (세 모델, 기본 AI vs RAG 추가)
+  정확도_네유형평균.jpg      02와 같은 그래프의 JPG
 색: 기본 AI #C9772B, RAG 추가 #1C64B8 / 페이지 못 찾음 #7B5EA7, 페이지 있는데 틀림 #14917F
     (dataviz validate_palette.js 라이트 모드 통과)
 """
@@ -152,6 +154,22 @@ def main() -> int:
     fig.suptitle("위험한 오답: D형 6문항은 RAG를 추가한 세 모델이 똑같이 틀렸다", x=0.01, ha="left", fontsize=15, fontweight="bold")
     fig.text(0.01, 0.005, "검사 수치 미달·고령 등 안전 조건에 걸린 환자에게 약을 허용한 오답(risk_analysis.py 규칙). 원인: 체크리스트 쪽(p.49·52)이 검색된 5쪽에 없음.", fontsize=9, color=MUTED)
     fig.tight_layout(rect=(0, 0.03, 1, 0.92)); fig.savefig(OUTD / "04_안전오답.png", dpi=150); plt.close(fig)
+
+    # 유형마다 한 장씩 (JPG)
+    for t, fname in zip(TYPES, ("A", "A2", "C", "D")):
+        fig, ax = plt.subplots(figsize=(9, 5.4))
+        bars(ax, [n for _, n in MODELS], [data[(m, t[0], "llm")] for m, _ in MODELS], [data[(m, t[0], "agent")] for m, _ in MODELS])
+        ax.set_ylabel("점수 (1.0 = 만점)")
+        ax.legend(loc="upper left", frameon=False, ncol=2, fontsize=11)
+        ax.set_title(f"{t[0]} · 기본 AI → RAG 추가", loc="left", fontsize=15, fontweight="bold", pad=14)
+        note = {"A": "AI 채점자(gpt-6-sol) 맞음 1·부분 0.5 평균. 금기 보조 6문항 제외(본 점수 101).",
+                "A2": "AI 채점자(gpt-6-sol) 맞음 1·부분 0.5 평균.",
+                "C": "코드 채점 정답률(예 / 아니오 / 판단 불가).",
+                "D": "코드 채점 완전 일치율(정답 약 목록과 완전히 같아야 맞음)."}[fname]
+        fig.text(0.01, 0.01, note + " 답 1회·채점 1회, 임상의 검증 전.", fontsize=9, color=MUTED)
+        fig.tight_layout(rect=(0, 0.04, 1, 1)); fig.savefig(OUTD / f"정확도_{fname}.jpg", dpi=150, pil_kwargs={"quality": 92}); plt.close(fig)
+    from PIL import Image
+    Image.open(OUTD / "02_정확도_네유형평균.png").convert("RGB").save(OUTD / "정확도_네유형평균.jpg", quality=92)
     print("저장:", OUTD)
     return 0
 

@@ -227,20 +227,22 @@ pres.addSection({ title: SEC[1] });
 {
   const s = content("결과 · 정확도", "세 모델 모두 RAG를 추가하면 정확해졌다", SEC[1]);
   // 막대 그래프 (도형으로 그림: Keynote·Google Slides 어디서나 같게 보이도록)
-  tx(s, "A형 본 점수 (101문항)", { x: 0.6, y: 1.7, w: 5.6, h: 0.35, fontSize: 14, bold: true, color: C.text1 });
+  tx(s, "네 유형(A·A2·C·D) 평균 점수", { x: 0.6, y: 1.7, w: 5.6, h: 0.35, fontSize: 14, bold: true, color: C.text1 });
   card(s, 0.75, 2.15, 0.25, 0.22, HEX.accent6); tx(s, "기본 AI", { x: 1.07, y: 2.12, w: 1.3, h: 0.3, fontSize: 12 });
   card(s, 2.35, 2.15, 0.25, 0.22, HEX.accent1); tx(s, "RAG 추가", { x: 2.67, y: 2.12, w: 1.8, h: 0.3, fontSize: 12 });
   const base = 5.95, H = 3.1;
   s.addShape(SH.LINE, { x: 0.6, y: base, w: 5.6, h: 0, line: { color: "C9CFD2", width: 1 }, objectName: "axis" });
-  [["gpt-5.6-terra", 0.441, 0.807], ["Claude Opus 5.5", 0.470, 0.911], ["Qwen3-14B", 0.084, 0.634]].forEach(([m, v1, v2], i) => {
-    const gx = 0.75 + i * 1.85;
+  // 네 유형 평균 (make_result_charts.py와 같은 값: 유형마다 같은 비중)
+  [["gpt-5.6-terra", 0.418, 0.770], ["Claude Opus 5.5", 0.464, 0.860], ["Qwen3-14B", 0.196, 0.599], ["세 모델 평균", 0.359, 0.743]].forEach(([m, v1, v2], i) => {
+    const gx = 0.7 + i * 1.38 + (i === 3 ? 0.08 : 0);
     [[v1, HEX.accent6], [v2, HEX.accent1]].forEach(([v, col], j) => {
-      const bx = gx + j * 0.72, h = Math.max(0.03, v * H);
-      s.addShape(SH.RECTANGLE, { x: bx, y: base - h, w: 0.62, h, fill: { color: col }, line: { color: col }, objectName: `bar-${i}-${j}` });
-      tx(s, v.toFixed(2), { x: bx - 0.1, y: base - h - 0.32, w: 0.82, h: 0.3, fontSize: 13, bold: j === 1, color: C.text1, align: "center" });
+      const bx = gx + j * 0.56, h = Math.max(0.03, v * H);
+      s.addShape(SH.RECTANGLE, { x: bx, y: base - h, w: 0.5, h, fill: { color: col }, line: { color: col }, objectName: `bar-${i}-${j}` });
+      tx(s, v.toFixed(2), { x: bx - 0.12, y: base - h - 0.32, w: 0.74, h: 0.3, fontSize: 12, bold: j === 1, color: C.text1, align: "center" });
     });
-    tx(s, m, { x: gx - 0.15, y: base + 0.08, w: 1.65, h: 0.3, fontSize: 12, align: "center" });
+    tx(s, m, { x: gx - 0.2, y: base + 0.08, w: 1.46, h: 0.3, fontSize: 11, bold: i === 3, align: "center" });
   });
+  s.addShape(SH.LINE, { x: 4.85, y: 2.6, w: 0, h: 3.35, line: { color: "C9CFD2", width: 1, dashType: "dash" }, objectName: "avg-sep" });
   table(s, [
     ["기본 AI → RAG 추가", "gpt", "Opus", "Qwen"],
     ["A 급여 기준 · 101", "0.44 → 0.81", "0.47 → 0.91", "0.08 → 0.63"],
