@@ -30,6 +30,12 @@ import eval_claude_batch as B  # noqa: E402  (지시문·문항·발췌·폴더 
 THINK = re.compile(r"<think>.*?</think>", re.S)
 
 
+def strip_think(text: str) -> str:
+    """생각 부분을 뗀 답. Qwen3 채팅 틀은 '<think>'를 프롬프트 쪽에 넣으므로, 출력에는 닫는 '</think>'만 있다.
+    그래서 마지막 '</think>' 뒤만 답으로 본다(여는 태그가 있어도 같은 결과)."""
+    return (text.rsplit("</think>", 1)[-1] if "</think>" in text else THINK.sub("", text)).strip()
+
+
 def plan(a, label: str) -> list[dict]:
     """eval_claude_batch.build와 같은 규칙으로 할 일 목록을 만든다(파일은 쓰지 않음)."""
     todo, skipped = [], []
@@ -60,6 +66,64 @@ def plan(a, label: str) -> list[dict]:
     return todo
 
 
+def save(a, t, text: str, sec: float, n_in: int, n_out: int, finished: bool, peak_gb: float, tps, log: Path) -> str:
+    """답 한 개를 answers.jsonl과 실행 기록에 붙인다. 답(생각 부분 뺀 것)을 돌려준다."""
+    reply = strip_think(text)
+    it = t["item"]
+    row = {"id": it["id"], "질문": it["question"], "reply": reply, "생각 포함 원문": text, "대상": a.model, "시각": datetime.now().isoformat(timespec="seconds"),
+           "초": round(sec, 1), "생각 모드": a.think, "끝남": finished, "배치": a.batch,
+           "usage": {"input_tokens": n_in, "output_tokens": n_out}}
+    if t["arm"] == "agent":
+        row["응답"] = {"answer": reply, "sources": t["sources"], "발췌 출처": f"{B.GPT_AGENT} 에이전트 검색 결과 재사용"}
+    t["path"].parent.mkdir(parents=True, exist_ok=True)
+    with t["path"].open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(row, ensure_ascii=False) + "\n")
+    with log.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps({"id": it["id"], "type": t["type"], "arm": t["arm"], "초": round(sec, 1), "끝남": finished,
+                             "입력 토큰": n_in, "출력 토큰": n_out, "초당 토큰": tps, "최대 메모리 GB": peak_gb,
+                             "생각 모드": a.think, "배치": a.batch}, ensure_ascii=False) + "\n")
+    return reply
+
+
+def run_batched(a, todo, model, tok, sampler, think, log) -> int:
+    """배치 생성: a.batch개를 동시에 만들고, 하나가 끝나면 그 자리에 다음 문항을 넣는다(연속 배치).
+    모델·지시문·샘플링 설정은 한 문항씩 할 때와 같다. '초'는 그 문항이 끝날 때까지 걸린 시간(배치 안에서 겹침)."""
+    import mlx.core as mx
+    from mlx_lm.generate import BatchGenerator
+
+    prompts = []
+    for t in todo:
+        msgs = [{"role": "system", "content": t["system"]}, {"role": "user", "content": t["user"]}]
+        prompts.append(tok.apply_chat_template(msgs, add_generation_prompt=True, enable_thinking=think))
+    gen = BatchGenerator(model, stop_tokens=[[x] for x in tok.eos_token_ids], sampler=sampler,
+                         completion_batch_size=a.batch, prefill_batch_size=1, prefill_step_size=512)  # 16GB Mac: 입력은 한 문항씩 잘게 읽어 메모리 최고점을 낮춘다
+    mx.reset_peak_memory()
+    uids = gen.insert(prompts, [a.max_tokens] * len(prompts))
+    by_uid = {u: (t, p) for u, t, p in zip(uids, todo, prompts)}
+    toks = {u: [] for u in uids}
+    started, t0, done = {}, time.time(), 0
+    while responses := gen.next_generated():
+        for r in responses:
+            started.setdefault(r.uid, time.time())
+            if r.finish_reason != "stop":
+                toks[r.uid].append(r.token)
+            if r.finish_reason is None:
+                continue
+            t, p = by_uid[r.uid]
+            sec = time.time() - started[r.uid]
+            n_out = len(toks[r.uid])
+            reply = save(a, t, tok.decode(toks[r.uid]), sec, len(p), n_out, r.finish_reason == "stop",
+                         round(mx.get_peak_memory() / 1e9, 2), round(n_out / sec, 1) if sec else None, log)
+            done += 1
+            el = time.time() - t0
+            print(f"[{done}/{len(todo)}] {t['type']} {t['arm']:5} {t['item']['id']}  {sec:5.1f}초  출력 {n_out}토큰"
+                  f"  누적 {el / 60:.1f}분 (문항당 평균 {el / done:.1f}초)  메모리 {mx.get_peak_memory() / 1e9:.1f}GB"
+                  f"  {'' if r.finish_reason == 'stop' else '(길이 한도에서 끊김)'}  → {reply.splitlines()[0][:40] if reply else '(빈 답)'}", flush=True)
+            toks.pop(r.uid, None)
+    gen.close()
+    return 0
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="MLX 로컬 모델로 답 받기")
     p.add_argument("--model", default="mlx-community/Qwen3-14B-4bit")
@@ -70,6 +134,8 @@ def main() -> int:
     p.add_argument("--think", choices=["on", "off"], default="on")
     p.add_argument("--max-tokens", type=int, default=6000)
     p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--batch", type=int, default=1,
+                   help="동시에 만드는 문항 수(배치 생성). 1이면 한 문항씩. 같은 모델·설정이며, 끝난 자리에 다음 문항을 바로 채운다")
     a = p.parse_args()
 
     todo = plan(a, a.label)
@@ -90,6 +156,9 @@ def main() -> int:
     log = B.EV / "local_mlx" / f"{a.label}_runs.jsonl"
     log.parent.mkdir(parents=True, exist_ok=True)
 
+    if a.batch > 1:
+        return run_batched(a, todo, model, tok, sampler, think, log)
+
     for n, t in enumerate(todo, 1):
         msgs = [{"role": "system", "content": t["system"]}, {"role": "user", "content": t["user"]}]
         prompt = tok.apply_chat_template(msgs, add_generation_prompt=True, enable_thinking=think)
@@ -98,10 +167,10 @@ def main() -> int:
         for last in stream_generate(model, tok, prompt, max_tokens=a.max_tokens, sampler=sampler):
             text += last.text
         sec = time.time() - start
-        reply = THINK.sub("", text).strip()
+        reply = strip_think(text)
         finished = last is not None and last.finish_reason == "stop"
         it = t["item"]
-        row = {"id": it["id"], "질문": it["question"], "reply": reply, "대상": a.model, "시각": datetime.now().isoformat(timespec="seconds"),
+        row = {"id": it["id"], "질문": it["question"], "reply": reply, "생각 포함 원문": text, "대상": a.model, "시각": datetime.now().isoformat(timespec="seconds"),
                "초": round(sec, 1), "생각 모드": a.think, "끝남": finished,
                "usage": {"input_tokens": last.prompt_tokens if last else None, "output_tokens": last.generation_tokens if last else None}}
         if t["arm"] == "agent":
