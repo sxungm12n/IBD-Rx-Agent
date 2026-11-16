@@ -1,13 +1,13 @@
 # 발표 자료 소스 (2026-11-16)
 
-- `build.js` : 40장 덱(v5, 다른 모델 8장: Opus 4장 + Qwen 2장 + 세 모델 오류 분석·개선 방향 2장)을 만든다. 대본(발표자 노트)은 `notes.json`에서 슬라이드 제목으로 찾아 넣는다.
+- `build.js` : 40장 덱(v6, 'RAG 기능 추가' 표기, RAG 추가 방법 슬라이드 포함, 다른 모델 8장)을 만든다. 대본(발표자 노트)은 `notes.json`에서 슬라이드 제목으로 찾아 넣는다.
 - `build_v5.js` + `notes_v5.json` : 2026-11-16 35장 v2 덱(`IBD_RAG_평가_발표_20261116_v2.pptx`) 소스, 보존용.
 - `build_v4.js` + `notes_v4.json` : 2026-11-16 오전 32장 미팅용 덱(`IBD_RAG_평가_발표_20261116_미팅.pptx`) 소스, 보존용.
 - `build_v3.js` : 2026-11-15 v2 덱(28장) 소스, 보존용.
 - `make_script_md.py` : 덱의 발표자 노트와 `notes.json` 순서를 대조하고 `발표대본_*.md`를 만든다.
 - 다시 만들기 (이 폴더에서, pptxgenjs 설치 후):
-  - `npm install` → `node build.js ../IBD_RAG_평가_발표_20261116_v5.pptx`
-  - `python3 make_script_md.py ../IBD_RAG_평가_발표_20261116_v5.pptx ../발표대본_20261116_v5.md`
+  - `npm install` → `node build.js ../IBD_RAG_평가_발표_20261116_v6.pptx`
+  - `python3 make_script_md.py ../IBD_RAG_평가_발표_20261116_v6.pptx ../발표대본_20261116_v6.md`
   - 32장 판: `build_v4.js`와 `notes_v4.json`을 `build.js`·`notes.json` 이름으로 바꿔 같은 방법으로.
 - 숫자는 모두 eval_out/ 결과 파일과 보고서(오답원인분류·인용문원문대조·오답위험도·모델비교·모델별발견)에서 옮겼다. 덱 만들기에는 API를 쓰지 않는다.
 - 2026-11-16 저녁: `build.js`·`notes.json`은 38장 v4(Qwen3-14B 공개 모델 2장 추가, 안전 오답 슬라이드에 Qwen 열)로 바뀜 → `IBD_RAG_평가_발표_20261116_v4.pptx`, `발표대본_20261116_v4.md`. 바꾸기 전 36장 v3 소스는 `build_v6.js` + `notes_v6.json`으로 보존.
@@ -15,3 +15,5 @@
 - 10분 요약 덱(10장): `build_10min.js` + `notes_10min.json` → `IBD_RAG_평가_발표_20261116_10분.pptx`, `발표대본_20261116_10분.md`(대본 약 9분).
   - `node build_10min.js ../IBD_RAG_평가_발표_20261116_10분.pptx` → `python3 make_script_md.py ../IBD_RAG_평가_발표_20261116_10분.pptx ../발표대본_20261116_10분.md notes_10min.json`
   - `make_script_md.py`는 3번째 인자로 대본 파일을 받는다(없으면 `notes.json`). 막대 그래프는 Keynote·Google Slides에서 같게 보이도록 도형으로 그렸다.
+- 10분 요약 v2(11장, 2026-11-16): '에이전트' 대신 'RAG 기능 추가'로 표기하고 RAG 추가 방법 슬라이드(준비 → 질문마다 검색 → 입력 비교)를 넣음 → `IBD_RAG_평가_발표_20261116_10분_v2.pptx`, `발표대본_20261116_10분_v2.md`(대본 약 10분). 10장 v1 소스는 `build_10min_v1.js` + `notes_10min_v1.json`으로 보존.
+- 40장 v6(2026-11-16): '에이전트' 대신 'RAG 기능 추가'로 표기(모델별은 'gpt + RAG' 등), RAG 구조 슬라이드를 '준비 → 질문마다 검색 → 입력 비교' 슬라이드로 바꿈 → `IBD_RAG_평가_발표_20261116_v6.pptx`, `발표대본_20261116_v6.md`. v5 소스는 `build_v8.js` + `notes_v8.json`으로 보존. 코드·파일 이름(예: `오답원인분류_에이전트.md`, `*_agent_*` 폴더)은 재현을 위해 그대로 둠.

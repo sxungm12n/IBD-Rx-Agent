@@ -14,7 +14,7 @@ titles = list(notes)
 assert len(titles) == len(deck_notes), (len(titles), len(deck_notes))
 for i, (k, d) in enumerate(zip(titles, deck_notes), 1):
     assert notes[k] in d, f"slide {i} 순서 불일치: {k}"
-SKIP = {"3주 동안 이렇게 진행했다", "채점 방식은 세 번 다듬었고, 최종은 v2.1이다", "에이전트가 가져온 5쪽을 ‘핵심 쪽’과 대조했다",
+SKIP = {"3주 동안 이렇게 진행했다", "채점 방식은 세 번 다듬었고, 최종은 v2.1이다", "에이전트가 가져온 5쪽을 ‘핵심 쪽’과 대조했다", "RAG 검색이 가져온 5쪽을 ‘핵심 쪽’과 대조했다",
         "모든 결과는 코드로 다시 만들 수 있게 남겼다", "논문을 키울 수 있는 추가 분석"}
 RATE = 330  # 말하기 속도: 1분에 약 330자(공백 제외)
 def mins(t): return len(t.replace(" ", "")) / RATE

@@ -16,7 +16,7 @@ const HEX = THEME.colors;
 
 const pres = new pptxgen();
 pres.layout = "LAYOUT_WIDE"; // 13.333 x 7.5
-pres.title = "IBD 보험가이드북 RAG 에이전트 평가";
+pres.title = "IBD 보험가이드북 RAG 기능 추가 평가";
 pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace };
 const C = pres.SchemeColor;
 const SH = pres.shapes;
@@ -38,7 +38,7 @@ pres.defineSlideMaster({
   objects: [
     { placeholder: { options: { name: "eyebrow", type: "body", x: 0.6, y: 0.38, w: 12.1, h: 0.32, fontSize: 12, bold: true, color: C.accent1, align: "left", margin: 0, charSpacing: 1 }, text: "" } },
     { placeholder: { options: { name: "title", type: "title", x: 0.6, y: 0.72, w: 12.1, h: 0.75, fontSize: 28, bold: true, color: C.text1, valign: "top", align: "left", margin: 0 }, text: "" } },
-    { text: { text: "IBD 보험가이드북 RAG 에이전트 평가 · 2026-11-16 · 10분 요약", options: { x: 0.6, y: 6.98, w: 8, h: 0.3, fontSize: 10, color: C.accent3, margin: 0 } } },
+    { text: { text: "IBD 보험가이드북 RAG 기능 추가 평가 · 2026-11-16 · 10분 요약", options: { x: 0.6, y: 6.98, w: 8, h: 0.3, fontSize: 10, color: C.accent3, margin: 0 } } },
   ],
   slideNumber: { x: 12.13, y: 6.98, w: 0.6, h: 0.3, fontSize: 10, color: C.accent3, align: "right", margin: 0 },
 });
@@ -99,8 +99,8 @@ pres.addSection({ title: SEC[0] });
   const s = pres.addSlide({ masterName: "TITLE_DARK", sectionTitle: SEC[0] });
   s._title = "표지";
   s.addText("연구 진행 보고 · 2026-11-16 · 10분 요약", { placeholder: "eyebrow" });
-  s.addText("IBD 보험가이드북\nRAG 에이전트 평가", { placeholder: "title" });
-  s.addText("AI에 2024 대한장연구학회 보험가이드북 발췌를 붙이면 국내 급여 기준 답이 얼마나 정확해지는가. 세 모델(gpt-5.6-terra · Claude Opus 5.5 · Qwen3-14B)로 확인했다.", { placeholder: "body" });
+  s.addText("IBD 보험가이드북\nRAG 기능 추가 평가", { placeholder: "title" });
+  s.addText("같은 AI에 RAG 기능(2024 대한장연구학회 보험가이드북 검색)을 추가하면 국내 급여 기준 답이 얼마나 정확해지는가. 세 모델(gpt-5.6-terra · Claude Opus 5.5 · Qwen3-14B)로 확인했다.", { placeholder: "body" });
   tx(s, "모든 수치는 답 1회 · 채점 1회, 임상의 검증 전이다.", { x: 0.8, y: 5.9, w: 11, h: 0.4, fontSize: 13, color: C.accent6 });
   addNote(s);
 }
@@ -109,9 +109,9 @@ pres.addSection({ title: SEC[0] });
 {
   const s = content("요약", "핵심 결론 세 가지", SEC[0]);
   const ks = [
-    ["01 · 정확도", "가이드북을 붙이면 세 모델 모두 크게 올랐다", "0.44 → 0.81", "A형 · gpt-5.6-terra\nOpus 0.47 → 0.91 · Qwen 0.08 → 0.63", null],
+    ["01 · 정확도", "RAG를 추가하면 세 모델 모두 크게 올랐다", "0.44 → 0.81", "A형 · gpt-5.6-terra\nOpus 0.47 → 0.91 · Qwen 0.08 → 0.63", null],
     ["02 · 오류", "좋은 모델일수록 남은 오답은 검색 문제", "7 / 9점", "Opus가 잃은 점수 중 검색 몫\n세 모델이 모두 틀린 문항은 전부 ‘근거 쪽 없음’", "E3ECF3"],
-    ["03 · 안전", "위험한 오답은 에이전트에서 생겼다", "6 = 6 = 6", "검사 수치 미달 환자에게 Upadacitinib\n세 모델이 같은 6문항 → 체크리스트 쪽 누락", "F6E8D8"],
+    ["03 · 안전", "위험한 오답은 RAG를 추가했을 때 생겼다", "6 = 6 = 6", "검사 수치 미달 환자에게 Upadacitinib\n세 모델이 같은 6문항 → 체크리스트 쪽 누락", "F6E8D8"],
   ];
   const w = 3.877;
   ks.forEach(([lab, head, big, sub, fill], i) => {
@@ -127,7 +127,7 @@ pres.addSection({ title: SEC[0] });
 
 // 3. 방법
 {
-  const s = content("방법", "같은 문제를, 가이드북이 있을 때와 없을 때 비교했다", SEC[0]);
+  const s = content("방법", "같은 문제를, RAG가 없을 때와 있을 때 비교했다", SEC[0]);
   table(s, [
     ["유형", "문항", "묻는 것 (예)", "채점"],
     ["A 급여 기준", "101", "Infliximab 성인 크론병 활성도 기준은? → CDAI 220 이상", "AI 채점자"],
@@ -140,22 +140,57 @@ pres.addSection({ title: SEC[0] });
   label(s, "기본 AI · 책을 덮고", 8.85, 1.92, 3.6);
   tx(s, "자료 없이 기억으로 답한다", { x: 8.85, y: 2.35, w: 3.6, h: 0.8, fontSize: 15 });
   card(s, 8.55, 3.45, 4.18, 1.8, "E3ECF3");
-  label(s, "RAG 에이전트 · 오픈북", 8.85, 3.62, 3.6);
-  tx(s, "가이드북에서 찾은 5쪽을 읽고 답한다. 다른 조건은 모두 같다", { x: 8.85, y: 4.05, w: 3.6, h: 1.1, fontSize: 15 });
+  label(s, "기본 AI + RAG 추가 · 오픈북", 8.85, 3.62, 3.6);
+  tx(s, "같은 AI가 가이드북에서 검색한 5쪽을 함께 받아 답한다. 다른 조건은 모두 같다", { x: 8.85, y: 4.05, w: 3.6, h: 1.1, fontSize: 15 });
   card(s, 0.6, 5.45, 12.13, 1.3);
-  tx(s, [B("답한 모델 셋: "), P("gpt-5.6-terra(주 실험) · Claude Opus 5.5(상위 모델) · Qwen3-14B(공개 모델, GPU 서버). Opus와 Qwen 에이전트는 gpt가 찾은 같은 5쪽을 받아, 바뀐 것은 답하는 모델뿐이다.")],
+  tx(s, [B("답한 모델 셋: "), P("gpt-5.6-terra(주 실험) · Claude Opus 5.5(상위 모델) · Qwen3-14B(공개 모델, GPU 서버). RAG를 추가할 때 Opus와 Qwen에는 gpt 실행 때 검색한 같은 5쪽을 넣어, 바뀐 것은 답하는 모델뿐이다.")],
     { x: 0.9, y: 5.5, w: 11.5, h: 1.2, fontSize: 15, valign: "middle" });
+  addNote(s);
+}
+
+// 3b. RAG를 어떻게 추가했나
+{
+  const s = content("방법 · RAG 추가", "RAG 기능은 이렇게 추가했다: 가이드북 검색 → 5쪽을 질문과 함께", SEC[0]);
+  function box(x, y, w, h, t, sub, hi) {
+    n += 1;
+    s.addShape(SH.ROUNDED_RECTANGLE, { x, y, w, h, fill: { color: hi ? "E3ECF3" : C.background2 }, line: { color: hi ? HEX.accent1 : "C9CFD2", width: 1.25 }, rectRadius: 0.08, objectName: `box-${n}` });
+    tx(s, [{ text: t, options: { bold: true, color: C.text1, fontSize: 14, breakLine: true } }, { text: sub, options: { fontSize: 12 } }], { x: x + 0.1, y, w: w - 0.2, h, valign: "middle", align: "center" });
+  }
+  function arrow(x, y) { n += 1; s.addShape(SH.RIGHT_ARROW, { x, y, w: 0.32, h: 0.26, fill: { color: C.accent3 }, line: { color: C.accent3 }, objectName: `arrow-${n}` }); }
+  // ① 준비 (한 번)
+  label(s, "① 준비 · 한 번만", 0.6, 1.62, 4);
+  let x = 0.6; const y1 = 1.98, h1 = 0.95;
+  box(x, y1, 2.6, h1, "보험가이드북 PDF", "2024 KASID Ver.3"); x += 2.6 + 0.08; arrow(x, y1 + 0.35); x += 0.32 + 0.08;
+  box(x, y1, 3.0, h1, "쪽 단위 70조각", "쪽·장·제목·약제·질환 표시"); x += 3.0 + 0.08; arrow(x, y1 + 0.35); x += 0.32 + 0.08;
+  box(x, y1, 2.55, h1, "키워드 색인 (BM25)", "한글 2글자 조각까지"); x += 2.55 + 0.12;
+  box(x, y1, 12.73 - x, h1, "의미 색인 (임베딩)", "text-embedding-3-large");
+  // ② 질문마다
+  label(s, "② 질문마다 · 검색", 0.6, 3.1, 4);
+  x = 0.6; const y2 = 3.46, h2 = 0.95;
+  box(x, y2, 1.55, h2, "질문", "원문 그대로"); x += 1.55 + 0.08; arrow(x, y2 + 0.35); x += 0.32 + 0.08;
+  box(x, y2, 2.35, h2, "후보 모으기", "키워드 12쪽 + 의미 12쪽"); x += 2.35 + 0.08; arrow(x, y2 + 0.35); x += 0.32 + 0.08;
+  box(x, y2, 2.1, h2, "RRF로 합침", "최대 20쪽"); x += 2.1 + 0.08; arrow(x, y2 + 0.35); x += 0.32 + 0.08;
+  box(x, y2, 2.35, h2, "재랭커로 다시 정렬", "bge-reranker-v2-m3"); x += 2.35 + 0.08; arrow(x, y2 + 0.35); x += 0.32 + 0.08;
+  box(x, y2, 12.73 - x, h2, "상위 5쪽", "질문과 가장 맞는 쪽", true);
+  // ③ 같은 AI에 넣는 입력 비교
+  label(s, "③ 같은 AI에 넣는 입력 · 다른 것은 발췌 5쪽 하나", 0.6, 4.58, 8);
+  card(s, 0.6, 4.94, 5.94, 1.88);
+  tx(s, [B("기본 AI"), { text: "\n지시: 2024 보험가이드북 기준으로만 답하라\n문제: (질문)\n답 형식: 답: … / 판정: … / 인정: …", options: { fontSize: 12, fontFace: "Consolas" } }],
+    { x: 0.85, y: 5.0, w: 5.5, h: 1.75, fontSize: 13 });
+  card(s, 6.79, 4.94, 5.94, 1.88, "E3ECF3");
+  tx(s, [B("기본 AI + RAG 추가"), { text: "\n지시: 근거는 제공된 발췌뿐, 발췌에 없는 수치·조건은 만들지 말 것\n[1] p.48 · 약제 Filgotinib · 질환 UC · (원문)  … [5]\n문제: (질문)   답 형식: 같음", options: { fontSize: 12, fontFace: "Consolas" } }],
+    { x: 7.04, y: 5.0, w: 5.5, h: 1.75, fontSize: 13 });
   addNote(s);
 }
 
 // 4. 정확도
 pres.addSection({ title: SEC[1] });
 {
-  const s = content("결과 · 정확도", "세 모델 모두 가이드북을 붙이면 정확해졌다", SEC[1]);
+  const s = content("결과 · 정확도", "세 모델 모두 RAG를 추가하면 정확해졌다", SEC[1]);
   // 막대 그래프 (도형으로 그림: Keynote·Google Slides 어디서나 같게 보이도록)
   tx(s, "A형 본 점수 (101문항)", { x: 0.6, y: 1.7, w: 5.6, h: 0.35, fontSize: 14, bold: true, color: C.text1 });
   card(s, 0.75, 2.15, 0.25, 0.22, HEX.accent6); tx(s, "기본 AI", { x: 1.07, y: 2.12, w: 1.3, h: 0.3, fontSize: 12 });
-  card(s, 2.35, 2.15, 0.25, 0.22, HEX.accent1); tx(s, "RAG 에이전트", { x: 2.67, y: 2.12, w: 1.8, h: 0.3, fontSize: 12 });
+  card(s, 2.35, 2.15, 0.25, 0.22, HEX.accent1); tx(s, "RAG 추가", { x: 2.67, y: 2.12, w: 1.8, h: 0.3, fontSize: 12 });
   const base = 5.95, H = 3.1;
   s.addShape(SH.LINE, { x: 0.6, y: base, w: 5.6, h: 0, line: { color: "C9CFD2", width: 1 }, objectName: "axis" });
   [["gpt-5.6-terra", 0.441, 0.807], ["Claude Opus 5.5", 0.470, 0.911], ["Qwen3-14B", 0.084, 0.634]].forEach(([m, v1, v2], i) => {
@@ -168,14 +203,14 @@ pres.addSection({ title: SEC[1] });
     tx(s, m, { x: gx - 0.15, y: base + 0.08, w: 1.65, h: 0.3, fontSize: 12, align: "center" });
   });
   table(s, [
-    ["기본 → 에이전트", "gpt", "Opus", "Qwen"],
+    ["기본 AI → RAG 추가", "gpt", "Opus", "Qwen"],
     ["A 급여 기준 · 101", "0.44 → 0.81", "0.47 → 0.91", "0.08 → 0.63"],
     ["A2 추가 규칙 · 38", "0.09 → 0.91", "0.18 → 0.93", "0.03 → 0.58"],
     ["C 환자 판정 · 198", "0.81 → 0.93", "0.82 → 0.98", "0.65 → 0.91"],
     ["D 약 고르기 · 37", "0.32 → 0.43", "0.38 → 0.62", "0.03 → 0.27"],
-    ["A형 나음 / 못함", "51 / 5", "60 / 5", "68 / 4"],
+    ["A형 RAG로 나음 / 못함", "51 / 5", "60 / 5", "68 / 4"],
   ], { x: 6.5, y: 1.75, w: 6.23, colW: [1.9, 1.45, 1.44, 1.44], fontSize: 13, rowH: 0.44 });
-  callout(s, [B("가이드북 없이는 최상위 모델도 국내 기준을 모른다 "), P("(A2 0.09~0.18). D형 약 고르기는 에이전트도 아직 낮다.")], 6.5, 4.6, 6.23, 1.15);
+  callout(s, [B("가이드북 없이는 최상위 모델도 국내 기준을 모른다 "), P("(A2 0.09~0.18). D형 약 고르기는 RAG를 추가해도 아직 낮다.")], 6.5, 4.6, 6.23, 1.15);
   tx(s, "A형 차이는 세 모델 모두 부호검정 p < 10⁻¹⁰. 1.0 = 만점(맞음 1 · 부분 0.5).", { x: 6.5, y: 5.9, w: 6.23, h: 0.5, fontSize: 11, color: C.accent3 });
   addNote(s);
 }
@@ -200,11 +235,11 @@ pres.addSection({ title: SEC[1] });
   addNote(s);
 }
 
-// 6. 에이전트 오류
+// 6. RAG 추가 후 오류
 pres.addSection({ title: SEC[2] });
 {
-  const s = content("오류 분석 · 에이전트", "좋은 모델일수록 남은 오답은 검색 문제였다", SEC[2]);
-  tx(s, "A형 에이전트가 잃은 점수 (101점 중)", { x: 0.6, y: 1.65, w: 7.6, h: 0.35, fontSize: 14, bold: true, color: C.text1 });
+  const s = content("오류 분석 · RAG 추가", "좋은 모델일수록 남은 오답은 검색 문제였다", SEC[2]);
+  tx(s, "RAG 추가 후 A형에서 잃은 점수 (101점 중)", { x: 0.6, y: 1.65, w: 7.6, h: 0.35, fontSize: 14, bold: true, color: C.text1 });
   table(s, [
     ["원인", "gpt", "Opus", "Qwen"],
     ["검색 · 근거 쪽을 못 가져옴", "6.0", "7.0", "6.5"],
@@ -229,13 +264,13 @@ pres.addSection({ title: SEC[2] });
 
 // 7. 안전
 {
-  const s = content("오류 분석 · 안전", "위험한 오답은 에이전트에서 생겼고, 원인은 하나였다", SEC[2]);
+  const s = content("오류 분석 · 안전", "위험한 오답은 RAG를 추가했을 때 생겼고, 원인은 하나였다", SEC[2]);
   card(s, 0.6, 1.75, 6.9, 2.75);
   label(s, "예 · ANC 900 환자에게 Filgotinib (정답 ‘아니오’)", 0.9, 1.92, 6.4);
   tx(s, [B("기본 AI: "), P("“ANC 1,000 미만이라 안 된다” → 맞음 (허가사항이라 기억함)")], { x: 0.9, y: 2.4, w: 6.4, h: 0.7, fontSize: 15 });
-  tx(s, [B("에이전트: "), P("“발췌에는 이 수치 기준이 없다” → ‘예’ (허용). 기준이 적힌 체크리스트 p.49가 5쪽 안에 없었다")], { x: 0.9, y: 3.15, w: 6.4, h: 1.2, fontSize: 15 });
+  tx(s, [B("RAG 추가: "), P("“발췌에는 이 수치 기준이 없다” → ‘예’ (허용). 기준이 적힌 체크리스트 p.49가 5쪽 안에 없었다")], { x: 0.9, y: 3.15, w: 6.4, h: 1.2, fontSize: 15 });
   table(s, [
-    ["‘높음 · 안전’ 오답 문항 (C / D)", "기본 AI", "에이전트"],
+    ["‘높음 · 안전’ 오답 문항 (C / D)", "기본 AI", "RAG 추가"],
     ["gpt-5.6-terra", "1 / 3", "5 / 6"],
     ["Claude Opus 5.5", "4 / 3", "1 / 6"],
     ["Qwen3-14B", "8 / 2", "6 / 6"],
