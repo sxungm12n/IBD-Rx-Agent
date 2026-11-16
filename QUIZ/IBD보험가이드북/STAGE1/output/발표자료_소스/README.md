@@ -12,3 +12,6 @@
 - 숫자는 모두 eval_out/ 결과 파일과 보고서(오답원인분류·인용문원문대조·오답위험도·모델비교·모델별발견)에서 옮겼다. 덱 만들기에는 API를 쓰지 않는다.
 - 2026-11-16 저녁: `build.js`·`notes.json`은 38장 v4(Qwen3-14B 공개 모델 2장 추가, 안전 오답 슬라이드에 Qwen 열)로 바뀜 → `IBD_RAG_평가_발표_20261116_v4.pptx`, `발표대본_20261116_v4.md`. 바꾸기 전 36장 v3 소스는 `build_v6.js` + `notes_v6.json`으로 보존.
 - 2026-11-16 밤: 40장 v5(세 모델 오류 분석 2장 추가) → `IBD_RAG_평가_발표_20261116_v5.pptx`, `발표대본_20261116_v5.md`. 38장 v4 소스는 `build_v7.js` + `notes_v7.json`으로 보존.
+- 10분 요약 덱(10장): `build_10min.js` + `notes_10min.json` → `IBD_RAG_평가_발표_20261116_10분.pptx`, `발표대본_20261116_10분.md`(대본 약 9분).
+  - `node build_10min.js ../IBD_RAG_평가_발표_20261116_10분.pptx` → `python3 make_script_md.py ../IBD_RAG_평가_발표_20261116_10분.pptx ../발표대본_20261116_10분.md notes_10min.json`
+  - `make_script_md.py`는 3번째 인자로 대본 파일을 받는다(없으면 `notes.json`). 막대 그래프는 Keynote·Google Slides에서 같게 보이도록 도형으로 그렸다.
