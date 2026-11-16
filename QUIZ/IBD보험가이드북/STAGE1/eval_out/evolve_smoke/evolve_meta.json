@@ -1,0 +1,7 @@
+{
+ "test_fold": "B",
+ "playbook": "evolve/runs/smoke_self/playbook.json",
+ "playbook_chars": 94,
+ "agent": "http://127.0.0.1:8001/api/guide/ask",
+ "model": "gpt-5.6-terra"
+}

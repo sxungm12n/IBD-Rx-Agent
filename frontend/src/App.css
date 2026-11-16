@@ -1,0 +1,304 @@
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.brand-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.eyebrow,
+.brand-sub {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-sub {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+h1 {
+  margin: 0 0 0.6rem;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: var(--text-h);
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  color: var(--text-h);
+}
+
+.lead {
+  margin: 0 0 0.75rem;
+}
+
+.status,
+.hint,
+.disclaimer {
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.ask {
+  margin: 1.25rem 0 0.9rem;
+}
+
+.ask-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 650;
+  color: var(--text-h);
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 7.5rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--social-bg);
+  color: var(--text-h);
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.ask-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.hint,
+.disclaimer {
+  margin: 0;
+}
+
+button,
+.suggestions button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.primary {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1.15rem;
+  background: var(--accent-strong);
+  color: #fff;
+  font-weight: 700;
+}
+
+.views {
+  display: flex;
+  gap: 0.4rem;
+  margin: -0.6rem 0 1.4rem;
+}
+
+.views button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  background: transparent;
+  color: var(--text);
+  font-weight: 650;
+}
+
+.views button.view-on {
+  border-color: transparent;
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.stage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+}
+
+.stage-actions button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  background: transparent;
+  color: var(--text-h);
+  font-weight: 650;
+}
+
+.stage-path {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.stage-hits {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trace {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.suggestions button {
+  max-width: 100%;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+}
+
+.suggestions button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--text-h);
+}
+
+.answer,
+.source {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--social-bg);
+}
+
+.asked {
+  margin: 1rem 0 0.55rem;
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+.answer {
+  margin-top: 0.5rem;
+}
+
+.answer-body {
+  white-space: pre-wrap;
+  color: var(--text-h);
+  line-height: 1.7;
+}
+
+.disclaimer {
+  margin-top: 1rem;
+}
+
+.sources {
+  margin-top: 1.25rem;
+}
+
+.sources ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.source-kicker {
+  margin: 0 0 0.2rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.source h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  color: var(--text-h);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.55rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--text-h);
+  font-size: 0.8rem;
+}
+
+.source-preview,
+.source-text {
+  margin: 0;
+  color: var(--text);
+}
+
+.source-text {
+  margin-top: 0.6rem;
+  white-space: pre-wrap;
+}
+
+.source summary {
+  margin-top: 0.55rem;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+@media (max-width: 640px) {
+  .ask-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primary {
+    width: 100%;
+  }
+}

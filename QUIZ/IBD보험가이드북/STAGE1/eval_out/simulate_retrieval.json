@@ -1,0 +1,805 @@
+{
+ "오답(검색 실패) 복구": {
+  "A-MTX-IBD-G7": {
+   "필요 쪽": [
+    19
+   ],
+   "현재": false,
+   "규칙 A": false,
+   "규칙 B": true
+  },
+  "A-IFX-IV-UC-adult-E": {
+   "필요 쪽": [
+    36
+   ],
+   "현재": false,
+   "규칙 A": false,
+   "규칙 B": true
+  },
+  "A-IFX-IV-UC-ped-E": {
+   "필요 쪽": [
+    36
+   ],
+   "현재": false,
+   "규칙 A": false,
+   "규칙 B": true
+  },
+  "A-IFX-IV-GIBD-E": {
+   "필요 쪽": [
+    37
+   ],
+   "현재": false,
+   "규칙 A": false,
+   "규칙 B": true
+  },
+  "A-FIL-UC-G6-hb": {
+   "필요 쪽": [
+    49
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "A-FIL-UC-G6-alc": {
+   "필요 쪽": [
+    49
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "A-UPA-UC-G6-hb": {
+   "필요 쪽": [
+    52
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "A2-ADA-CD-adult-L": {
+   "필요 쪽": [
+    28
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "A2-ADA-CD-ped-L": {
+   "필요 쪽": [
+    28
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "A2-ADA-UC-L": {
+   "필요 쪽": [
+    28
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "A2-ADA-GIBD-L": {
+   "필요 쪽": [
+    28
+   ],
+   "현재": false,
+   "규칙 A": false,
+   "규칙 B": true
+  },
+  "C-FIL-UC-anc-low": {
+   "필요 쪽": [
+    49
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-FIL-UC-alc-low": {
+   "필요 쪽": [
+    49
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-UPA-UC-hb-low": {
+   "필요 쪽": [
+    52
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-UPA-UC-anc-low": {
+   "필요 쪽": [
+    52
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-UPA-UC-alc-low": {
+   "필요 쪽": [
+    52
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-IFX-SC-CD-adult-base": {
+   "필요 쪽": [
+    29
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-IFX-SC-UC-adult-base": {
+   "필요 쪽": [
+    29
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  },
+  "C-IFX-SC-UC-adult-prior-intol": {
+   "필요 쪽": [
+    29
+   ],
+   "현재": false,
+   "규칙 A": true,
+   "규칙 B": true
+  }
+ },
+ "전체 핵심 쪽 포함률": {
+  "A / 급여 기준(고시 쪽) / 현재": {
+   "문항": 82,
+   "포함": 75
+  },
+  "A / 급여 기준(고시 쪽) / 규칙 A": {
+   "문항": 82,
+   "포함": 75
+  },
+  "A / 급여 기준(고시 쪽) / 규칙 B": {
+   "문항": 82,
+   "포함": 82
+  },
+  "A / 검사 하한·체크리스트 / 현재": {
+   "문항": 17,
+   "포함": 14
+  },
+  "A / 검사 하한·체크리스트 / 규칙 A": {
+   "문항": 17,
+   "포함": 17
+  },
+  "A / 검사 하한·체크리스트 / 규칙 B": {
+   "문항": 17,
+   "포함": 17
+  },
+  "A2 / 급여 기준(고시 쪽) / 현재": {
+   "문항": 4,
+   "포함": 4
+  },
+  "A2 / 급여 기준(고시 쪽) / 규칙 A": {
+   "문항": 4,
+   "포함": 4
+  },
+  "A2 / 급여 기준(고시 쪽) / 규칙 B": {
+   "문항": 4,
+   "포함": 4
+  },
+  "C / 급여 기준(고시 쪽) / 현재": {
+   "문항": 183,
+   "포함": 183
+  },
+  "C / 급여 기준(고시 쪽) / 규칙 A": {
+   "문항": 183,
+   "포함": 183
+  },
+  "C / 급여 기준(고시 쪽) / 규칙 B": {
+   "문항": 183,
+   "포함": 183
+  },
+  "C / 검사 하한·체크리스트 / 현재": {
+   "문항": 15,
+   "포함": 9
+  },
+  "C / 검사 하한·체크리스트 / 규칙 A": {
+   "문항": 15,
+   "포함": 15
+  },
+  "C / 검사 하한·체크리스트 / 규칙 B": {
+   "문항": 15,
+   "포함": 15
+  },
+  "D / 현재": {
+   "정답 약": 133,
+   "정답 약 쪽 있음": 63,
+   "문항": 37,
+   "모든 정답 약 쪽 있음": 15
+  },
+  "D / 규칙 A": {
+   "정답 약": 133,
+   "정답 약 쪽 있음": 63,
+   "문항": 37,
+   "모든 정답 약 쪽 있음": 15
+  },
+  "D / 규칙 B": {
+   "정답 약": 133,
+   "정답 약 쪽 있음": 133,
+   "문항": 37,
+   "모든 정답 약 쪽 있음": 37
+  }
+ },
+ "발췌 크기": {
+  "A": {
+   "현재": {
+    "평균 쪽": 4.9,
+    "평균 글자": 5703
+   },
+   "규칙 A": {
+    "평균 쪽": 7.2,
+    "평균 글자": 7329
+   },
+   "규칙 B": {
+    "평균 쪽": 7.3,
+    "평균 글자": 7398
+   }
+  },
+  "A2": {
+   "현재": {
+    "평균 쪽": 4.7,
+    "평균 글자": 7432
+   },
+   "규칙 A": {
+    "평균 쪽": 6.5,
+    "평균 글자": 8700
+   },
+   "규칙 B": {
+    "평균 쪽": 6.8,
+    "평균 글자": 8897
+   }
+  },
+  "C": {
+   "현재": {
+    "평균 쪽": 4.8,
+    "평균 글자": 6746
+   },
+   "규칙 A": {
+    "평균 쪽": 7.2,
+    "평균 글자": 8494
+   },
+   "규칙 B": {
+    "평균 쪽": 7.2,
+    "평균 글자": 8511
+   }
+  },
+  "D": {
+   "현재": {
+    "평균 쪽": 5.0,
+    "평균 글자": 7249
+   },
+   "규칙 A": {
+    "평균 쪽": 8.9,
+    "평균 글자": 9966
+   },
+   "규칙 B": {
+    "평균 쪽": 14.4,
+    "평균 글자": 13774
+   }
+  }
+ },
+ "D형": [
+  {
+   "id": "D-cd-base",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-cdai219",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-prior1",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-intol",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-68",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-68-tnf",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-cv",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-malig-tnf",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-hb75",
+   "빠뜨림": [
+    "Adalimumab",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Adalimumab",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Adalimumab",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": {
+    "현재": false,
+    "규칙 A": true,
+    "규칙 B": true
+   }
+  },
+  {
+   "id": "D-cd-anc900",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": {
+    "현재": false,
+    "규칙 A": true,
+    "규칙 B": true
+   }
+  },
+  {
+   "id": "D-cd-hb85",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-cd-68-tnf-hb75",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": {
+    "현재": false,
+    "규칙 A": true,
+    "규칙 B": true
+   }
+  },
+  {
+   "id": "D-uc-base",
+   "빠뜨림": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-mayo5",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-endo1",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-5asa",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-intol",
+   "빠뜨림": [
+    "Filgotinib",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Filgotinib",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Filgotinib",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-68",
+   "빠뜨림": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-68-tnf",
+   "빠뜨림": [
+    "Filgotinib",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Filgotinib",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Filgotinib",
+    "Ozanimod",
+    "Tofacitinib",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-cv",
+   "빠뜨림": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-recent-mi",
+   "빠뜨림": [
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-hb85",
+   "빠뜨림": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-hb75",
+   "빠뜨림": [
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": {
+    "현재": false,
+    "규칙 A": true,
+    "규칙 B": true
+   }
+  },
+  {
+   "id": "D-uc-anc900",
+   "빠뜨림": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": {
+    "현재": false,
+    "규칙 A": true,
+    "규칙 B": true
+   }
+  },
+  {
+   "id": "D-uc-alc450",
+   "빠뜨림": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": {
+    "현재": false,
+    "규칙 A": true,
+    "규칙 B": true
+   }
+  },
+  {
+   "id": "D-uc-68-hb85",
+   "빠뜨림": [
+    "Ozanimod"
+   ],
+   "현재": [
+    "Ozanimod"
+   ],
+   "규칙 A": [
+    "Ozanimod"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-uc-tnf-hb85",
+   "빠뜨림": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "현재": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 A": [
+    "Filgotinib",
+    "Golimumab",
+    "Ozanimod",
+    "Vedolizumab"
+   ],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-pcd-base",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-pcd-29",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-puc-base",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-puc-45",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-fcd-base",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-fcd-abx",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-bd-base",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-bd-18",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-bd-prior1",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  },
+  {
+   "id": "D-bd-intol",
+   "빠뜨림": [],
+   "현재": [],
+   "규칙 A": [],
+   "규칙 B": [],
+   "UPA 체크리스트(52)": null
+  }
+ ]
+}

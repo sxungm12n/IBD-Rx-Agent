@@ -1,0 +1,28 @@
+.DS_Store
+
+# Python
+backend/.venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Secrets
+backend/.env
+data/RAG/.env
+
+# Secrets (모든 .env, 키 파일)
+**/.env
+**/.env.*
+!**/env.example
+
+# Python 가상환경 (STAGE1 실험용 포함)
+**/.venv/
+**/.venv_*/
+
+# Claude Code 개인 설정
+.claude/settings.local.json

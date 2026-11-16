@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "backend-8001",
+      "runtimeExecutable": "/Users/limseongmin/IBD Rx Agent/backend/.venv/bin/uvicorn",
+      "runtimeArgs": ["app.main:app", "--app-dir", "/Users/limseongmin/IBD Rx Agent/backend", "--host", "127.0.0.1", "--port", "8001"],
+      "port": 8001,
+      "url": "http://127.0.0.1:8001"
+    }
+  ]
+}

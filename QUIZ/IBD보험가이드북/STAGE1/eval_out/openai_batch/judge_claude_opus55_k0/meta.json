@@ -1,0 +1,14 @@
+{
+ "tag": "judge_claude_opus55_k0",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "llm_claude-opus-5-5:output/a_items.jsonl",
+  "agent_claude-opus-5-5:output/a_items.jsonl",
+  "a2_llm_claude-opus-5-5:output/a2_items.jsonl",
+  "a2_agent_claude-opus-5-5:output/a2_items.jsonl"
+ ],
+ "requests": 290,
+ "built": "2026-11-16T13:12:58"
+}
