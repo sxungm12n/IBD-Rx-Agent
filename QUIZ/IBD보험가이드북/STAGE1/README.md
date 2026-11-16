@@ -194,6 +194,7 @@ python3 STAGE1/make_a.py
 | `eval_claude_batch.py` | Claude 답 받기: `build`(요청 파일만, 무료) → `submit --yes`(과금) → `status` → `fetch` | Anthropic Message Batches · `.venv_claude` | `eval_out/<유형>_<대상>_claude-opus-5-5/answers.jsonl`, 요청·원본·실측 비용 `eval_out/claude_batch/<tag>/` |
 | `regrade_v2_batch.py` | `regrade_v2.py`와 같은 v2.1 채점을 배치로: `build --job run:items` → `submit --yes` → `status` → `fetch` | OpenAI Batch · gpt-6-sol · `.venv_claude` | `graded_v21.jsonl`(regrade_v2와 같은 모양), `eval_out/openai_batch/<tag>/` |
 | `eval_local_mlx.py` | 내 Mac(Apple 칩)에서 공개 모델로 답 받기. 기본 `mlx-community/Qwen3-14B-4bit` | 요금 없음 · `.venv_mlx`(mlx-lm) | `eval_out/<유형>_<대상>_qwen3-14b-4bit/`, 실행 기록 `eval_out/local_mlx/` |
+| `eval_local_cuda.py` (+ `run_qwen_cuda.sh`) | NVIDIA GPU에서 원본 `Qwen/Qwen3-14B`(bf16)로 답 받기. `eval_local_mlx.py`와 같은 문항·지시문·샘플링, 엔진만 vLLM. `run_qwen_cuda.sh`는 모델 다운로드→실행을 하고 진행을 `logs/`(STATUS.txt·qwen_cuda.log·eval.log)에 남김. 기본 GPU 1번(`GPU=0 ./run_qwen_cuda.sh`로 변경). 이 서버는 nvcc·ninja가 없어 `VLLM_USE_FLASHINFER_SAMPLER=0` 필요 | 요금 없음 · `.venv_cuda`(Python 3.12, vllm) | `eval_out/<유형>_<대상>_qwen3-14b-bf16/`, 실행 기록 `eval_out/local_cuda/` |
 | `compare_models.py` | 모델별 정확도·짝 비교·안전 오답 표 | 없음 | `eval_out/모델비교.md` |
 | `findings_by_model.py` | gpt로 정리한 발견(기준 혼동·축약·빠뜨린 약·안전 오답)을 같은 규칙으로 모델마다 계산. gpt 값이 기존 보고서와 같게 나와야 한다 | 없음 | `eval_out/모델별발견.json`·`.md` |
 
