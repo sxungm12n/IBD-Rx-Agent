@@ -1,0 +1,1452 @@
+{
+ "j00000": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00001": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00002": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00003": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00004": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00005": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00006": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00007": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00008": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00009": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00010": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00011": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00012": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00013": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00014": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00015": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00016": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00017": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00018": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00019": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00020": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00021": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00022": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00023": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00024": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00025": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00026": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00027": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00028": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00029": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00030": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00031": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00032": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00033": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00034": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00035": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00036": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00037": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00038": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00039": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00040": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00041": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00042": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00043": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00044": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00045": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00046": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00047": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00048": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00049": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00050": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00051": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00052": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00053": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00054": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00055": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00056": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00057": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00058": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00059": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00060": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00061": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00062": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00063": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00064": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00065": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00066": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00067": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00068": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00069": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00070": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00071": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00072": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00073": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00074": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00075": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00076": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00077": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00078": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00079": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00080": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00081": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00082": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00083": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00084": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00085": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00086": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00087": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00088": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00089": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00090": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00091": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00092": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00093": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00094": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00095": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00096": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00097": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00098": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00099": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00100": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00101": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00102": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00103": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00104": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00105": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00106": {
+  "run": "llm_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00107": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00108": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00109": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00110": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00111": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00112": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00113": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00114": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00115": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00116": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00117": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00118": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00119": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00120": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00121": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00122": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00123": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00124": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00125": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00126": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00127": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00128": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00129": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00130": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00131": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00132": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00133": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00134": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00135": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00136": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00137": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00138": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00139": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00140": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00141": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00142": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00143": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00144": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00145": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00146": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00147": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00148": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00149": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00150": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00151": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00152": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00153": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00154": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00155": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00156": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00157": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00158": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00159": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00160": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00161": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00162": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00163": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00164": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00165": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00166": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00167": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00168": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00169": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00170": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00171": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00172": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00173": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00174": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00175": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00176": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00177": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00178": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00179": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00180": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00181": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00182": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00183": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00184": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00185": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00186": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00187": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00188": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00189": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00190": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00191": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00192": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00193": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00194": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00195": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00196": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00197": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00198": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00199": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00200": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00201": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00202": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00203": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00204": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00205": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00206": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00207": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00208": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00209": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00210": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00211": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00212": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00213": {
+  "run": "agent_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00214": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00215": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00216": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00217": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00218": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00219": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00220": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00221": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00222": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00223": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00224": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00225": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00226": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00227": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00228": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00229": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00230": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00231": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00232": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00233": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00234": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00235": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00236": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00237": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00238": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00239": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00240": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00241": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00242": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00243": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00244": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00245": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00246": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00247": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00248": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00249": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00250": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00251": {
+  "run": "a2_llm_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ },
+ "j00252": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00253": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00254": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00255": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00256": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00257": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00258": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00259": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00260": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00261": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00262": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00263": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00264": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00265": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00266": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00267": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00268": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00269": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00270": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00271": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00272": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00273": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00274": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00275": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00276": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00277": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00278": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00279": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00280": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00281": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00282": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00283": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00284": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00285": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00286": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00287": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00288": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00289": {
+  "run": "a2_agent_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""답하는 모델 비교표: gpt-5.6-terra vs Claude (API 없음, 저장된 채점 결과만, 2026-11-16).
+"""답하는 모델 비교표: gpt-5.6-terra vs Claude Opus 5.5 vs Qwen3-14B (API 없음, 저장된 채점 결과만, 2026-11-16).
 
 같은 문항·같은 지시문·같은 발췌(에이전트는 gpt 에이전트가 검색한 5쪽 재사용)로 받은 답을 비교한다.
   A형   본 점수(금기 6문항 제외 101문항, 맞음 1·부분 0.5) · gpt-6-sol 채점 v2.1 첫 회(graded_v21.jsonl)
@@ -22,7 +22,7 @@ import eval_a as E  # noqa: E402
 import risk_analysis as R  # noqa: E402
 
 OUT, EV = HERE / "output", HERE / "eval_out"
-MODELS = ["gpt-5.6-terra", "claude-opus-5-5"]
+MODELS = ["gpt-5.6-terra", "claude-opus-5-5", "qwen3-14b-bf16"]  # qwen3-14b-bf16: 서버 vLLM 원본 정밀도 (2026-11-16 추가)
 ARMS = {"llm": "기본 AI", "agent": "에이전트"}
 SCORE = E.SCORE
 

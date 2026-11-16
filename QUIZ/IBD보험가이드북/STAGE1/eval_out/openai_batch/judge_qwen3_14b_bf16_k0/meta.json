@@ -1,0 +1,14 @@
+{
+ "tag": "judge_qwen3_14b_bf16_k0",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "llm_qwen3-14b-bf16:output/a_items.jsonl",
+  "agent_qwen3-14b-bf16:output/a_items.jsonl",
+  "a2_llm_qwen3-14b-bf16:output/a2_items.jsonl",
+  "a2_agent_qwen3-14b-bf16:output/a2_items.jsonl"
+ ],
+ "requests": 290,
+ "built": "2026-11-16T16:59:48"
+}

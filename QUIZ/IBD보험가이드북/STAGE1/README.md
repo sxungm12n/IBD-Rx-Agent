@@ -195,8 +195,9 @@ python3 STAGE1/make_a.py
 | `regrade_v2_batch.py` | `regrade_v2.py`와 같은 v2.1 채점을 배치로: `build --job run:items` → `submit --yes` → `status` → `fetch` | OpenAI Batch · gpt-6-sol · `.venv_claude` | `graded_v21.jsonl`(regrade_v2와 같은 모양), `eval_out/openai_batch/<tag>/` |
 | `eval_local_mlx.py` | 내 Mac(Apple 칩)에서 공개 모델로 답 받기. 기본 `mlx-community/Qwen3-14B-4bit` | 요금 없음 · `.venv_mlx`(mlx-lm) | `eval_out/<유형>_<대상>_qwen3-14b-4bit/`, 실행 기록 `eval_out/local_mlx/` |
 | `eval_local_cuda.py` (+ `run_qwen_cuda.sh`) | NVIDIA GPU에서 원본 `Qwen/Qwen3-14B`(bf16)로 답 받기. `eval_local_mlx.py`와 같은 문항·지시문·샘플링, 엔진만 vLLM. `run_qwen_cuda.sh`는 모델 다운로드→실행을 하고 진행을 `logs/`(STATUS.txt·qwen_cuda.log·eval.log)에 남김. 기본 GPU 1번(`GPU=0 ./run_qwen_cuda.sh`로 변경). 이 서버는 nvcc·ninja가 없어 `VLLM_USE_FLASHINFER_SAMPLER=0` 필요 | 요금 없음 · `.venv_cuda`(Python 3.12, vllm) | `eval_out/<유형>_<대상>_qwen3-14b-bf16/`, 실행 기록 `eval_out/local_cuda/` |
-| `compare_models.py` | 모델별 정확도·짝 비교·안전 오답 표 | 없음 | `eval_out/모델비교.md` |
+| `compare_models.py` | 모델별 정확도·짝 비교·안전 오답 표 (gpt-5.6-terra · claude-opus-5-5 · qwen3-14b-bf16) | 없음 | `eval_out/모델비교.md` |
 | `findings_by_model.py` | gpt로 정리한 발견(기준 혼동·축약·빠뜨린 약·안전 오답)을 같은 규칙으로 모델마다 계산. gpt 값이 기존 보고서와 같게 나와야 한다 | 없음 | `eval_out/모델별발견.json`·`.md` |
+| `error_analysis_models.py` | 세 모델 × 두 대상 오답 원인을 코드 규칙으로 분류(검색/읽기/답변, C형 방향, D형 사건). gpt 에이전트 손 분류와 28건 중 27건 일치. Qwen 약 이름 표기 대응표 `NAME_VARIANTS`(Claude 판단, 사람 검수 전)와 표기 변형 인정 시 참고값 | 없음 | `eval_out/오답원인_모델별.json`·`.md`, 해석 `eval_out/오류분석_세모델_정리.md` |
 
 ```bash
 cd STAGE1
@@ -204,7 +205,7 @@ cd STAGE1
 .venv_claude/bin/python eval_claude_batch.py fetch --tag full            # 끝난 배치 결과 받기 (무료)
 .venv_claude/bin/python regrade_v2_batch.py build --job agent_claude-opus-5-5:output/a_items.jsonl --dry
 .venv_mlx/bin/python eval_local_mlx.py --types C D --limit 5 --think on  # 내 Mac 파일럿
-python3 compare_models.py && python3 findings_by_model.py                 # 비교표 (무료)
+python3 compare_models.py && python3 findings_by_model.py && python3 error_analysis_models.py   # 비교표·오답 원인 (무료)
 ```
 
 - 키: `STAGE1/.env`의 `ANTHROPIC_API_KEY`, OpenAI 키는 기존과 같다(`eval_a.load_env`).
@@ -222,7 +223,7 @@ python3 compare_models.py && python3 findings_by_model.py                 # 비�
 | `graded.jsonl`, `graded_v2*.jsonl`, `results.csv`, `summary.json`, `human_check.csv` | 예전 v1·v2 채점 결과 (지금 결과에 쓰지 않음) |
 | `claude_review_NOT_human.csv` | v1 판정을 Claude가 검토한 것. 사람 판정이 아니므로 기준 정답으로 쓰지 않는다 (`eval_out/README_판정주체.md`) |
 
-그 밖의 실행 폴더: `d_options_*`(보기형 D형, 평가에 쓰지 않음), `evolve_smoke`(자기진화 시험 실행), `*_claude-opus-5-5`·`*_qwen3-14b-4bit`(다른 모델, 5b절), `claude_batch/`·`openai_batch/`(배치 요청·원본 결과·실측 비용), `local_mlx/`(내 Mac 실행 기록).
+그 밖의 실행 폴더: `d_options_*`(보기형 D형, 평가에 쓰지 않음), `evolve_smoke`(자기진화 시험 실행), `*_claude-opus-5-5`·`*_qwen3-14b-bf16`(GPU 서버 전체 실행)·`*_qwen3-14b-4bit`(맥 파일럿)(다른 모델, 5b절), `claude_batch/`·`openai_batch/`(배치 요청·원본 결과·실측 비용), `local_mlx/`(내 Mac 실행 기록), `local_cuda/`(GPU 서버 실행 기록). Qwen A·A2형 채점 배치: `openai_batch/judge_qwen3_14b_bf16_k0/` (2026-11-16, $1.91).
 
 ## 7. 예전 방식과 보관 (재현용으로 남겨 둠)
 

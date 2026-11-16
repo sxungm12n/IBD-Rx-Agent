@@ -30,7 +30,7 @@ import quote_check as Q  # noqa: E402
 import risk_analysis as R  # noqa: E402
 
 OUT, EV = HERE / "output", HERE / "eval_out"
-MODELS = ["gpt-5.6-terra", "claude-opus-5-5"]
+MODELS = ["gpt-5.6-terra", "claude-opus-5-5", "qwen3-14b-bf16"]  # qwen3-14b-bf16: 서버 vLLM 원본 정밀도 (2026-11-16 추가)
 TNF = re.compile(r"TNF|종양괴사")
 TNF_BIO = re.compile(r"TNF|종양괴사|생물학제제")
 DPAGE = {("Infliximab", "CD"): [35, 38], ("Infliximab", "UC"): [36, 39], ("Infliximab", "GIBD"): [37],
