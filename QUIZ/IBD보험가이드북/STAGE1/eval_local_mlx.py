@@ -58,6 +58,8 @@ def plan(a, label: str) -> list[dict]:
                         skipped.append(item["id"])
                         continue
                     system, user = B.agent_prompt(item, sources)
+                elif arm == "llm-same":   # 발췌 없음, RAG와 같은 지시문 틀 (2026-11-23)
+                    system, user = B.no_rag_prompt(item)
                 else:
                     system, user = B.llm_prompt(item)
                 todo.append({"type": typ, "arm": arm, "item": item, "sources": sources, "system": system, "user": user, "path": path})
@@ -129,7 +131,7 @@ def main() -> int:
     p.add_argument("--model", default="mlx-community/Qwen3-14B-4bit")
     p.add_argument("--label", default="qwen3-14b-4bit", help="결과 폴더 이름에 붙는 모델 라벨")
     p.add_argument("--types", nargs="+", default=list(B.TYPES), choices=list(B.TYPES))
-    p.add_argument("--arms", nargs="+", default=["llm", "agent"], choices=["llm", "agent"])
+    p.add_argument("--arms", nargs="+", default=["llm", "agent"], choices=["llm", "agent", "llm-same"])
     p.add_argument("--limit", type=int, help="유형마다 앞에서 N문항만")
     p.add_argument("--think", choices=["on", "off"], default="on")
     p.add_argument("--max-tokens", type=int, default=6000)

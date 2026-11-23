@@ -19,7 +19,7 @@ if C.exists():  # C형 환자 사례 판정 (2026-11-11)
     items += [json.loads(l) for l in C.read_text(encoding="utf-8").splitlines() if l.strip()]
 
 def ckey(it):
-    """evolve.py의 묶음 키와 같다: 평가 시점, 그리고 '함께 써도 정답' 중 시점 대안·고령 함정의 체크리스트 인용 허용은 뺀다."""
+    """A형 내용 묶음 키: 평가 시점, 그리고 '함께 써도 정답' 중 시점 대안·고령 함정의 체크리스트 인용 허용은 뺀다."""
     k = {a: b for a, b in it["answer"]["채점"].items() if a != "시점"}
     alt = k.get("함께 써도 정답")
     if (isinstance(alt, dict) and set(alt) <= {"시점", "이유"}) or (it["기준"].startswith("고령") and isinstance(alt, str)):

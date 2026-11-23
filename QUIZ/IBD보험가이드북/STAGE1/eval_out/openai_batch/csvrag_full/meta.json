@@ -1,0 +1,16 @@
+{
+ "tag": "csvrag_full",
+ "model": "gpt-5.6-terra",
+ "arm": "csvrag",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "limit": 0,
+ "requests": 380,
+ "건너뜀": [],
+ "발췌 출처": "eval_out/csv_rag/retrieved_<유형>.jsonl (CSV 행 상위 5)",
+ "built": "2026-11-23T12:23:41"
+}

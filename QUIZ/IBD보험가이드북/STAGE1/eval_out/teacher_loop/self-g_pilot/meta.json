@@ -1,0 +1,112 @@
+{
+ "arm": "self",
+ "pilot": true,
+ "표본": {
+  "pilot": 0,
+  "오답": 3,
+  "정답": 2
+ },
+ "seed": 20261120,
+ "teacher": [
+  "openai",
+  "gpt-5.6-terra"
+ ],
+ "teacher_prompt": "일반(g)",
+ "student": "gpt-5.6-terra",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-23T01:45:41",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_teacher_r1",
+   "kind": "teacher",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 20,
+   "built": "2026-11-23T01:45:41",
+   "batch_id": "batch_6b031dbe4d6c819098f3eccc3ac4dbd2",
+   "input_file_id": "file-Tv7fQhigvy2ewmamaEwyWS",
+   "submitted": "2026-11-23T01:52:14",
+   "fetched": "2026-11-23T01:55:23",
+   "usage": {
+    "input_tokens": 75251,
+    "output_tokens": 7464,
+    "cost_usd": 0.12
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 11,
+    "다시 읽어": 2,
+    "더 찾아": 7
+   }
+  },
+  {
+   "name": "02_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 9,
+   "built": "2026-11-23T01:55:23",
+   "batch_id": "batch_6b031e7cb24c8190b98d359b3d701f10",
+   "input_file_id": "file-GsvX1x4jHPeiMqxBm3Kv41",
+   "submitted": "2026-11-23T01:55:24",
+   "fetched": "2026-11-23T01:57:33",
+   "usage": {
+    "input_tokens": 36568,
+    "output_tokens": 2367,
+    "cost_usd": 0.0508
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 9
+   }
+  },
+  {
+   "name": "03_teacher_r2",
+   "kind": "teacher",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 9,
+   "built": "2026-11-23T01:57:33",
+   "batch_id": "batch_6b031efee5f08190aac1660859f15649",
+   "input_file_id": "file-QMxGMUBWxVgwLuvWsi3Dwx",
+   "submitted": "2026-11-23T01:57:35",
+   "fetched": "2026-11-23T01:59:58",
+   "usage": {
+    "input_tokens": 42956,
+    "output_tokens": 7875,
+    "cost_usd": 0.0902
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 4,
+    "더 찾아": 5
+   }
+  },
+  {
+   "name": "04_student_r2",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 5,
+   "built": "2026-11-23T02:00:13",
+   "batch_id": "batch_6b031f9fedd881908c240890020f5ada",
+   "input_file_id": "file-QCzpaCoHH7qm2WiKJdGMPr",
+   "submitted": "2026-11-23T02:00:16",
+   "fetched": "2026-11-23T02:10:30",
+   "usage": {
+    "input_tokens": 27244,
+    "output_tokens": 2590,
+    "cost_usd": 0.0428
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 5
+   }
+  }
+ ],
+ "pending": null
+}

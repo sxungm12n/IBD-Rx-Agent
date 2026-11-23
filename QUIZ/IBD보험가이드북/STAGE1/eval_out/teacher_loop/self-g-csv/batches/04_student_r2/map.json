@@ -1,0 +1,22 @@
+{
+ "s00000": "D-cd-prior1",
+ "s00001": "D-cd-malig-tnf",
+ "s00002": "D-cd-68-tnf-hb75",
+ "s00003": "D-uc-base",
+ "s00004": "D-uc-mayo5",
+ "s00005": "D-uc-5asa",
+ "s00006": "D-uc-intol",
+ "s00007": "D-uc-68",
+ "s00008": "D-uc-68-tnf",
+ "s00009": "D-uc-cv",
+ "s00010": "D-uc-recent-mi",
+ "s00011": "D-uc-hb85",
+ "s00012": "D-uc-hb75",
+ "s00013": "D-uc-anc900",
+ "s00014": "D-uc-alc450",
+ "s00015": "D-uc-68-hb85",
+ "s00016": "D-uc-tnf-hb85",
+ "s00017": "D-pcd-base",
+ "s00018": "D-pcd-29",
+ "s00019": "D-fcd-abx"
+}

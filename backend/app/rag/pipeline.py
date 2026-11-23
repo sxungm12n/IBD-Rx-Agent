@@ -45,12 +45,12 @@ class Engine:
         return engine
 
     def answer(
-        self, question: str, *, answer_only: bool = False, playbook: str | None = None, answer_style: str = "short"
+        self, question: str, *, answer_only: bool = False, answer_style: str = "short"
     ) -> tuple[str, list[Passage]]:
         selected = [hit.passage for hit in self.trace(question)["rerank"][:ANSWER_K]]
         logger.info("guide ask sources=%s", [passage.id for passage in selected])
         return (
-            generate_answer(question, selected, answer_only=answer_only, playbook=playbook, answer_style=answer_style),
+            generate_answer(question, selected, answer_only=answer_only, answer_style=answer_style),
             selected,
         )
 
@@ -159,12 +159,12 @@ class GuideService:
             return {"passages": None, "reranker": "loading", "detail": None}
 
     def ask(
-        self, question: str, *, answer_only: bool = False, playbook: str | None = None, answer_style: str = "short"
+        self, question: str, *, answer_only: bool = False, answer_style: str = "short"
     ) -> tuple[str, list[Passage]]:
         return self._with_engine(
             question,
             lambda engine, cleaned: engine.answer(
-                cleaned, answer_only=answer_only, playbook=playbook, answer_style=answer_style
+                cleaned, answer_only=answer_only, answer_style=answer_style
             ),
         )
 

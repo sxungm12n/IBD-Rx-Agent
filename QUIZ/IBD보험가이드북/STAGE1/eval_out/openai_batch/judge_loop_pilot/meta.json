@@ -1,0 +1,16 @@
+{
+ "tag": "judge_loop_pilot",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "loop-route_pilot_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-route_pilot_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-self_pilot_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-self_pilot_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-opus_pilot_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-opus_pilot_gpt-5.6-terra:output/a2_items.jsonl"
+ ],
+ "requests": 30,
+ "built": "2026-11-20T17:31:55"
+}

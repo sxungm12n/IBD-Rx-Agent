@@ -1,0 +1,246 @@
+W1118 16:05:48.527000 47879 .venv_rag/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 6965.99it/s]
+검색 대상 44청크 (IBD_insurance_csv_2024.embeddings.jsonl)
+  A 20/107
+  A 40/107
+  A 60/107
+  A 80/107
+  A 100/107
+A: retrieved_A.jsonl (이번 실행 정답 행 상위 5 포함 107/107, 1166초)
+  A2 20/38
+A2: retrieved_A2.jsonl (이번 실행 정답 행 상위 5 포함 30/30, 398초)
+  C 20/198
+  C 40/198
+  C 60/198
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/_base_client.py", line 1005, in request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/backend/app/rag/embed.py", line 17, in embed_query
+    response = OpenAI(api_key=key).embeddings.create(model=EMBEDDING_MODEL, input=text)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/resources/embeddings.py", line 132, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/embeddings",
+        ^^^^^^^^^^^^^^
+    ...<8 lines>...
+        cast_to=CreateEmbeddingResponse,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/_base_client.py", line 1037, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/csv_rag_retrieve.py", line 98, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/csv_rag_retrieve.py", line 74, in main
+    trace = engine.trace(item["question"])
+  File "/Users/limseongmin/IBD Rx Agent/backend/app/rag/pipeline.py", line 84, in trace
+    semantic = self._vectors.ranked(embed_query(question), VECTOR_K)
+                                    ~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/backend/app/rag/embed.py", line 19, in embed_query
+    raise GuideError(f"질문 임베딩에 실패했습니다. {exc}") from exc
+app.rag.errors.GuideError: 질문 임베딩에 실패했습니다. Connection error.
+W1118 16:47:33.366000 52135 .venv_rag/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 7209.01it/s]
+검색 대상 44청크 (IBD_insurance_csv_2024.embeddings.jsonl)
+A: retrieved_A.jsonl (이번 실행 정답 행 상위 5 포함 해당 없음, 0초)
+A2: retrieved_A2.jsonl (이번 실행 정답 행 상위 5 포함 해당 없음, 0초)
+  C-ADA-UC-prior-short 재시도 1: 질문 임베딩에 실패했습니다. Connection error.
+  C-ADA-UC-prior-short 재시도 2: 질문 임베딩에 실패했습니다. Request timed out.
+  C-ADA-UC-prior-short 재시도 3: 질문 임베딩에 실패했습니다. Connection error.
+  C 80/198
+  C-ADA-UC-prior-intol 재시도 1: 질문 임베딩에 실패했습니다. Connection error.
+  C-ADA-UC-prior-intol 재시도 2: 질문 임베딩에 실패했습니다. Connection error.
+  C-ADA-UC-prior-intol 재시도 3: 질문 임베딩에 실패했습니다. Connection error.
+  C-ADA-UC-prior-intol 재시도 4: 질문 임베딩에 실패했습니다. Connection error.
+  C-ADA-UC-prior-intol 재시도 5: 질문 임베딩에 실패했습니다. Connection error.
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/_base_client.py", line 1005, in request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/backend/app/rag/embed.py", line 17, in embed_query
+    response = OpenAI(api_key=key).embeddings.create(model=EMBEDDING_MODEL, input=text)
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/resources/embeddings.py", line 132, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/embeddings",
+        ^^^^^^^^^^^^^^
+    ...<8 lines>...
+        cast_to=CreateEmbeddingResponse,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.14/site-packages/openai/_base_client.py", line 1037, in request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/csv_rag_retrieve.py", line 107, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/limseongmin/IBD Rx Agent/QUIZ/IBD보험가이드북/STAGE1/csv_rag_retrieve.py", line 77, in main
+    trace = engine.trace(item["question"])
+  File "/Users/limseongmin/IBD Rx Agent/backend/app/rag/pipeline.py", line 84, in trace
+    semantic = self._vectors.ranked(embed_query(question), VECTOR_K)
+                                    ~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/limseongmin/IBD Rx Agent/backend/app/rag/embed.py", line 19, in embed_query
+    raise GuideError(f"질문 임베딩에 실패했습니다. {exc}") from exc
+app.rag.errors.GuideError: 질문 임베딩에 실패했습니다. Connection error.
+W1118 20:46:53.084000 53373 .venv_rag/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 5406.22it/s]
+검색 대상 44청크 (IBD_insurance_csv_2024.embeddings.jsonl)
+A: retrieved_A.jsonl (이번 실행 정답 행 상위 5 포함 해당 없음, 0초)
+A2: retrieved_A2.jsonl (이번 실행 정답 행 상위 5 포함 해당 없음, 0초)
+/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-53373-2u3xvl5m'}
+  warnings.warn(
+== Wed Nov 18 22:57:02 KST 2026 재시작 (시간 제한 추가)
+W1118 22:57:11.715000 54891 .venv_rag/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 6877.97it/s]
+검색 대상 44청크 (IBD_insurance_csv_2024.embeddings.jsonl)
+  C 100/198
+  C 120/198
+  C 140/198
+  C 160/198
+  C 180/198
+C: retrieved_C.jsonl (이번 실행 정답 행 상위 5 포함 115/115, 1448초)
+  D 20/37
+D: retrieved_D.jsonl (이번 실행 정답 행 상위 5 포함 해당 없음, 478초)

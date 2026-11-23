@@ -3,6 +3,7 @@
 실행:
     pip install openai python-dotenv
     python Embedding.py
+    python Embedding.py --source IBD_insurance_csv_2024.jsonl --output IBD_insurance_csv_2024.embeddings.jsonl
 
 키는 같은 폴더의 .env에 OPENAI_API_KEY로 둔다.
 결과는 IBD_insurance_guide_2024.embeddings.jsonl 에 원문 필드와 벡터를 함께 쓴다.
@@ -10,6 +11,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 from pathlib import Path
@@ -53,9 +55,16 @@ def main() -> None:
     if not api_key:
         raise SystemExit("data/RAG/.env에 OPENAI_API_KEY를 넣어 주세요.")
 
-    records = load_records(SOURCE)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source", type=Path, default=SOURCE)
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    args = parser.parse_args()
+    source = args.source if args.source.is_absolute() else HERE / args.source
+    output = args.output if args.output.is_absolute() else HERE / args.output
+
+    records = load_records(source)
     client = OpenAI(api_key=api_key)
-    temporary = OUTPUT.with_suffix(OUTPUT.suffix + ".tmp")
+    temporary = output.with_suffix(output.suffix + ".tmp")
 
     with temporary.open("w", encoding="utf-8") as handle:
         for start in range(0, len(records), BATCH_SIZE):
@@ -69,8 +78,8 @@ def main() -> None:
             done = min(start + BATCH_SIZE, len(records))
             print(f"{done}/{len(records)}", flush=True)
 
-    temporary.replace(OUTPUT)
-    print(f"저장: {OUTPUT}")
+    temporary.replace(output)
+    print(f"저장: {output}")
 
 
 if __name__ == "__main__":

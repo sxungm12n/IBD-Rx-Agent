@@ -1,0 +1,152 @@
+{
+ "j00000": {
+  "run": "loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00001": {
+  "run": "loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00002": {
+  "run": "loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00003": {
+  "run": "loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00004": {
+  "run": "loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00005": {
+  "run": "a2_loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00006": {
+  "run": "a2_loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00007": {
+  "run": "a2_loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00008": {
+  "run": "a2_loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00009": {
+  "run": "a2_loop-route_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00010": {
+  "run": "loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00011": {
+  "run": "loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00012": {
+  "run": "loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00013": {
+  "run": "loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00014": {
+  "run": "loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00015": {
+  "run": "a2_loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00016": {
+  "run": "a2_loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00017": {
+  "run": "a2_loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00018": {
+  "run": "a2_loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00019": {
+  "run": "a2_loop-self_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00020": {
+  "run": "loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00021": {
+  "run": "loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00022": {
+  "run": "loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00023": {
+  "run": "loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00024": {
+  "run": "loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00025": {
+  "run": "a2_loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00026": {
+  "run": "a2_loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00027": {
+  "run": "a2_loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00028": {
+  "run": "a2_loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00029": {
+  "run": "a2_loop-opus_pilot_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ }
+}

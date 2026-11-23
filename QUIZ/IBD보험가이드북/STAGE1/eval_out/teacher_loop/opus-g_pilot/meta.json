@@ -1,0 +1,110 @@
+{
+ "arm": "opus",
+ "pilot": true,
+ "표본": {
+  "pilot": 0,
+  "오답": 3,
+  "정답": 2
+ },
+ "seed": 20261120,
+ "teacher": [
+  "anthropic",
+  "claude-opus-5-5"
+ ],
+ "teacher_prompt": "일반(g)",
+ "student": "gpt-5.6-terra",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-23T01:45:41",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_teacher_r1",
+   "kind": "teacher",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "requests": 20,
+   "built": "2026-11-23T01:45:41",
+   "batch_id": "msgbatch_01AS3DHWHysfJpqWU8KY4rFu",
+   "submitted": "2026-11-23T01:52:17",
+   "fetched": "2026-11-23T01:53:36",
+   "usage": {
+    "input_tokens": 126048,
+    "output_tokens": 10743,
+    "cost_usd": 0.3595
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 11,
+    "다시 읽어": 3,
+    "더 찾아": 6
+   }
+  },
+  {
+   "name": "02_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 9,
+   "built": "2026-11-23T01:54:18",
+   "batch_id": "batch_6b031e3d18208190ac54a31d61c8a7f0",
+   "input_file_id": "file-XF2C9FDRAFBr47PeadNnUx",
+   "submitted": "2026-11-23T01:54:21",
+   "fetched": "2026-11-23T01:56:29",
+   "usage": {
+    "input_tokens": 37047,
+    "output_tokens": 2576,
+    "cost_usd": 0.0525
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 9
+   }
+  },
+  {
+   "name": "03_teacher_r2",
+   "kind": "teacher",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "requests": 9,
+   "built": "2026-11-23T01:56:29",
+   "batch_id": "msgbatch_01WinGmXTqwHQveXQFH8iD1q",
+   "submitted": "2026-11-23T01:56:31",
+   "fetched": "2026-11-23T01:58:39",
+   "usage": {
+    "input_tokens": 71463,
+    "output_tokens": 5484,
+    "cost_usd": 0.1978
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 6,
+    "더 찾아": 3
+   }
+  },
+  {
+   "name": "04_student_r2",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 3,
+   "built": "2026-11-23T01:58:53",
+   "batch_id": "batch_6b031f5086748190aca5c1dc1bf7887d",
+   "input_file_id": "file-AjzCzt5RrWWL9emh18vrZA",
+   "submitted": "2026-11-23T01:58:57",
+   "fetched": "2026-11-23T02:01:19",
+   "usage": {
+    "input_tokens": 17835,
+    "output_tokens": 1132,
+    "cost_usd": 0.0246
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 3
+   }
+  }
+ ],
+ "pending": null
+}

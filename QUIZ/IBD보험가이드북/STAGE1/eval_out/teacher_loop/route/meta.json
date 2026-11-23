@@ -1,0 +1,51 @@
+{
+ "arm": "route",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": null,
+ "teacher_prompt": null,
+ "source": "pdf",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "agent",
+ "student": "gpt-5.6-terra",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-23T13:06:10",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 380,
+   "built": "2026-11-23T13:06:11",
+   "batch_id": "batch_6b03bbca4c1c81909281b716db1440f8",
+   "input_file_id": "file-QQa3rgH7Apu8A3hhhQTZon",
+   "submitted": "2026-11-23T13:06:34",
+   "fetched": "2026-11-23T13:09:08",
+   "usage": {
+    "input_tokens": 1563701,
+    "output_tokens": 34357,
+    "cost_usd": 1.7698
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 380
+   }
+  }
+ ],
+ "pending": null
+}

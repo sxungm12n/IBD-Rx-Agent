@@ -1,0 +1,21 @@
+{
+ "s00000": "A-VEDO-SC-UC-G4",
+ "s00001": "A2-ADA-UC-L",
+ "s00002": "A2-ADA-GIBD-L",
+ "s00003": "A2-GOL-UC-L",
+ "s00004": "D-cd-68-tnf",
+ "s00005": "D-cd-malig-tnf",
+ "s00006": "D-cd-anc900",
+ "s00007": "D-cd-68-tnf-hb75",
+ "s00008": "D-uc-base",
+ "s00009": "D-uc-intol",
+ "s00010": "D-uc-68",
+ "s00011": "D-uc-68-tnf",
+ "s00012": "D-uc-cv",
+ "s00013": "D-uc-recent-mi",
+ "s00014": "D-uc-hb85",
+ "s00015": "D-uc-hb75",
+ "s00016": "D-uc-anc900",
+ "s00017": "D-uc-alc450",
+ "s00018": "D-uc-tnf-hb85"
+}

@@ -1,0 +1,727 @@
+{
+ "j00000": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00001": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00002": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00003": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00004": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00005": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00006": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00007": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00008": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00009": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00010": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00011": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00012": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00013": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00014": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00015": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00016": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00017": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00018": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00019": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00020": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00021": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00022": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00023": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00024": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00025": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00026": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00027": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00028": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00029": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00030": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00031": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00032": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00033": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00034": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00035": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00036": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00037": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00038": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00039": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00040": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00041": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00042": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00043": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00044": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00045": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00046": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00047": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00048": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00049": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00050": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00051": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00052": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00053": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00054": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00055": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00056": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00057": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00058": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00059": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00060": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00061": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00062": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00063": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00064": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00065": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00066": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00067": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00068": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00069": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00070": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00071": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00072": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00073": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00074": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00075": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00076": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00077": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00078": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00079": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00080": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00081": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00082": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00083": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00084": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00085": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00086": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00087": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00088": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00089": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00090": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00091": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00092": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00093": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00094": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00095": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00096": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00097": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00098": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00099": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00100": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00101": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00102": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00103": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00104": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00105": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00106": {
+  "run": "csvrag_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00107": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00108": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00109": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00110": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00111": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00112": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00113": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00114": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00115": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00116": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00117": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00118": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00119": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00120": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00121": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00122": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00123": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00124": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00125": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00126": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00127": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00128": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00129": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00130": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00131": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00132": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00133": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00134": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00135": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00136": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00137": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00138": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00139": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00140": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00141": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00142": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00143": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00144": {
+  "run": "a2_csvrag_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "tag": "llm_same_full",
+ "model": "gpt-5.6-terra",
+ "arm": "llm-same",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "limit": 0,
+ "requests": 380,
+ "건너뜀": [],
+ "발췌 출처": "발췌 없음 (RAG와 같은 지시문 틀)",
+ "built": "2026-11-23T13:06:11"
+}

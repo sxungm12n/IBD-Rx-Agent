@@ -52,6 +52,11 @@ python3 STAGE1/analyze_errors.py && python3 STAGE1/simulate_retrieval.py && pyth
 - **A2형:** CSV 메모(notes)에서 R 재투여 · P 교체·처방 · T 혈중농도 검사 · W 교체투여(스위치) · L 처방 기간 · J 자가주사 일지 · D 용량 증량 영역을 뽑는다. 약과 무관한 일반 규칙은 '일반' 문항 1개로만 만든다.
 - **C형:** 약·적응증 25행마다 모든 조건을 만족하는 기본 환자를 만들고 조건을 하나씩 깬다. 경계값(CDAI 220 인정 / 219 불인정)과 함정 18문항(비-TNF 약에 TNF 실패 불필요, 약마다 다른 Hb 하한, 고령 조항 없는 약)을 둔다.
 - **D형:** 환자를 가이드북의 9개 성분에 하나씩 대입해 정답 집합을 계산한다. 보기를 주지 않아 해외 허가 약·이미 실패한 약을 쓰는지도 본다.
+- **C·D형 확장 세트 (2026-11-23, 아직 답 받기 전):** 같은 스크립트가 `c_ext_items.jsonl`(144문항)과 `d_ext_items.jsonl`(64문항)을 따로 쓴다. 기존 `c_items.jsonl`·`d_items.jsonl`은 글자 하나 바뀌지 않으므로 기존 답과 채점은 그대로 유효하다.
+  - C 확장: 경계값 충족(나이·Hb·ANC·ALC가 기준값 그대로, Mayo 12) · JAK 심혈관/악성종양 위험 경로 · 활성도+이전 치료 동시 미달 · 이전 치료 정보 없음(판단 불가) · 유지 기준 경계(CDAI·PCDAI '또는'의 한쪽 경로와 그 바로 아래, Mayo '그리고'의 한쪽 미달·직장출혈 조건, DAIBD·누공 경계). PUCAI 유지 경계는 '기준'을 두 가지로 읽을 수 있어 만들지 않는다.
+  - D 확장: 환자 유형 6개마다 기본 환자에서 조건을 1개 또는 2개 바꾼 조합을 모두 만든다. 1개 변경은 모두 두고, 2개 변경은 두 조건이 함께 있어야 답이 달라질 때만 둔다(인정 약 없음 제외). 버린 조합 수는 `d_ext_summary.json`에, 검수용 표는 `d_ext_review.md`에 있다.
+  - 검수할 점: 소아 크론병에서 '완전장관영양법+스테로이드' 실패면 Adalimumab이 제외된다. CSV의 ADA 소아 행 보편적 치료 목록에 완전장관영양법이 없기 때문이다(`D-x-pcd-영양법+스테로이드`, IFX는 인정).
+  - 같은 CSV 행에서 나온 문항이라 서로 독립이 아니다. 기존 세트와 합쳐 보고할 때는 행 단위 분석도 함께 보고한다.
 
 ### A형 상세
 A형은 "이 약은 어떤 기준이면 급여되나"를 묻는 **서술형 단답** 문항이다. 보기는 주지 않는다. C형(환자에게 적용)과 짝을 이룬다.
@@ -195,6 +200,9 @@ python3 STAGE1/make_a.py
 | `regrade_v2_batch.py` | `regrade_v2.py`와 같은 v2.1 채점을 배치로: `build --job run:items` → `submit --yes` → `status` → `fetch` | OpenAI Batch · gpt-6-sol · `.venv_claude` | `graded_v21.jsonl`(regrade_v2와 같은 모양), `eval_out/openai_batch/<tag>/` |
 | `eval_local_mlx.py` | 내 Mac(Apple 칩)에서 공개 모델로 답 받기. 기본 `mlx-community/Qwen3-14B-4bit` | 요금 없음 · `.venv_mlx`(mlx-lm) | `eval_out/<유형>_<대상>_qwen3-14b-4bit/`, 실행 기록 `eval_out/local_mlx/` |
 | `eval_local_cuda.py` (+ `run_qwen_cuda.sh`) | NVIDIA GPU에서 원본 `Qwen/Qwen3-14B`(bf16)로 답 받기. `eval_local_mlx.py`와 같은 문항·지시문·샘플링, 엔진만 vLLM. `run_qwen_cuda.sh`는 모델 다운로드→실행을 하고 진행을 `logs/`(STATUS.txt·qwen_cuda.log·eval.log)에 남김. 기본 GPU 1번(`GPU=0 ./run_qwen_cuda.sh`로 변경). 이 서버는 nvcc·ninja가 없어 `VLLM_USE_FLASHINFER_SAMPLER=0` 필요 | 요금 없음 · `.venv_cuda`(Python 3.12, vllm) | `eval_out/<유형>_<대상>_qwen3-14b-bf16/`, 실행 기록 `eval_out/local_cuda/` |
+| `csv_rag_retrieve.py` · `eval_csvrag_batch.py` | CSV-RAG: CSV 44행을 청크로 같은 BM25·임베딩·리랭커 검색(`.venv_rag`, Mac MPS) → gpt-5.6-terra 배치로 답. `--arm llm-same`은 발췌 없는 기본 AI를 RAG와 같은 지시문 틀로(`eval_claude_batch.no_rag_prompt`) | 배치 과금 | `eval_out/csv_rag/`, `eval_out/<유형>_{csvrag,llm-same}_gpt-5.6-terra/` |
+| `teacher_loop.py` | 선생–학생 검토·재검색 루프(설계 `TEACHER_LOOP_PLAN.md`, 지시문 점검 `PROMPT_REVIEW.md`). 조건 `--arm self·opus·route·reask`, `--source pdf·csv`, `--student gpt·qwen`. 일반 선생 지시문(해시 60e30c0dc140), 맞춤 지시문은 `_archive/`에 보관 | 배치 과금(gpt·Opus), qwen은 로컬 | `eval_out/teacher_loop[_qwen3-14b-bf16]/<조건>/`, `eval_out/<유형>_loop-<조건>_<학생>/` |
+| `run_local_batch.py` (+ `run_qwen_loop.sh`) | `--student qwen` 루프의 로컬 배치를 Qwen3-14B로 채움(vLLM bf16, Mac은 `--engine mlx`). `run_qwen_loop.sh`는 GPU 서버에서 네 조건을 끝까지 돌림 | 요금 없음(opus 선생만 과금) | `batches/<이름>/results_local.jsonl` |
 | `compare_models.py` | 모델별 정확도·짝 비교·안전 오답 표 (gpt-5.6-terra · claude-opus-5-5 · qwen3-14b-bf16) | 없음 | `eval_out/모델비교.md` |
 | `findings_by_model.py` | gpt로 정리한 발견(기준 혼동·축약·빠뜨린 약·안전 오답)을 같은 규칙으로 모델마다 계산. gpt 값이 기존 보고서와 같게 나와야 한다 | 없음 | `eval_out/모델별발견.json`·`.md` |
 | `error_analysis_models.py` | 세 모델 × 두 대상 오답 원인을 코드 규칙으로 분류(검색/읽기/답변, C형 방향, D형 사건). gpt 에이전트 손 분류와 28건 중 27건 일치. Qwen 약 이름 표기 대응표 `NAME_VARIANTS`(Claude 판단, 사람 검수 전)와 표기 변형 인정 시 참고값 | 없음 | `eval_out/오답원인_모델별.json`·`.md`, 해석 `eval_out/오류분석_세모델_정리.md` |
@@ -223,12 +231,11 @@ python3 compare_models.py && python3 findings_by_model.py && python3 error_analy
 | `graded.jsonl`, `graded_v2*.jsonl`, `results.csv`, `summary.json`, `human_check.csv` | 예전 v1·v2 채점 결과 (지금 결과에 쓰지 않음) |
 | `claude_review_NOT_human.csv` | v1 판정을 Claude가 검토한 것. 사람 판정이 아니므로 기준 정답으로 쓰지 않는다 (`eval_out/README_판정주체.md`) |
 
-그 밖의 실행 폴더: `d_options_*`(보기형 D형, 평가에 쓰지 않음), `evolve_smoke`(자기진화 시험 실행), `*_claude-opus-5-5`·`*_qwen3-14b-bf16`(GPU 서버 전체 실행)·`*_qwen3-14b-4bit`(맥 파일럿)(다른 모델, 5b절), `claude_batch/`·`openai_batch/`(배치 요청·원본 결과·실측 비용), `local_mlx/`(내 Mac 실행 기록), `local_cuda/`(GPU 서버 실행 기록). Qwen A·A2형 채점 배치: `openai_batch/judge_qwen3_14b_bf16_k0/` (2026-11-16, $1.91).
+그 밖의 실행 폴더: `d_options_*`(보기형 D형, 평가에 쓰지 않음), `*_claude-opus-5-5`·`*_qwen3-14b-bf16`(GPU 서버 전체 실행)·`*_qwen3-14b-4bit`(맥 파일럿)(다른 모델, 5b절), `claude_batch/`·`openai_batch/`(배치 요청·원본 결과·실측 비용), `local_mlx/`(내 Mac 실행 기록), `local_cuda/`(GPU 서버 실행 기록). Qwen A·A2형 채점 배치: `openai_batch/judge_qwen3_14b_bf16_k0/` (2026-11-16, $1.91).
 
 ## 7. 예전 방식과 보관 (재현용으로 남겨 둠)
 
 - **v1 채점 (`eval_a.py --phase judge`):** 채점자가 원문을 못 보는 방식. 2026-10-27 첫 결과에 썼고, 지금은 v2.1로 바꿨다. 예전 결과를 다시 만들 수 있게 코드는 지우지 않았다. `human_check.csv`(v1 기준 표본)도 쓰지 않는다. 사람 검증은 `make_judge_check.py`로 새로 한다.
 - **보기형 D형 (`d_options`):** `make_d.py`가 함께 만들고 `score_cases.py`가 채점할 수 있지만 평가에는 쓰지 않는다.
-- **자기진화 실험 (`evolve/`):** 경험 노트(playbook)를 에이전트 프롬프트에 붙이는 실험. 2026-11-10 시험 실행까지만 했다. `evolve/split.json`은 A형 내용 묶음 30개를 두 묶음(16·14)으로 나눈 것으로 이 실험에만 쓴다. 묶음 자체는 코드가 계산한다(평가 시점을 뺀 채점 열쇠가 같은 문항, `evolve.py`와 `make_review_xlsx.py`에 같은 규칙).
 - **문항 수정 이력:** 고치기 전 문항은 `output/_backup_<날짜>/`, 고치기 전 답·채점은 `eval_out/<실행>/superseded_*.jsonl`.
 - **`_archive/`:** 더 쓰지 않는 스크립트와 예전 시험 결과. 2026-11-10 채점 비교를 다시 만드는 방법도 `_archive/README.md`에 있다(2026-11-15 확인: 저장된 결과와 같음).

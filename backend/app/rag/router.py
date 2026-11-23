@@ -15,8 +15,6 @@ router = APIRouter(prefix="/api/guide", tags=["guide"])
 class AskRequest(BaseModel):
     question: str = Field(min_length=2, max_length=2000)
     answer_only: bool = False
-    # 평가용: 자기진화 경험 노트(또는 채점 규칙)를 답변 프롬프트에 붙인다. 검색에는 쓰지 않는다.
-    playbook: str | None = Field(default=None, max_length=20000)
     # 평가용 답 형식 (answer_only일 때): short=단답(A·A2형), case=환자 판정(C형), drugs=약제 선택(D형), open_drugs=보기 없는 약제 선택(D2형)
     answer_style: Literal["short", "case", "drugs", "open_drugs"] = "short"
 
@@ -54,7 +52,6 @@ async def ask(body: AskRequest) -> AskResponse:
             guide_service.ask,
             body.question,
             answer_only=body.answer_only,
-            playbook=body.playbook,
             answer_style=body.answer_style,
         )
     except ValueError as exc:

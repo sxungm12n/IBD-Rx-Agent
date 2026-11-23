@@ -84,6 +84,28 @@ def agent_prompt(item: dict, sources: list[dict]) -> tuple[str, str]:
     return system, user
 
 
+# 발췌 없는 기본 AI를 RAG 에이전트와 같은 틀로 (2026-11-23). RAG 지시문에서 '근거' 두 줄만 바꾸고 나머지는 글자까지 같다.
+# 사용자 메시지도 같은 모양이며 발췌 칸만 '없음'. 기존 기본 AI 지시문(eval_a.LLM_SYSTEM·CASE_SYSTEM)은 이전 결과 기록용으로 둔다.
+SAME_SWAP = [
+    ("근거는 제공된 발췌뿐입니다. 발췌에 없는 수치, 조건, 금기는 만들지 않습니다.",
+     "가이드북 발췌는 주어지지 않습니다. 알고 있는 가이드북 기준으로 답하며, 가이드북에 없는 수치, 조건, 금기는 만들지 않습니다."),
+    ("- 발췌에 그 기준이 없으면 \"답: 가이드북에 적혀 있지 않다\"라고만 씁니다.",
+     "- 가이드북에 그 기준이 없으면 \"답: 가이드북에 적혀 있지 않다\"라고만 씁니다."),
+]
+NO_CONTEXT = "없음"
+
+
+def no_rag_prompt(item: dict) -> tuple[str, str]:
+    """agent_prompt와 같은 틀, 발췌 없음."""
+    style = E.ANSWER_STYLE.get(item["type"])
+    system = _ANSWER_STYLE[style] if style else _ANSWER_ONLY
+    assert SAME_SWAP[0][0] in system, "백엔드 지시문이 바뀜: SAME_SWAP 확인"
+    for old, new in SAME_SWAP:
+        system = system.replace(old, new)
+    user = f"질문:\n{item['question']}\n\n가이드북 발췌:\n{NO_CONTEXT}"
+    return system, user
+
+
 def tag_dir(tag: str) -> Path:
     return BATCH_ROOT / tag
 

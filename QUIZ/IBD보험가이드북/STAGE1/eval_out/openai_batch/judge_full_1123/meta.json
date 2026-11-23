@@ -1,0 +1,20 @@
+{
+ "tag": "judge_full_1123",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "loop-reask_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-reask_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-route_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-route_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-self-g_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-self-g_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-opus-g_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-opus-g_gpt-5.6-terra:output/a2_items.jsonl",
+  "llm-same_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_llm-same_gpt-5.6-terra:output/a2_items.jsonl"
+ ],
+ "requests": 725,
+ "built": "2026-11-23T13:21:18"
+}

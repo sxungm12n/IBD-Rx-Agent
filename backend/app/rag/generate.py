@@ -59,19 +59,11 @@ def _context(passages: list[Passage]) -> str:
     return "\n\n".join(blocks)
 
 
-_PLAYBOOK = """
-
-참고 노트
-아래는 이전 문제를 풀며 정리한 답변 요령입니다. 답의 내용은 반드시 가이드북 발췌를 따르고, 노트가 발췌와 다르면 발췌를 따릅니다.
-{playbook}"""
-
-
 def generate_answer(
     question: str,
     passages: list[Passage],
     *,
     answer_only: bool = False,
-    playbook: str | None = None,
     answer_style: str = "short",
 ) -> str:
     if not passages:
@@ -93,8 +85,6 @@ def generate_answer(
 
     user = f"질문:\n{question}\n\n가이드북 발췌:\n{_context(passages)}"
     system = _ANSWER_STYLE.get(answer_style, _ANSWER_ONLY) if answer_only else _SYSTEM
-    if playbook and playbook.strip():
-        system += _PLAYBOOK.replace("{playbook}", playbook.strip())
     # 평가 baseline과 같은 Responses API·기본 reasoning 설정을 쓴다. 추론 모델은 temperature를 받지 않는다.
     try:
         response = OpenAI(api_key=key).responses.create(

@@ -39,7 +39,7 @@ def main() -> int:
     p.add_argument("--model", default="Qwen/Qwen3-14B")
     p.add_argument("--label", default="qwen3-14b-bf16", help="결과 폴더 이름에 붙는 모델 라벨")
     p.add_argument("--types", nargs="+", default=list(B.TYPES), choices=list(B.TYPES))
-    p.add_argument("--arms", nargs="+", default=["llm", "agent"], choices=["llm", "agent"])
+    p.add_argument("--arms", nargs="+", default=["llm", "agent"], choices=["llm", "agent", "llm-same"])
     p.add_argument("--limit", type=int, help="유형마다 앞에서 N문항만")
     p.add_argument("--think", choices=["on", "off"], default="on")
     p.add_argument("--max-tokens", type=int, default=6000)

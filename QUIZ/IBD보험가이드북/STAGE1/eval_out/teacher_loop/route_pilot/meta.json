@@ -1,0 +1,42 @@
+{
+ "arm": "route",
+ "pilot": true,
+ "표본": {
+  "pilot": 0,
+  "오답": 3,
+  "정답": 2
+ },
+ "seed": 20261120,
+ "teacher": null,
+ "student": "gpt-5.6-terra",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "601b7ce19375",
+ "created": "2026-11-20T17:19:45",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 20,
+   "built": "2026-11-20T17:19:45",
+   "batch_id": "batch_6b0002ab905c8190800f120aa9d3da9c",
+   "input_file_id": "file-TztnwuixyZfAbjXbHgGn4M",
+   "submitted": "2026-11-20T17:19:56",
+   "fetched": "2026-11-20T17:22:22",
+   "usage": {
+    "input_tokens": 101791,
+    "output_tokens": 2175,
+    "cost_usd": 0.1148
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 20
+   }
+  }
+ ],
+ "pending": null
+}

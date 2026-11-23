@@ -1,0 +1,12 @@
+{
+ "tag": "judge_csvrag_full",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "csvrag_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_csvrag_gpt-5.6-terra:output/a2_items.jsonl"
+ ],
+ "requests": 145,
+ "built": "2026-11-23T12:27:07"
+}
