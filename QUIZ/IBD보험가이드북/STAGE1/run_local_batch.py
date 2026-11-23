@@ -25,7 +25,7 @@ from datetime import datetime
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOTS = sorted((HERE / "eval_out").glob("teacher_loop_*"))
+ROOTS = [HERE / "eval_out" / "teacher_loop"] + sorted((HERE / "eval_out").glob("teacher_loop_*"))   # gpt 학생 + Qwen 선생은 teacher_loop/
 MODELS = {"vllm": "Qwen/Qwen3-14B", "mlx": "mlx-community/Qwen3-14B-4bit"}
 
 
@@ -40,7 +40,7 @@ def jl(p: Path) -> list[dict]:
 
 
 def pending_dirs() -> list[Path]:
-    """teacher_loop_<라벨>/<조건>/meta.json 의 pending이 '로컬 실행'이고 결과가 덜 찬 배치 폴더."""
+    """teacher_loop[_<라벨>]/<조건>/meta.json 의 pending이 '로컬 실행'이고 결과가 덜 찬 배치 폴더."""
     out = []
     for root in ROOTS:
         for meta in root.glob("*/meta.json"):

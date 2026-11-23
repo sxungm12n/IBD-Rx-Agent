@@ -5,12 +5,13 @@
 #   .venv_rag   teacher_loop.py (쪽 조회·검색: 백엔드 RAG 코드, csv_rag_retrieve.py 설명의 패키지)
 #   .venv_cuda  run_local_batch.py (vLLM)
 #   .env        ANTHROPIC_API_KEY (opus 선생), OPENAI_API_KEY ('검색' 쪽 찾기의 질문 임베딩)
-# 조건: reask · route · self(선생 = Qwen 자신, 로컬) · opus(선생 = Claude Opus, Anthropic 배치)
+# 조건: reask · route · self(선생 = 학생 자신) · opus(선생 = Claude Opus, Anthropic 배치) · qwen(선생 = 로컬 Qwen)
 # 0회차 답은 기존 Qwen PDF 에이전트 답(eval_out/*agent_qwen3-14b-bf16). 같은 틀 기본 AI는 아래 마지막 줄 참고.
 #
 # 사용
 #   nohup ./run_qwen_loop.sh > logs/qwen_loop.log 2>&1 &         # 네 조건 모두
 #   ARMS="reask self" ./run_qwen_loop.sh                          # 일부만
+#   STUDENT=gpt ARMS=qwen ./run_qwen_loop.sh                       # gpt-5.6-terra 학생 + Qwen 선생 (학생 재답은 OpenAI 배치, 과금 약 $1)
 #   tail -f logs/qwen_loop.log
 # opus 선생 배치는 과금된다 (gpt 학생 기준 380문항 약 $8). 로컬 Qwen 부분은 요금 없음.
 set -u
@@ -19,7 +20,8 @@ mkdir -p logs
 PY=.venv_rag/bin/python
 GPU=${GPU:-1}
 ARMS=(${=ARMS:-reask route self opus})
-T() { $PY teacher_loop.py "$@" --student qwen 2>&1 | grep -vE "Warning|W1123|Loading|NOTE"; }
+STUDENT=${STUDENT:-qwen}             # 학생: qwen(기본) 또는 gpt (gpt 학생 + Qwen 선생: STUDENT=gpt ARMS=qwen)
+T() { $PY teacher_loop.py "$@" --student $STUDENT 2>&1 | grep -vE "Warning|W1123|Loading|NOTE"; }
 
 # 로컬 배치를 채우는 vLLM 프로세스 (모델을 한 번 올려 두고 새 배치를 계속 찾음)
 CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=$GPU VLLM_USE_FLASHINFER_SAMPLER=0 \
@@ -29,7 +31,8 @@ trap "kill $RUNNER 2>/dev/null" EXIT
 
 typeset -A done
 for arm in $ARMS; do
-  [[ -f eval_out/teacher_loop_qwen3-14b-bf16/$( [[ $arm == self || $arm == opus ]] && echo $arm-g || echo $arm )/state.jsonl ]] || T init --arm $arm
+  ROOTDIR=eval_out/teacher_loop$( [[ $STUDENT == qwen ]] && echo _qwen3-14b-bf16 )
+  [[ -f $ROOTDIR/$( [[ $arm == route || $arm == reask ]] && echo $arm || echo $arm-g )/state.jsonl ]] || T init --arm $arm
   done[$arm]=0
 done
 while true; do

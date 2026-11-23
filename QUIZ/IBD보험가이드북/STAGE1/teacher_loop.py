@@ -7,6 +7,7 @@
 조건 (--arm)
   self   선생 = gpt-5.6-terra (자기 검토)            OpenAI Batch               폴더·실행 이름 self-g
   opus   선생 = claude-opus-5-5 (강한 선생)          Anthropic Message Batches  폴더·실행 이름 opus-g
+  qwen   선생 = 로컬 Qwen3-14B (작은 공개 모델 선생)  run_local_batch.py        폴더·실행 이름 qwen-g
   선생은 일반 지시문(TEACHER_TAG "g", 2026-11-23)을 쓴다. 2026-11-20 파일럿의 맞춤 지시문 결과는 self_pilot·opus_pilot.
   reask  선생 없음. 쪽도 붙이지 않고 같은 발췌·같은 지시문으로 학생이 한 번 더 답함 (다시 묻기만 대조군)
   route  선생 없음. 규칙 B(질문의 약·질환 → 고시·체크리스트·투약간격 쪽)로 쪽을 한 번 붙이고 학생이 한 번 답함
@@ -66,8 +67,9 @@ def teacher_of(arm: str) -> tuple[str, str]:
     if arm == "self" and STUDENT != "gpt":
         return STUDENTS[STUDENT][0], STUDENTS[STUDENT][1]
     return TEACHERS[arm]
-TEACHERS = {"self": ("openai", "gpt-5.6-terra"), "opus": ("anthropic", "claude-opus-5-5")}
-ARMS = ["self", "opus", "route", "reask"]
+TEACHERS = {"self": ("openai", "gpt-5.6-terra"), "opus": ("anthropic", "claude-opus-5-5"),
+            "qwen": ("local", "Qwen/Qwen3-14B")}   # qwen: 로컬 Qwen3-14B 선생 (학생은 --student로, 예: gpt 학생 + Qwen 선생)
+ARMS = ["self", "opus", "qwen", "route", "reask"]
 NO_TEACHER = ("route", "reask")   # 선생 없이 학생이 한 번 다시 답함 (reask: 쪽도 안 붙임 = 다시 묻기만 대조군)
 MAX_ROUNDS = 2          # 학생이 고쳐 쓰는 최대 횟수
 PER_REQUEST = 2         # 찾기 요청 하나에 붙이는 최대 발췌 수
@@ -465,18 +467,18 @@ LOCAL_JSON_NOTE = """
 """
 
 
-def local_request(cid: str, kind: str, system: str, user: str) -> dict:
+def local_request(cid: str, kind: str, system: str, user: str, model: str) -> dict:
     """로컬 모델용 요청 (run_local_batch.py가 읽음). 선생은 API의 json_schema 기능 대신 스키마를 지시문 끝에 붙인다."""
     if kind == "teacher":
         system = system + LOCAL_JSON_NOTE + json.dumps(review_schema(), ensure_ascii=False)
-    return {"custom_id": cid, "kind": kind, "model": STUDENTS[STUDENT][1],
+    return {"custom_id": cid, "kind": kind, "model": model,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}]}
 
 
 def teacher_request(provider: str, model: str, cid: str, st: dict) -> dict:
     user = teacher_user(st)
     if provider == "local":
-        return local_request(cid, "teacher", teacher_system(), user)
+        return local_request(cid, "teacher", teacher_system(), user, model)
     if provider == "openai":
         return {"custom_id": cid, "method": "POST", "url": "/v1/responses",
                 "body": {"model": model, "input": [{"role": "system", "content": teacher_system()},
@@ -491,7 +493,7 @@ def teacher_request(provider: str, model: str, cid: str, st: dict) -> dict:
 def student_request(cid: str, st: dict) -> dict:
     system, user = student_messages(st)
     if STUDENTS[STUDENT][0] == "local":
-        return local_request(cid, "student", system, user)
+        return local_request(cid, "student", system, user, STUDENTS[STUDENT][1])
     return {"custom_id": cid, "method": "POST", "url": "/v1/responses",
             "body": {"model": STUDENT_MODEL, "input": [{"role": "system", "content": system},
                                                        {"role": "user", "content": user}]}}
