@@ -1,0 +1,102 @@
+{
+ "j00000": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00001": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00002": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00003": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00004": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00005": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00006": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00007": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00008": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00009": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00010": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00011": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00012": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00013": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00014": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00015": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00016": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00017": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00018": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00019": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ }
+}

@@ -1,0 +1,3627 @@
+{
+ "j00000": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00001": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00002": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00003": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00004": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00005": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00006": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00007": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00008": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00009": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00010": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00011": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00012": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00013": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00014": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00015": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00016": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00017": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00018": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00019": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00020": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00021": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00022": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00023": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00024": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00025": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00026": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00027": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00028": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00029": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00030": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00031": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00032": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00033": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00034": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00035": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00036": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00037": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00038": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00039": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00040": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00041": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00042": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00043": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00044": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00045": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00046": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00047": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00048": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00049": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00050": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00051": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00052": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00053": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00054": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00055": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00056": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00057": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00058": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00059": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00060": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00061": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00062": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00063": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00064": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00065": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00066": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00067": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00068": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00069": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00070": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00071": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00072": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00073": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00074": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00075": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00076": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00077": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00078": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00079": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00080": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00081": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00082": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00083": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00084": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00085": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00086": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00087": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00088": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00089": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00090": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00091": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00092": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00093": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00094": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00095": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00096": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00097": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00098": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00099": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00100": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00101": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00102": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00103": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00104": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00105": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00106": {
+  "run": "loop-reask_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00107": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00108": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00109": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00110": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00111": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00112": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00113": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00114": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00115": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00116": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00117": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00118": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00119": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00120": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00121": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00122": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00123": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00124": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00125": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00126": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00127": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00128": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00129": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00130": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00131": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00132": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00133": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00134": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00135": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00136": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00137": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00138": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00139": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00140": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00141": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00142": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00143": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00144": {
+  "run": "a2_loop-reask_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ },
+ "j00145": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00146": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00147": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00148": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00149": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00150": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00151": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00152": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00153": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00154": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00155": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00156": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00157": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00158": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00159": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00160": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00161": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00162": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00163": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00164": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00165": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00166": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00167": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00168": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00169": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00170": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00171": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00172": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00173": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00174": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00175": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00176": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00177": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00178": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00179": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00180": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00181": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00182": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00183": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00184": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00185": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00186": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00187": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00188": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00189": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00190": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00191": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00192": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00193": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00194": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00195": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00196": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00197": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00198": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00199": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00200": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00201": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00202": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00203": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00204": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00205": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00206": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00207": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00208": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00209": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00210": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00211": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00212": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00213": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00214": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00215": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00216": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00217": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00218": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00219": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00220": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00221": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00222": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00223": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00224": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00225": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00226": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00227": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00228": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00229": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00230": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00231": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00232": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00233": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00234": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00235": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00236": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00237": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00238": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00239": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00240": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00241": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00242": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00243": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00244": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00245": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00246": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00247": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00248": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00249": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00250": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00251": {
+  "run": "loop-route_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00252": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00253": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00254": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00255": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00256": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00257": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00258": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00259": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00260": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00261": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00262": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00263": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00264": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00265": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00266": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00267": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00268": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00269": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00270": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00271": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00272": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00273": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00274": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00275": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00276": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00277": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00278": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00279": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00280": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00281": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00282": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00283": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00284": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00285": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00286": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00287": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00288": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00289": {
+  "run": "a2_loop-route_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ },
+ "j00290": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00291": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00292": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00293": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00294": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00295": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00296": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00297": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00298": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00299": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00300": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00301": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00302": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00303": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00304": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00305": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00306": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00307": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00308": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00309": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00310": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00311": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00312": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00313": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00314": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00315": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00316": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00317": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00318": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00319": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00320": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00321": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00322": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00323": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00324": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00325": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00326": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00327": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00328": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00329": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00330": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00331": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00332": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00333": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00334": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00335": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00336": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00337": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00338": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00339": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00340": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00341": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00342": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00343": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00344": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00345": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00346": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00347": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00348": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00349": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00350": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00351": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00352": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00353": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00354": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00355": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00356": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00357": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00358": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00359": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00360": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00361": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00362": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00363": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00364": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00365": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00366": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00367": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00368": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00369": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00370": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00371": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00372": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00373": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00374": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00375": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00376": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00377": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00378": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00379": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00380": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00381": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00382": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00383": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00384": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00385": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00386": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00387": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00388": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00389": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00390": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00391": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00392": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00393": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00394": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00395": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00396": {
+  "run": "loop-self-g_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00397": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00398": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00399": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00400": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00401": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00402": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00403": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00404": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00405": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00406": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00407": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00408": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00409": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00410": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00411": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00412": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00413": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00414": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00415": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00416": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00417": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00418": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00419": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00420": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00421": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00422": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00423": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00424": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00425": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00426": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00427": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00428": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00429": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00430": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00431": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00432": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00433": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00434": {
+  "run": "a2_loop-self-g_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ },
+ "j00435": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00436": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00437": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00438": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00439": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00440": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00441": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00442": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00443": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00444": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00445": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00446": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00447": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00448": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00449": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00450": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00451": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00452": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00453": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00454": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00455": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00456": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00457": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00458": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00459": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00460": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00461": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00462": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00463": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00464": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00465": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00466": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00467": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00468": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00469": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00470": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00471": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00472": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00473": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00474": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00475": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00476": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00477": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00478": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00479": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00480": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00481": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00482": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00483": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00484": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00485": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00486": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00487": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00488": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00489": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00490": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00491": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00492": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00493": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00494": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00495": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00496": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00497": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00498": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00499": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00500": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00501": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00502": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00503": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00504": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00505": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00506": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00507": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00508": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00509": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00510": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00511": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00512": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00513": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00514": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00515": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00516": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00517": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00518": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00519": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00520": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00521": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00522": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00523": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00524": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00525": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00526": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00527": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00528": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00529": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00530": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00531": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00532": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00533": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00534": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00535": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00536": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00537": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00538": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00539": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00540": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00541": {
+  "run": "loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00542": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00543": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00544": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00545": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00546": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00547": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00548": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00549": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00550": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00551": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00552": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00553": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00554": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00555": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00556": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00557": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00558": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00559": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00560": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00561": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00562": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00563": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00564": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00565": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00566": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00567": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00568": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00569": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00570": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00571": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00572": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00573": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00574": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00575": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00576": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00577": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00578": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00579": {
+  "run": "a2_loop-qwen-g_gpt-5.6-terra",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ },
+ "j00580": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-CD-PED-G2"
+ },
+ "j00581": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-UC-PED-G2"
+ },
+ "j00582": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MESA-PR-UC-PED-G2"
+ },
+ "j00583": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-BAL-UC-PED-G2"
+ },
+ "j00584": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-MTX-IBD-G7"
+ },
+ "j00585": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G3"
+ },
+ "j00586": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-G4"
+ },
+ "j00587": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-adult-E"
+ },
+ "j00588": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G3"
+ },
+ "j00589": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-G4"
+ },
+ "j00590": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-ped-E"
+ },
+ "j00591": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G3"
+ },
+ "j00592": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-G4"
+ },
+ "j00593": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-CD-fistula-E"
+ },
+ "j00594": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G3"
+ },
+ "j00595": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-G4"
+ },
+ "j00596": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-adult-E"
+ },
+ "j00597": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G2"
+ },
+ "j00598": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G3"
+ },
+ "j00599": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-G4"
+ },
+ "j00600": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-UC-ped-E"
+ },
+ "j00601": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G2"
+ },
+ "j00602": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G3"
+ },
+ "j00603": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-G4"
+ },
+ "j00604": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-IV-GIBD-E"
+ },
+ "j00605": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G3"
+ },
+ "j00606": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-G4"
+ },
+ "j00607": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-adult-E"
+ },
+ "j00608": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G3"
+ },
+ "j00609": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-G4"
+ },
+ "j00610": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-CD-fistula-E"
+ },
+ "j00611": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G3"
+ },
+ "j00612": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-G4"
+ },
+ "j00613": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-IFX-SC-UC-adult-E"
+ },
+ "j00614": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G3"
+ },
+ "j00615": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-G4"
+ },
+ "j00616": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-adult-E"
+ },
+ "j00617": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G3"
+ },
+ "j00618": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-G4"
+ },
+ "j00619": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-CD-ped-E"
+ },
+ "j00620": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G3"
+ },
+ "j00621": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-G4"
+ },
+ "j00622": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-UC-E"
+ },
+ "j00623": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G2"
+ },
+ "j00624": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G3"
+ },
+ "j00625": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-G4"
+ },
+ "j00626": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-ADA-GIBD-E"
+ },
+ "j00627": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G3"
+ },
+ "j00628": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-G4"
+ },
+ "j00629": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-GOL-UC-E"
+ },
+ "j00630": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G3"
+ },
+ "j00631": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-G4"
+ },
+ "j00632": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-CD-E"
+ },
+ "j00633": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G3"
+ },
+ "j00634": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G4"
+ },
+ "j00635": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-G5"
+ },
+ "j00636": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-IV-UC-E"
+ },
+ "j00637": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G3"
+ },
+ "j00638": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-G4"
+ },
+ "j00639": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-CD-E"
+ },
+ "j00640": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G3"
+ },
+ "j00641": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-G4"
+ },
+ "j00642": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-VEDO-SC-UC-E"
+ },
+ "j00643": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G3"
+ },
+ "j00644": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G4"
+ },
+ "j00645": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-G5"
+ },
+ "j00646": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-CD-E"
+ },
+ "j00647": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G3"
+ },
+ "j00648": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-G4"
+ },
+ "j00649": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UST-UC-E"
+ },
+ "j00650": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G3"
+ },
+ "j00651": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G4"
+ },
+ "j00652": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G5"
+ },
+ "j00653": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-hb"
+ },
+ "j00654": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-anc"
+ },
+ "j00655": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G6-alc"
+ },
+ "j00656": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-G7"
+ },
+ "j00657": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-FIL-UC-E"
+ },
+ "j00658": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G3"
+ },
+ "j00659": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G4"
+ },
+ "j00660": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G5"
+ },
+ "j00661": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-hb"
+ },
+ "j00662": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-anc"
+ },
+ "j00663": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G6-alc"
+ },
+ "j00664": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-G7"
+ },
+ "j00665": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-TOF-UC-E"
+ },
+ "j00666": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G3"
+ },
+ "j00667": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G4"
+ },
+ "j00668": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G5"
+ },
+ "j00669": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-hb"
+ },
+ "j00670": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-anc"
+ },
+ "j00671": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G6-alc"
+ },
+ "j00672": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-G7"
+ },
+ "j00673": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-CD-E"
+ },
+ "j00674": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G3"
+ },
+ "j00675": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G4"
+ },
+ "j00676": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G5"
+ },
+ "j00677": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-hb"
+ },
+ "j00678": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-anc"
+ },
+ "j00679": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G6-alc"
+ },
+ "j00680": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-G7"
+ },
+ "j00681": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-UPA-UC-E"
+ },
+ "j00682": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G3"
+ },
+ "j00683": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G4"
+ },
+ "j00684": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G5"
+ },
+ "j00685": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-G7"
+ },
+ "j00686": {
+  "run": "llm-same_qwen3-14b-bf16",
+  "items": "output/a_items.jsonl",
+  "id": "A-OZA-UC-E"
+ },
+ "j00687": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R1"
+ },
+ "j00688": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R2"
+ },
+ "j00689": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R3"
+ },
+ "j00690": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-R4"
+ },
+ "j00691": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P1"
+ },
+ "j00692": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-P2"
+ },
+ "j00693": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T1"
+ },
+ "j00694": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GEN-T2"
+ },
+ "j00695": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-adult-D"
+ },
+ "j00696": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-ped-D"
+ },
+ "j00697": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-IV-CD-fistula-D"
+ },
+ "j00698": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-L"
+ },
+ "j00699": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-adult-J"
+ },
+ "j00700": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-L"
+ },
+ "j00701": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-CD-fistula-J"
+ },
+ "j00702": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-L"
+ },
+ "j00703": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-IFX-SC-UC-adult-J"
+ },
+ "j00704": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-L"
+ },
+ "j00705": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-adult-D"
+ },
+ "j00706": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-L"
+ },
+ "j00707": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-CD-ped-D"
+ },
+ "j00708": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-L"
+ },
+ "j00709": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-UC-D"
+ },
+ "j00710": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-ADA-GIBD-L"
+ },
+ "j00711": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-GOL-UC-L"
+ },
+ "j00712": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-W"
+ },
+ "j00713": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-CD-D"
+ },
+ "j00714": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-W"
+ },
+ "j00715": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-IV-UC-D"
+ },
+ "j00716": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-W"
+ },
+ "j00717": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-CD-L"
+ },
+ "j00718": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-W"
+ },
+ "j00719": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-VEDO-SC-UC-L"
+ },
+ "j00720": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-CD-D"
+ },
+ "j00721": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UST-UC-D"
+ },
+ "j00722": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-TOF-UC-D"
+ },
+ "j00723": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-CD-D"
+ },
+ "j00724": {
+  "run": "a2_llm-same_qwen3-14b-bf16",
+  "items": "output/a2_items.jsonl",
+  "id": "A2-UPA-UC-D"
+ }
+}

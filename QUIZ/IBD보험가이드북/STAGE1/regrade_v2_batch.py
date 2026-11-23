@@ -140,7 +140,7 @@ def fetch(a) -> int:
     meta, mapping = json.loads((d / "meta.json").read_text()), json.loads((d / "map.json").read_text())
     c = client()
     b = c.batches.retrieve(json.loads((d / "batch.json").read_text())["id"])
-    if b.status != "completed":
+    if b.status not in ("completed", "cancelled"):   # 취소한 배치도 끝난 요청의 결과는 받는다 (남은 것은 build가 다시 고름)
         print(f"아직 끝나지 않음: {b.status} {b.request_counts}")
         return 1
     raw = c.files.content(b.output_file_id).text if b.output_file_id else ""
