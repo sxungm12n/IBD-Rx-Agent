@@ -1,0 +1,4 @@
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/bin/python -m pip install --upgrade pip
+RAG_DONE

@@ -1,0 +1,15 @@
+[reask] 문항 380 {'A': 107, 'A2': 38, 'C': 198, 'D': 37} · 건너뜀 0 · 지시문 해시 60e30c0dc140
+다음: next
+[13:42:29] reask fetch: 받을 배치가 없습니다.
+[13:42:29] reask next: [reask] 01_student_r1: student 요청 380개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 1,791,536자
+다음: submit --arm reask --student qwen --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/reask/batches/01_student_r1
+로컬 실행 표시함: 01_student_r1. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/reask/batches/01_student_r1
+run_local_batch.py가 멈춤 (logs/qwen_local.log)
+[13:59:25] reask fetch: 01_student_r1: {'재답': 380} · 실패 0 · 토큰 입력 1,139,734 출력 251,770
+다음: next
+[13:59:25] reask next: 할 일 없음 {'done': 380}. 다음: finalize
+loop-reask_qwen3-14b-bf16: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-reask_qwen3-14b-bf16: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-reask_qwen3-14b-bf16: 198개 → 채점: score_cases.py …
+d_loop-reask_qwen3-14b-bf16: 37개 → 채점: score_cases.py …
+[14:00:26] 루프 끝.

@@ -1,0 +1,49 @@
+{
+ "arm": "route",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": null,
+ "teacher_prompt": null,
+ "source": "pdf",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "agent",
+ "student": "qwen3-14b-bf16",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-23T14:07:23",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_student_r1",
+   "kind": "student",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 380,
+   "built": "2026-11-23T14:07:23",
+   "batch_id": "local",
+   "submitted": "2026-11-23T14:07:24",
+   "fetched": "2026-11-23T14:36:12",
+   "usage": {
+    "input_tokens": 1823683,
+    "output_tokens": 270821
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 380
+   }
+  }
+ ],
+ "pending": null
+}

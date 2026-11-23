@@ -1,0 +1,33 @@
+[qwen-g] 문항 380 {'A': 107, 'A2': 38, 'C': 198, 'D': 37} · 건너뜀 0 · 지시문 해시 60e30c0dc140
+다음: next
+[17:10:06] qwen fetch: 받을 배치가 없습니다.
+[17:10:06] qwen next: [qwen-g] 01_teacher_r1: teacher 요청 380개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 2,618,515자
+다음: submit --arm qwen --student gpt --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop/qwen-g/batches/01_teacher_r1
+로컬 실행 표시함: 01_teacher_r1. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop/qwen-g/batches/01_teacher_r1
+[17:23:08] qwen fetch: 01_teacher_r1: {'더 찾아': 66, '통과': 263, '다시 읽어': 50, '선생 오류': 1} · 실패 0 · 토큰 입력 1,563,284 출력 294,308
+다음: next
+[17:23:27] qwen next: 쪽 찾기 66문항 (코드)…
+[qwen-g] 02_student_r1: student 요청 116개 · gpt-5.6-terra · 입력 약 684,969자 → 약 418K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 300~2000토큰/요청 가정): $0.63 ~ $1.81
+API 안 씀. 제출: submit --arm qwen --yes
+제출함: 02_student_r1 batch_6b03f8020d2c819091e8ba2a5b3b15ee 상태 validating
+[17:26:34] qwen fetch: 02_student_r1: {'재답': 116} · 실패 0 · 토큰 입력 383,602 출력 13,776 · $0.47
+다음: next
+[17:26:34] qwen next: [qwen-g] 03_teacher_r2: teacher 요청 116개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 883,115자
+다음: submit --arm qwen --student gpt --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop/qwen-g/batches/03_teacher_r2
+로컬 실행 표시함: 03_teacher_r2. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop/qwen-g/batches/03_teacher_r2
+[17:31:35] qwen fetch: 03_teacher_r2: {'통과': 71, '다시 읽어': 22, '더 찾아': 23} · 실패 0 · 토큰 입력 530,798 출력 105,331
+다음: next
+[17:31:35] qwen next: 쪽 찾기 23문항 (코드)…
+[qwen-g] 04_student_r2: student 요청 45개 · gpt-5.6-terra · 입력 약 311,000자 → 약 190K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 300~2000토큰/요청 가정): $0.27 ~ $0.73
+API 안 씀. 제출: submit --arm qwen --yes
+제출함: 04_student_r2 batch_6b03f9e924708190be07e79076faff3a 상태 validating
+[17:34:41] qwen fetch: 04_student_r2: {'재답': 45} · 실패 0 · 토큰 입력 174,164 출력 5,874 · $0.21
+다음: next
+[17:34:41] qwen next: 할 일 없음 {'passed': 334, 'done': 46}. 다음: finalize
+loop-qwen-g_gpt-5.6-terra: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-qwen-g_gpt-5.6-terra: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-qwen-g_gpt-5.6-terra: 198개 → 채점: score_cases.py …
+d_loop-qwen-g_gpt-5.6-terra: 37개 → 채점: score_cases.py …
+[17:35:41] 루프 끝.

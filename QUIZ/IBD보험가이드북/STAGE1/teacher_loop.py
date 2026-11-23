@@ -29,6 +29,7 @@
 import argparse
 import hashlib
 import json
+import os
 import random
 import re
 import sys
@@ -899,6 +900,12 @@ def main() -> int:
         if name == "submit":
             x.add_argument("--yes", action="store_true")
     a = p.parse_args()
+    # 쪽 찾기(백엔드 RAG)의 질문 임베딩은 OPENAI_API_KEY를 셸 환경변수나 data/RAG/.env에서만 읽는다.
+    # IBD보험가이드북/.env·STAGE1/.env에 둔 키도 쓰도록, 환경변수가 비어 있으면 .env 값을 채운다 (값은 출력하지 않음).
+    if not os.environ.get("OPENAI_API_KEY"):
+        _k = E.load_env().get("OPENAI_API_KEY", "")
+        if _k:
+            os.environ["OPENAI_API_KEY"] = _k
     global SOURCE, STUDENT, ROOT
     SOURCE, STUDENT = a.source, a.student
     if STUDENT != "gpt":

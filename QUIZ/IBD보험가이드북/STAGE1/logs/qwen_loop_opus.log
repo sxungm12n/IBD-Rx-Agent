@@ -1,0 +1,753 @@
+[17:37:14] opus fetch: 01_teacher_r1: {'통과': 227, '더 찾아': 60, '다시 읽어': 93} · 실패 0 · 토큰 입력 2,407,036 출력 165,408 · $6.47
+다음: next
+[17:41:01] opus next: 쪽 찾기 60문항 (코드)…
+[opus-g] 02_student_r1: student 요청 153개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 936,738자
+다음: submit --arm opus --student qwen --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/opus-g/batches/02_student_r1
+로컬 실행 표시함: 02_student_r1. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/opus-g/batches/02_student_r1
+[17:47:02] opus fetch: 02_student_r1: {'재답': 153} · 실패 0 · 토큰 입력 599,905 출력 121,055
+다음: next
+[17:47:02] opus next: [opus-g] 03_teacher_r2: teacher 요청 153개 · claude-opus-5-5 · 입력 약 1,152,157자 → 약 1,014K 토큰 (실측 비율 0.88토큰/자)
+  예상 비용(배치 50%, 출력 500~1500토큰/요청 가정): $2.79 ~ $4.32
+API 안 씀. 제출: submit --arm opus --yes
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKZwnFgAtaz38pDjSgZ8'}
+[17:48:04] opus fetch: 받을 배치가 없습니다.
+[17:48:04] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKa2NMPKnoJ3MWe8bXsC'}
+[17:49:06] opus fetch: 받을 배치가 없습니다.
+[17:49:07] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKa6xbHCBApmXhtDResP'}
+[17:50:09] opus fetch: 받을 배치가 없습니다.
+[17:50:09] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaBYYK2Pp1FzEmvCUXX'}
+[17:51:11] opus fetch: 받을 배치가 없습니다.
+[17:51:11] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaG9W7aS2Wsa7yoFs3c'}
+[17:52:14] opus fetch: 받을 배치가 없습니다.
+[17:52:14] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaLkMxnqi5cEeB2qM25'}
+[17:53:16] opus fetch: 받을 배치가 없습니다.
+[17:53:16] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaRL3NeKvrRytJcbbiC'}
+[17:54:18] opus fetch: 받을 배치가 없습니다.
+[17:54:18] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaVvAZv1DHqEQ7nA5yt'}
+[17:55:20] opus fetch: 받을 배치가 없습니다.
+[17:55:20] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaaVzQnU9PuZxyb5sod'}
+[17:56:22] opus fetch: 받을 배치가 없습니다.
+[17:56:22] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKaf5Cnhx5TQVdXuj7zT'}
+[17:57:24] opus fetch: 받을 배치가 없습니다.
+[17:57:24] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKajf6M5uHJR6qWvnW6k'}
+[17:58:26] opus fetch: 받을 배치가 없습니다.
+[17:58:27] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKapErU74YyamcGL1aSn'}
+[17:59:29] opus fetch: 받을 배치가 없습니다.
+[17:59:29] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKatpdq7C57z4wbmXAta'}
+[18:00:31] opus fetch: 받을 배치가 없습니다.
+[18:00:31] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKayRnJHRq3XQVysUs95'}
+[18:01:33] opus fetch: 받을 배치가 없습니다.
+[18:01:33] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKb41vyxwTPXCKDHQQq8'}
+[18:02:36] opus fetch: 받을 배치가 없습니다.
+[18:02:36] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKb8c6uiyU5U3xfjq6Ha'}
+[18:03:38] opus fetch: 받을 배치가 없습니다.
+[18:03:38] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbDDzWshe1fKBHCpFyM'}
+[18:04:41] opus fetch: 받을 배치가 없습니다.
+[18:04:41] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbHsj1EXAaXdezYat27'}
+[18:05:44] opus fetch: 받을 배치가 없습니다.
+[18:05:44] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbNThXiuu7ZNQNWJu5c'}
+[18:06:46] opus fetch: 받을 배치가 없습니다.
+[18:06:46] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbT3bLE7GzQbHDqmqCc'}
+[18:07:48] opus fetch: 받을 배치가 없습니다.
+[18:07:48] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbXdqUZCgtb2rjY3Z8s'}
+[18:08:50] opus fetch: 받을 배치가 없습니다.
+[18:08:50] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbcDg4JbdavTYosDfwy'}
+[18:09:52] opus fetch: 받을 배치가 없습니다.
+[18:09:52] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbgod6CWHLmjQoAXvE4'}
+[18:10:55] opus fetch: 받을 배치가 없습니다.
+[18:10:55] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbmQJXW28r4amkMqdTP'}
+[18:11:57] opus fetch: 받을 배치가 없습니다.
+[18:11:57] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbr15fn8Au2G4UWySha'}
+[18:12:59] opus fetch: 받을 배치가 없습니다.
+[18:13:00] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKbvbPn1kBakrK15ZLtq'}
+[18:14:02] opus fetch: 받을 배치가 없습니다.
+[18:14:02] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKc1BMYuGNQ1sUaGYavF'}
+[18:15:04] opus fetch: 받을 배치가 없습니다.
+[18:15:04] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKc5n6D2GpGLQusH5etG'}
+[18:16:06] opus fetch: 받을 배치가 없습니다.
+[18:16:06] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKcAM2DyLVJdCwJXUrX6'}
+[18:17:08] opus fetch: 받을 배치가 없습니다.
+[18:17:09] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKcEx3FPe2KkKxYUdZQK'}
+[18:18:11] opus fetch: 받을 배치가 없습니다.
+[18:18:11] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+Traceback (most recent call last):
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 918, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 913, in main
+    return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/teacher_loop.py", line 657, in submit
+    b = anthropic_client().messages.batches.create(requests=jl(bd / "requests.jsonl"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/resources/messages/batches.py", line 115, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1692, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1243, in request
+    return self._request(cast_to, options, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/.venv_rag/lib/python3.12/site-packages/anthropic/_base_client.py", line 1346, in _request
+    raise self._make_status_error_from_response(response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011ChKcKYDRFtNj9anSmF9Qf'}

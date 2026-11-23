@@ -1,0 +1,118 @@
+{
+ "arm": "qwen",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": [
+  "local",
+  "Qwen/Qwen3-14B"
+ ],
+ "teacher_prompt": "일반(g)",
+ "source": "pdf",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "agent",
+ "student": "gpt-5.6-terra",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-23T17:10:05",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_teacher_r1",
+   "kind": "teacher",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 380,
+   "built": "2026-11-23T17:10:06",
+   "batch_id": "local",
+   "submitted": "2026-11-23T17:10:06",
+   "fetched": "2026-11-23T17:23:08",
+   "usage": {
+    "input_tokens": 1563284,
+    "output_tokens": 294308
+   },
+   "failed": 0,
+   "결과": {
+    "더 찾아": 66,
+    "통과": 263,
+    "다시 읽어": 50,
+    "선생 오류": 1
+   }
+  },
+  {
+   "name": "02_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 116,
+   "built": "2026-11-23T17:23:26",
+   "batch_id": "batch_6b03f8020d2c819091e8ba2a5b3b15ee",
+   "input_file_id": "file-7XHbHJP87wrHneRvbLh7vc",
+   "submitted": "2026-11-23T17:23:30",
+   "fetched": "2026-11-23T17:26:34",
+   "usage": {
+    "input_tokens": 383602,
+    "output_tokens": 13776,
+    "cost_usd": 0.4663
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 116
+   }
+  },
+  {
+   "name": "03_teacher_r2",
+   "kind": "teacher",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 116,
+   "built": "2026-11-23T17:26:34",
+   "batch_id": "local",
+   "submitted": "2026-11-23T17:26:34",
+   "fetched": "2026-11-23T17:31:35",
+   "usage": {
+    "input_tokens": 530798,
+    "output_tokens": 105331
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 71,
+    "다시 읽어": 22,
+    "더 찾아": 23
+   }
+  },
+  {
+   "name": "04_student_r2",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 45,
+   "built": "2026-11-23T17:31:35",
+   "batch_id": "batch_6b03f9e924708190be07e79076faff3a",
+   "input_file_id": "file-H4BXsWePsGk2f1raHnQwoq",
+   "submitted": "2026-11-23T17:31:37",
+   "fetched": "2026-11-23T17:34:41",
+   "usage": {
+    "input_tokens": 174164,
+    "output_tokens": 5874,
+    "cost_usd": 0.2094
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 45
+   }
+  }
+ ],
+ "pending": null
+}

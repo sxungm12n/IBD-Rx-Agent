@@ -1,0 +1,113 @@
+{
+ "arm": "self",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": [
+  "local",
+  "Qwen/Qwen3-14B"
+ ],
+ "teacher_prompt": "일반(g)",
+ "source": "pdf",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "agent",
+ "student": "qwen3-14b-bf16",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-23T14:07:23",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_teacher_r1",
+   "kind": "teacher",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 380,
+   "built": "2026-11-23T14:07:24",
+   "batch_id": "local",
+   "submitted": "2026-11-23T14:07:24",
+   "fetched": "2026-11-23T14:20:28",
+   "usage": {
+    "input_tokens": 1568370,
+    "output_tokens": 301157
+   },
+   "failed": 0,
+   "결과": {
+    "다시 읽어": 64,
+    "통과": 261,
+    "더 찾아": 55
+   }
+  },
+  {
+   "name": "02_student_r1",
+   "kind": "student",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 119,
+   "built": "2026-11-23T16:54:55",
+   "batch_id": "local",
+   "submitted": "2026-11-23T16:54:57",
+   "fetched": "2026-11-23T16:58:58",
+   "usage": {
+    "input_tokens": 447732,
+    "output_tokens": 86164
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 119
+   }
+  },
+  {
+   "name": "03_teacher_r2",
+   "kind": "teacher",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 119,
+   "built": "2026-11-23T16:58:58",
+   "batch_id": "local",
+   "submitted": "2026-11-23T16:58:58",
+   "fetched": "2026-11-23T17:04:59",
+   "usage": {
+    "input_tokens": 546289,
+    "output_tokens": 110807
+   },
+   "failed": 0,
+   "결과": {
+    "다시 읽어": 26,
+    "통과": 61,
+    "더 찾아": 32
+   }
+  },
+  {
+   "name": "04_student_r2",
+   "kind": "student",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 58,
+   "built": "2026-11-23T17:05:48",
+   "batch_id": "local",
+   "submitted": "2026-11-23T17:05:49",
+   "fetched": "2026-11-23T17:08:50",
+   "usage": {
+    "input_tokens": 249614,
+    "output_tokens": 41358
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 58
+   }
+  }
+ ],
+ "pending": null
+}

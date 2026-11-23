@@ -1,0 +1,464 @@
+할 일 380개 · 모델 Qwen/Qwen3-14B · GPU 2 · 생각 모드 on
+W1123 13:50:07.198000 1111280 .venv_cuda/lib/python3.12/site-packages/torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1123 13:50:07.199000 1111280 .venv_cuda/lib/python3.12/site-packages/torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1123 13:50:07.199000 1111280 .venv_cuda/lib/python3.12/site-packages/torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+(MainProcess pid=1111280) INFO 11-23 13:50:11 [startup.py:96] non-default args: {'dtype': 'bfloat16', 'max_model_len': 16384, 'enable_prefix_caching': True, 'gpu_memory_utilization': 0.6, 'disable_log_stats': True, 'model': 'Qwen/Qwen3-14B'}
+(MainProcess pid=1111280) INFO 11-23 13:50:12 [model.py:744] Resolved architecture: Qwen3ForCausalLM
+(MainProcess pid=1111280) INFO 11-23 13:50:12 [model.py:2170] Using max model len 16384
+(MainProcess pid=1111280) INFO 11-23 13:50:12 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=16384.
+(MainProcess pid=1111280) INFO 11-23 13:50:12 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])
+(MainProcess pid=1111280) WARNING 11-23 13:50:12 [flashinfer.py:99] FlashInfer kernels are disabled: flashinfer-cubin is not installed and nvcc (CUDA_HOME, CUDA_PATH, PATH or /usr/local/cuda) or ninja (PATH) is missing. Set CUDA_HOME to a CUDA toolkit and put ninja on PATH, or run `vllm download-kernels`.
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1187.45it/s]
+(EngineCore pid=1111934) INFO 11-23 13:50:15 [core.py:139] Initializing a V1 LLM engine (v0.33.0) with config: model='Qwen/Qwen3-14B', speculative_config=None, tokenizer='Qwen/Qwen3-14B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=main, tokenizer_revision=main, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=16384, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, aux_output_config=AuxOutputConfig(enable_return_routed_experts=False, max_bytes=None), kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, custom_histogram_buckets=None, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=Qwen/Qwen3-14B, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::qwen4_exp_ple_short_conv', 'vllm::qwen4_exp_qsa_with_output', 'vllm::qwen4_exp_qsa_prepare_with_output', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::qwen_gdn_attention_core_fused_norm_packed', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'cudagraph_decoder_replay': True, 'decoder_replay_cudagraph_capture_sizes': [], 'decoder_replay_trim_threshold': 768, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native']), enable_flashinfer_autotune=True, enable_rocm_segmented_attn_autotune=False, enable_cutedsl_warmup=True, enable_jit_warmup=True, monokernel=False, moe_backend='auto', sparse_indexer_topk_backend='auto', linear_backend='auto', linear_backend_per_quant=None)
+(EngineCore pid=1111934) INFO 11-23 13:50:17 [parallel_state.py:1929] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///data1/BMAI/seongmin/tmp/vllm_dist_f43114c93aa642faab98ce19a198ea47 backend=nccl
+(EngineCore pid=1111934) INFO 11-23 13:50:17 [parallel_state.py:2385] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, ETP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=1111934) INFO 11-23 13:50:17 [gpu_worker.py:513] Using V2 Model Runner
+(EngineCore pid=1111934) INFO 11-23 13:50:18 [model_runner.py:399] Loading model from scratch...
+(EngineCore pid=1111934) INFO 11-23 13:50:19 [cuda.py:508] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=1111934) INFO 11-23 13:50:19 [flash_attn.py:1122] Using FlashAttention version 3
+(EngineCore pid=1111934) INFO 11-23 13:50:19 [base_loader.py:82] Initializing model took 1.253688 seconds
+(EngineCore pid=1111934) INFO 11-23 13:50:20 [weight_utils.py:1144] Filesystem type for checkpoints: EXT4. Checkpoint size: 27.51 GiB. Available RAM: 801.54 GiB.
+(EngineCore pid=1111934) INFO 11-23 13:50:20 [weight_utils.py:1167] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+Loading safetensors checkpoint shards:   0% Completed | 0/8 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  12% Completed | 1/8 [00:00<00:02,  2.46it/s]
+Loading safetensors checkpoint shards:  25% Completed | 2/8 [00:00<00:02,  2.39it/s]
+Loading safetensors checkpoint shards:  38% Completed | 3/8 [00:01<00:02,  2.34it/s]
+Loading safetensors checkpoint shards:  50% Completed | 4/8 [00:01<00:01,  2.34it/s]
+Loading safetensors checkpoint shards:  62% Completed | 5/8 [00:02<00:01,  2.34it/s]
+Loading safetensors checkpoint shards:  75% Completed | 6/8 [00:02<00:00,  2.29it/s]
+Loading safetensors checkpoint shards:  88% Completed | 7/8 [00:03<00:00,  2.27it/s]
+Loading safetensors checkpoint shards: 100% Completed | 8/8 [00:03<00:00,  2.69it/s]
+Loading safetensors checkpoint shards: 100% Completed | 8/8 [00:03<00:00,  2.46it/s]
+
+(EngineCore pid=1111934) INFO 11-23 13:50:23 [default_loader.py:506] Loading weights took 3.28 seconds
+(EngineCore pid=1111934) INFO 11-23 13:50:24 [model_runner.py:428] Model loading took 27.52 GiB memory and 6.739973 seconds
+(EngineCore pid=1111934) INFO 11-23 13:50:25 [topk_topp_sampler.py:121] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.
+(EngineCore pid=1111934) INFO 11-23 13:50:25 [torch_utils.py:281] Reducing Torch threads from 128 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=1111934) INFO 11-23 13:50:25 [utils.py:381] Using LBNHC KV cache layout.
+(EngineCore pid=1111934) INFO 11-23 13:50:25 [monitor.py:40] [backbone] Starting torch.compile
+(EngineCore pid=1111934) INFO 11-23 13:50:34 [backends.py:1125] [backbone] Using cache directory: /home/seongmin/.cache/vllm/torch_compile_cache/3792e3a729/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=1111934) INFO 11-23 13:50:34 [backends.py:1187] [backbone] Dynamo bytecode transform time: 8.45 s
+(EngineCore pid=1111934) INFO 11-23 13:50:46 [backends.py:417] [backbone] Compiling a graph for compile range (1, 16384) takes 12.03 s
+(EngineCore pid=1111934) INFO 11-23 13:50:52 [backends.py:948] collected artifacts: 41 entries, 3 artifacts, 6185484 bytes total
+(EngineCore pid=1111934) INFO 11-23 13:50:52 [decorators.py:752] [backbone] saved AOT compiled function to /home/seongmin/.cache/vllm/torch_compile_cache/torch_aot_compile/eb2dd64444dafe04f9b2bea59e87d28374638b8ef47f279b356b6238b62acd74/rank_0_0/model
+(EngineCore pid=1111934) INFO 11-23 13:50:52 [monitor.py:62] [backbone] torch.compile took 26.54 s in total
+(EngineCore pid=1111934) INFO 11-23 13:50:52 [monitor.py:91] [backbone] Initial profiling/warmup run took 0.02 s
+Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   2%|▏         | 1/51 [00:00<00:06,  7.24it/s]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:00<00:06,  8.09it/s]Capturing CUDA graphs (PIECEWISE):   6%|▌         | 3/51 [00:00<00:05,  8.57it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:00<00:05,  8.99it/s]Capturing CUDA graphs (PIECEWISE):  10%|▉         | 5/51 [00:00<00:05,  9.03it/s]Capturing CUDA graphs (PIECEWISE):  12%|█▏        | 6/51 [00:00<00:04,  9.31it/s]Capturing CUDA graphs (PIECEWISE):  16%|█▌        | 8/51 [00:00<00:04,  9.60it/s]Capturing CUDA graphs (PIECEWISE):  18%|█▊        | 9/51 [00:00<00:04,  9.58it/s]Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:01<00:04,  9.91it/s]Capturing CUDA graphs (PIECEWISE):  25%|██▌       | 13/51 [00:01<00:03, 10.12it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▉       | 15/51 [00:01<00:03, 10.36it/s]Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 17/51 [00:01<00:03, 10.48it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 19/51 [00:01<00:02, 10.69it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 21/51 [00:02<00:02, 11.01it/s]Capturing CUDA graphs (PIECEWISE):  45%|████▌     | 23/51 [00:02<00:02, 10.88it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 25/51 [00:02<00:02, 11.06it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 27/51 [00:02<00:02, 11.25it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 29/51 [00:02<00:01, 11.24it/s]Capturing CUDA graphs (PIECEWISE):  61%|██████    | 31/51 [00:02<00:01, 11.20it/s]Capturing CUDA graphs (PIECEWISE):  65%|██████▍   | 33/51 [00:03<00:01, 11.76it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 35/51 [00:03<00:01, 11.95it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 37/51 [00:03<00:01, 12.19it/s]Capturing CUDA graphs (PIECEWISE):  76%|███████▋  | 39/51 [00:03<00:00, 12.35it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 41/51 [00:03<00:00, 12.54it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 43/51 [00:03<00:00, 12.62it/s]Capturing CUDA graphs (PIECEWISE):  88%|████████▊ | 45/51 [00:04<00:00, 12.38it/s]Capturing CUDA graphs (PIECEWISE):  92%|█████████▏| 47/51 [00:04<00:00, 12.84it/s]Capturing CUDA graphs (PIECEWISE):  96%|█████████▌| 49/51 [00:04<00:00, 13.78it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:04<00:00, 14.46it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:04<00:00, 11.42it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00, 15.91it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00, 15.89it/s]
+(EngineCore pid=1111934) INFO 11-23 13:51:06 [model_runner.py:1163] Graph capturing finished in 6 secs, took 0.72 GiB
+(EngineCore pid=1111934) INFO 11-23 13:51:07 [gpu_worker.py:772] Available KV cache memory: 24.2 GiB
+(EngineCore pid=1111934) INFO 11-23 13:51:07 [gpu_worker.py:787] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.6000 is equivalent to --gpu-memory-utilization=0.5851 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.6149. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.
+(EngineCore pid=1111934) INFO 11-23 13:51:07 [kv_cache_utils.py:1147] GPU KV cache size: 158,560 tokens, Maximum concurrency for 16,384 tokens per request: 9.68x
+(EngineCore pid=1111934) INFO 11-23 13:51:07 [kernel_warmup.py:179] JIT kernel warmup starting.
+(EngineCore pid=1111934) INFO 11-23 13:51:07 [kernel_warmup.py:192] JIT kernel warmup finished in 0.00s.
+Capturing CUDA graphs (PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (PIECEWISE):   2%|▏         | 1/51 [00:00<00:07,  6.81it/s]Capturing CUDA graphs (PIECEWISE):   4%|▍         | 2/51 [00:00<00:06,  7.68it/s]Capturing CUDA graphs (PIECEWISE):   8%|▊         | 4/51 [00:00<00:05,  8.99it/s]Capturing CUDA graphs (PIECEWISE):  10%|▉         | 5/51 [00:00<00:04,  9.27it/s]Capturing CUDA graphs (PIECEWISE):  14%|█▎        | 7/51 [00:00<00:04,  9.81it/s]Capturing CUDA graphs (PIECEWISE):  18%|█▊        | 9/51 [00:00<00:04, 10.11it/s]Capturing CUDA graphs (PIECEWISE):  22%|██▏       | 11/51 [00:01<00:03, 10.18it/s]Capturing CUDA graphs (PIECEWISE):  25%|██▌       | 13/51 [00:01<00:03, 10.49it/s]Capturing CUDA graphs (PIECEWISE):  29%|██▉       | 15/51 [00:01<00:03, 10.68it/s]Capturing CUDA graphs (PIECEWISE):  33%|███▎      | 17/51 [00:01<00:03, 11.22it/s]Capturing CUDA graphs (PIECEWISE):  37%|███▋      | 19/51 [00:01<00:02, 11.80it/s]Capturing CUDA graphs (PIECEWISE):  41%|████      | 21/51 [00:01<00:02, 12.00it/s]Capturing CUDA graphs (PIECEWISE):  45%|████▌     | 23/51 [00:02<00:02, 12.13it/s]Capturing CUDA graphs (PIECEWISE):  49%|████▉     | 25/51 [00:02<00:02, 11.94it/s]Capturing CUDA graphs (PIECEWISE):  53%|█████▎    | 27/51 [00:02<00:01, 12.25it/s]Capturing CUDA graphs (PIECEWISE):  57%|█████▋    | 29/51 [00:02<00:01, 12.18it/s]Capturing CUDA graphs (PIECEWISE):  61%|██████    | 31/51 [00:02<00:01, 12.39it/s]Capturing CUDA graphs (PIECEWISE):  65%|██████▍   | 33/51 [00:02<00:01, 12.67it/s]Capturing CUDA graphs (PIECEWISE):  69%|██████▊   | 35/51 [00:03<00:01, 13.17it/s]Capturing CUDA graphs (PIECEWISE):  73%|███████▎  | 37/51 [00:03<00:01, 13.52it/s]Capturing CUDA graphs (PIECEWISE):  76%|███████▋  | 39/51 [00:03<00:00, 13.77it/s]Capturing CUDA graphs (PIECEWISE):  80%|████████  | 41/51 [00:03<00:00, 13.35it/s]Capturing CUDA graphs (PIECEWISE):  84%|████████▍ | 43/51 [00:03<00:00, 13.82it/s]Capturing CUDA graphs (PIECEWISE):  88%|████████▊ | 45/51 [00:03<00:00, 13.81it/s]Capturing CUDA graphs (PIECEWISE):  92%|█████████▏| 47/51 [00:03<00:00, 14.21it/s]Capturing CUDA graphs (PIECEWISE):  96%|█████████▌| 49/51 [00:04<00:00, 14.77it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:04<00:00, 15.55it/s]Capturing CUDA graphs (PIECEWISE): 100%|██████████| 51/51 [00:04<00:00, 12.29it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/51 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):   4%|▍         | 2/51 [00:00<00:02, 18.83it/s]Capturing CUDA graphs (FULL):   8%|▊         | 4/51 [00:00<00:02, 19.08it/s]Capturing CUDA graphs (FULL):  12%|█▏        | 6/51 [00:00<00:02, 19.41it/s]Capturing CUDA graphs (FULL):  18%|█▊        | 9/51 [00:00<00:02, 20.92it/s]Capturing CUDA graphs (FULL):  24%|██▎       | 12/51 [00:00<00:01, 21.70it/s]Capturing CUDA graphs (FULL):  29%|██▉       | 15/51 [00:00<00:01, 22.38it/s]Capturing CUDA graphs (FULL):  35%|███▌      | 18/51 [00:00<00:01, 23.07it/s]Capturing CUDA graphs (FULL):  41%|████      | 21/51 [00:00<00:01, 23.63it/s]Capturing CUDA graphs (FULL):  47%|████▋     | 24/51 [00:01<00:01, 24.61it/s]Capturing CUDA graphs (FULL):  53%|█████▎    | 27/51 [00:01<00:00, 25.83it/s]Capturing CUDA graphs (FULL):  61%|██████    | 31/51 [00:01<00:00, 27.57it/s]Capturing CUDA graphs (FULL):  69%|██████▊   | 35/51 [00:01<00:00, 28.58it/s]Capturing CUDA graphs (FULL):  75%|███████▍  | 38/51 [00:01<00:00, 28.88it/s]Capturing CUDA graphs (FULL):  80%|████████  | 41/51 [00:01<00:00, 28.50it/s]Capturing CUDA graphs (FULL):  88%|████████▊ | 45/51 [00:01<00:00, 28.51it/s]Capturing CUDA graphs (FULL):  94%|█████████▍| 48/51 [00:01<00:00, 28.23it/s]Capturing CUDA graphs (FULL): 100%|██████████| 51/51 [00:01<00:00, 25.81it/s]
+(EngineCore pid=1111934) INFO 11-23 13:51:23 [model_runner.py:1163] Graph capturing finished in 7 secs, took 0.54 GiB
+(EngineCore pid=1111934) INFO 11-23 13:51:23 [gpu_worker.py:1003] CUDA graph pool memory: 0.54 GiB (actual), 1.39 GiB (estimated), difference: 0.85 GiB (156.1%).
+(EngineCore pid=1111934) INFO 11-23 13:51:23 [gpu_worker.py:1066] Free memory on device (92.42/93.13 GiB) on startup. Desired GPU memory utilization is (0.6, 55.88 GiB). Actual usage is 28.3 GiB for consumed memory (weights + non-torch), 3.38 GiB for peak activation, and 0.54 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=25239624807` (23.51 GiB) to fit into requested memory, or `--kv-cache-memory=64482358784` (60.05 GiB) to fully utilize gpu memory. Current kv cache memory in use is 24.2 GiB.
+(EngineCore pid=1111934) INFO 11-23 13:51:23 [jit_monitor.py:84] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=1111934) INFO 11-23 13:51:24 [core.py:405] init engine (profile, create kv cache, warmup model) took 59.15 s (compilation: 26.54 s)
+(EngineCore pid=1111934) INFO 11-23 13:51:24 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['triton', 'native'])
+(MainProcess pid=1111280) INFO 11-23 13:51:24 [hf.py:736] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+모델 불러옴 73초
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1665.19it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:01<01:17,  1.65s/it, est. speed input: 153.51 toks/s, output: 74.62 toks/s]Processed prompts:   4%|▍         | 2/48 [00:02<00:44,  1.03it/s, est. speed input: 233.77 toks/s, output: 132.25 toks/s]Processed prompts:   8%|▊         | 4/48 [00:02<00:19,  2.22it/s, est. speed input: 420.79 toks/s, output: 260.62 toks/s]Processed prompts:  12%|█▎        | 6/48 [00:02<00:10,  3.82it/s, est. speed input: 603.33 toks/s, output: 399.71 toks/s]Processed prompts:  19%|█▉        | 9/48 [00:02<00:06,  5.97it/s, est. speed input: 834.52 toks/s, output: 585.76 toks/s]Processed prompts:  23%|██▎       | 11/48 [00:02<00:05,  7.26it/s, est. speed input: 968.18 toks/s, output: 706.50 toks/s]Processed prompts:  27%|██▋       | 13/48 [00:03<00:04,  8.62it/s, est. speed input: 1088.87 toks/s, output: 825.27 toks/s]Processed prompts:  33%|███▎      | 16/48 [00:03<00:02, 11.88it/s, est. speed input: 1294.52 toks/s, output: 1021.53 toks/s]Processed prompts:  42%|████▏     | 20/48 [00:03<00:01, 15.78it/s, est. speed input: 1543.60 toks/s, output: 1275.06 toks/s]Processed prompts:  48%|████▊     | 23/48 [00:03<00:01, 16.43it/s, est. speed input: 1687.86 toks/s, output: 1439.15 toks/s]Processed prompts:  52%|█████▏    | 25/48 [00:03<00:01, 16.17it/s, est. speed input: 1766.02 toks/s, output: 1541.05 toks/s]Processed prompts:  58%|█████▊    | 28/48 [00:03<00:01, 14.38it/s, est. speed input: 1848.50 toks/s, output: 1664.40 toks/s]Processed prompts:  62%|██████▎   | 30/48 [00:04<00:01, 12.51it/s, est. speed input: 1871.08 toks/s, output: 1727.83 toks/s]Processed prompts:  67%|██████▋   | 32/48 [00:04<00:01, 11.35it/s, est. speed input: 1890.26 toks/s, output: 1790.26 toks/s]Processed prompts:  71%|███████   | 34/48 [00:04<00:01, 11.12it/s, est. speed input: 1925.82 toks/s, output: 1869.47 toks/s]Processed prompts:  75%|███████▌  | 36/48 [00:04<00:01, 11.58it/s, est. speed input: 1971.57 toks/s, output: 1963.80 toks/s]Processed prompts:  79%|███████▉  | 38/48 [00:04<00:00, 12.39it/s, est. speed input: 2021.39 toks/s, output: 2067.22 toks/s]Processed prompts:  83%|████████▎ | 40/48 [00:05<00:00,  8.24it/s, est. speed input: 1948.91 toks/s, output: 2049.65 toks/s]Processed prompts:  88%|████████▊ | 42/48 [00:05<00:00,  7.08it/s, est. speed input: 1909.02 toks/s, output: 2072.02 toks/s]Processed prompts:  92%|█████████▏| 44/48 [00:05<00:00,  8.31it/s, est. speed input: 1951.43 toks/s, output: 2182.92 toks/s]Processed prompts:  96%|█████████▌| 46/48 [00:08<00:00,  2.05it/s, est. speed input: 1382.65 toks/s, output: 1638.00 toks/s]Processed prompts:  98%|█████████▊| 47/48 [00:10<00:00,  1.46it/s, est. speed input: 1187.65 toks/s, output: 1463.76 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  1.19s/it, est. speed input: 920.49 toks/s, output: 1199.50 toks/s] Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  1.19s/it, est. speed input: 920.49 toks/s, output: 1199.50 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  3.62it/s, est. speed input: 920.49 toks/s, output: 1199.50 toks/s]
+[1/380] A llm-same A-MESA-CD-PED-G2   13.3초  출력 123토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[2/380] A llm-same A-MESA-UC-PED-G2   13.3초  출력 252토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[3/380] A llm-same A-MESA-PR-UC-PED-G2   13.3초  출력 221토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[4/380] A llm-same A-BAL-UC-PED-G2   13.3초  출력 183토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[5/380] A llm-same A-MTX-IBD-G7   13.3초  출력 166토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[6/380] A llm-same A-IFX-IV-CD-adult-G3   13.3초  출력 248토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[7/380] A llm-same A-IFX-IV-CD-adult-G4   13.3초  출력 873토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[8/380] A llm-same A-IFX-IV-CD-adult-E   13.3초  출력 218토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[9/380] A llm-same A-IFX-IV-CD-ped-G3   13.3초  출력 191토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[10/380] A llm-same A-IFX-IV-CD-ped-G4   13.3초  출력 1176토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[11/380] A llm-same A-IFX-IV-CD-ped-E   13.3초  출력 277토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[12/380] A llm-same A-IFX-IV-CD-fistula-G3   13.3초  출력 277토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[13/380] A llm-same A-IFX-IV-CD-fistula-G4   13.3초  출력 258토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[14/380] A llm-same A-IFX-IV-CD-fistula-E   13.3초  출력 358토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[15/380] A llm-same A-IFX-IV-UC-adult-G3   13.3초  출력 228토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[16/380] A llm-same A-IFX-IV-UC-adult-G4   13.3초  출력 419토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[17/380] A llm-same A-IFX-IV-UC-adult-E   13.3초  출력 621토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[18/380] A llm-same A-IFX-IV-UC-ped-G2   13.3초  출력 197토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[19/380] A llm-same A-IFX-IV-UC-ped-G3   13.3초  출력 244토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[20/380] A llm-same A-IFX-IV-UC-ped-G4   13.3초  출력 284토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[21/380] A llm-same A-IFX-IV-UC-ped-E   13.3초  출력 342토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[22/380] A llm-same A-IFX-IV-GIBD-G2   13.3초  출력 187토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[23/380] A llm-same A-IFX-IV-GIBD-G3   13.3초  출력 231토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[24/380] A llm-same A-IFX-IV-GIBD-G4   13.3초  출력 454토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[25/380] A llm-same A-IFX-IV-GIBD-E   13.3초  출력 241토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[26/380] A llm-same A-IFX-SC-CD-adult-G3   13.3초  출력 368토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[27/380] A llm-same A-IFX-SC-CD-adult-G4   13.3초  출력 450토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[28/380] A llm-same A-IFX-SC-CD-adult-E   13.3초  출력 406토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[29/380] A llm-same A-IFX-SC-CD-fistula-G3   13.3초  출력 467토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[30/380] A llm-same A-IFX-SC-CD-fistula-G4   13.3초  출력 354토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[31/380] A llm-same A-IFX-SC-CD-fistula-E   13.3초  출력 318토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[32/380] A llm-same A-IFX-SC-UC-adult-G3   13.3초  출력 285토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[33/380] A llm-same A-IFX-SC-UC-adult-G4   13.3초  출력 240토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[34/380] A llm-same A-IFX-SC-UC-adult-E   13.3초  출력 209토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[35/380] A llm-same A-ADA-CD-adult-G3   13.3초  출력 266토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[36/380] A llm-same A-ADA-CD-adult-G4   13.3초  출력 722토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[37/380] A llm-same A-ADA-CD-adult-E   13.3초  출력 232토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[38/380] A llm-same A-ADA-CD-ped-G3   13.3초  출력 375토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[39/380] A llm-same A-ADA-CD-ped-G4   13.3초  출력 380토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[40/380] A llm-same A-ADA-CD-ped-E   13.3초  출력 196토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[41/380] A llm-same A-ADA-UC-G3   13.3초  출력 161토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[42/380] A llm-same A-ADA-UC-G4   13.3초  출력 257토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[43/380] A llm-same A-ADA-UC-E   13.3초  출력 337토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[44/380] A llm-same A-ADA-GIBD-G2   13.3초  출력 239토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[45/380] A llm-same A-ADA-GIBD-G3   13.3초  출력 316토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[46/380] A llm-same A-ADA-GIBD-G4   13.3초  출력 460토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[47/380] A llm-same A-ADA-GIBD-E   13.3초  출력 299토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+[48/380] A llm-same A-GOL-UC-G3   13.3초  출력 318토큰  누적 0.2분    → 답: 가이드북에 적혀 있지 않다
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1285.11it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:01<01:29,  1.90s/it, est. speed input: 131.07 toks/s, output: 74.75 toks/s]Processed prompts:   4%|▍         | 2/48 [00:02<00:49,  1.08s/it, est. speed input: 205.55 toks/s, output: 134.40 toks/s]Processed prompts:   6%|▋         | 3/48 [00:02<00:30,  1.46it/s, est. speed input: 284.44 toks/s, output: 198.92 toks/s]Processed prompts:  17%|█▋        | 8/48 [00:02<00:08,  4.91it/s, est. speed input: 711.65 toks/s, output: 534.08 toks/s]Processed prompts:  25%|██▌       | 12/48 [00:03<00:04,  7.29it/s, est. speed input: 974.52 toks/s, output: 782.73 toks/s]Processed prompts:  33%|███▎      | 16/48 [00:03<00:03,  9.34it/s, est. speed input: 1210.87 toks/s, output: 1017.16 toks/s]Processed prompts:  46%|████▌     | 22/48 [00:03<00:01, 14.58it/s, est. speed input: 1595.58 toks/s, output: 1424.10 toks/s]Processed prompts:  52%|█████▏    | 25/48 [00:03<00:01, 15.77it/s, est. speed input: 1738.46 toks/s, output: 1596.23 toks/s]Processed prompts:  60%|██████    | 29/48 [00:03<00:01, 14.77it/s, est. speed input: 1868.95 toks/s, output: 1767.80 toks/s]Processed prompts:  65%|██████▍   | 31/48 [00:04<00:01, 13.34it/s, est. speed input: 1894.93 toks/s, output: 1833.46 toks/s]Processed prompts:  77%|███████▋  | 37/48 [00:04<00:00, 19.68it/s, est. speed input: 2194.72 toks/s, output: 2240.99 toks/s]Processed prompts:  83%|████████▎ | 40/48 [00:04<00:00, 13.44it/s, est. speed input: 2155.67 toks/s, output: 2256.75 toks/s]Processed prompts:  90%|████████▉ | 43/48 [00:05<00:00, 10.99it/s, est. speed input: 2124.22 toks/s, output: 2309.36 toks/s]Processed prompts:  94%|█████████▍| 45/48 [00:05<00:00, 10.73it/s, est. speed input: 2138.81 toks/s, output: 2381.11 toks/s]Processed prompts:  98%|█████████▊| 47/48 [00:06<00:00,  5.56it/s, est. speed input: 1889.03 toks/s, output: 2170.77 toks/s]Processed prompts: 100%|██████████| 48/48 [00:06<00:00,  5.56it/s, est. speed input: 1896.02 toks/s, output: 2218.45 toks/s]Processed prompts: 100%|██████████| 48/48 [00:06<00:00,  7.42it/s, est. speed input: 1896.02 toks/s, output: 2218.45 toks/s]
+[49/380] A llm-same A-GOL-UC-G4    6.5초  출력 326토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[50/380] A llm-same A-GOL-UC-E    6.5초  출력 282토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[51/380] A llm-same A-VEDO-IV-CD-G3    6.5초  출력 283토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[52/380] A llm-same A-VEDO-IV-CD-G4    6.5초  출력 328토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[53/380] A llm-same A-VEDO-IV-CD-E    6.5초  출력 198토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[54/380] A llm-same A-VEDO-IV-UC-G3    6.5초  출력 224토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[55/380] A llm-same A-VEDO-IV-UC-G4    6.5초  출력 259토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[56/380] A llm-same A-VEDO-IV-UC-G5    6.5초  출력 246토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[57/380] A llm-same A-VEDO-IV-UC-E    6.5초  출력 461토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[58/380] A llm-same A-VEDO-SC-CD-G3    6.5초  출력 332토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[59/380] A llm-same A-VEDO-SC-CD-G4    6.5초  출력 425토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[60/380] A llm-same A-VEDO-SC-CD-E    6.5초  출력 309토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[61/380] A llm-same A-VEDO-SC-UC-G3    6.5초  출력 378토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[62/380] A llm-same A-VEDO-SC-UC-G4    6.5초  출력 330토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[63/380] A llm-same A-VEDO-SC-UC-E    6.5초  출력 332토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[64/380] A llm-same A-UST-CD-G3    6.5초  출력 243토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[65/380] A llm-same A-UST-CD-G4    6.5초  출력 435토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[66/380] A llm-same A-UST-CD-G5    6.5초  출력 291토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[67/380] A llm-same A-UST-CD-E    6.5초  출력 349토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[68/380] A llm-same A-UST-UC-G3    6.5초  출력 223토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[69/380] A llm-same A-UST-UC-G4    6.5초  출력 261토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[70/380] A llm-same A-UST-UC-E    6.5초  출력 327토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[71/380] A llm-same A-FIL-UC-G3    6.5초  출력 142토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[72/380] A llm-same A-FIL-UC-G4    6.5초  출력 286토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[73/380] A llm-same A-FIL-UC-G5    6.5초  출력 201토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[74/380] A llm-same A-FIL-UC-G6-hb    6.5초  출력 327토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[75/380] A llm-same A-FIL-UC-G6-anc    6.5초  출력 537토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[76/380] A llm-same A-FIL-UC-G6-alc    6.5초  출력 527토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[77/380] A llm-same A-FIL-UC-G7    6.5초  출력 220토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[78/380] A llm-same A-FIL-UC-E    6.5초  출력 416토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[79/380] A llm-same A-TOF-UC-G3    6.5초  출력 239토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[80/380] A llm-same A-TOF-UC-G4    6.5초  출력 272토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[81/380] A llm-same A-TOF-UC-G5    6.5초  출력 271토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[82/380] A llm-same A-TOF-UC-G6-hb    6.5초  출력 181토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[83/380] A llm-same A-TOF-UC-G6-anc    6.5초  출력 204토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[84/380] A llm-same A-TOF-UC-G6-alc    6.5초  출력 338토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[85/380] A llm-same A-TOF-UC-G7    6.5초  출력 202토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[86/380] A llm-same A-TOF-UC-E    6.5초  출력 261토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[87/380] A llm-same A-UPA-CD-G3    6.5초  출력 263토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[88/380] A llm-same A-UPA-CD-G4    6.5초  출력 241토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[89/380] A llm-same A-UPA-CD-G5    6.5초  출력 348토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[90/380] A llm-same A-UPA-CD-G6-hb    6.5초  출력 391토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[91/380] A llm-same A-UPA-CD-G6-anc    6.5초  출력 260토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[92/380] A llm-same A-UPA-CD-G6-alc    6.5초  출력 408토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[93/380] A llm-same A-UPA-CD-G7    6.5초  출력 201토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[94/380] A llm-same A-UPA-CD-E    6.5초  출력 226토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[95/380] A llm-same A-UPA-UC-G3    6.5초  출력 267토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+[96/380] A llm-same A-UPA-UC-G4    6.5초  출력 288토큰  누적 0.3분    → 답: 가이드북에 적혀 있지 않다
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1274.37it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:02<01:52,  2.39s/it, est. speed input: 104.13 toks/s, output: 74.44 toks/s]Processed prompts:   4%|▍         | 2/48 [00:02<00:50,  1.10s/it, est. speed input: 203.15 toks/s, output: 143.40 toks/s]Processed prompts:  10%|█         | 5/48 [00:02<00:15,  2.74it/s, est. speed input: 468.01 toks/s, output: 348.78 toks/s]Processed prompts:  15%|█▍        | 7/48 [00:02<00:10,  3.94it/s, est. speed input: 621.81 toks/s, output: 474.71 toks/s]Processed prompts:  21%|██        | 10/48 [00:03<00:06,  6.10it/s, est. speed input: 854.98 toks/s, output: 668.09 toks/s]Processed prompts:  31%|███▏      | 15/48 [00:03<00:03, 10.22it/s, est. speed input: 1202.74 toks/s, output: 992.80 toks/s]Processed prompts:  35%|███▌      | 17/48 [00:03<00:02, 10.39it/s, est. speed input: 1295.07 toks/s, output: 1091.68 toks/s]Processed prompts:  44%|████▍     | 21/48 [00:03<00:01, 14.08it/s, est. speed input: 1534.13 toks/s, output: 1351.61 toks/s]Processed prompts:  52%|█████▏    | 25/48 [00:03<00:01, 18.17it/s, est. speed input: 1777.08 toks/s, output: 1614.00 toks/s]Processed prompts:  58%|█████▊    | 28/48 [00:04<00:01, 15.88it/s, est. speed input: 1860.93 toks/s, output: 1743.67 toks/s]Processed prompts:  65%|██████▍   | 31/48 [00:04<00:01, 14.11it/s, est. speed input: 1936.80 toks/s, output: 1859.46 toks/s]Processed prompts:  73%|███████▎  | 35/48 [00:04<00:00, 16.76it/s, est. speed input: 2111.26 toks/s, output: 2098.25 toks/s]Processed prompts:  79%|███████▉  | 38/48 [00:04<00:00, 16.02it/s, est. speed input: 2192.88 toks/s, output: 2237.18 toks/s]Processed prompts:  85%|████████▌ | 41/48 [00:04<00:00, 14.98it/s, est. speed input: 2254.93 toks/s, output: 2361.14 toks/s]Processed prompts:  90%|████████▉ | 43/48 [00:05<00:00, 12.77it/s, est. speed input: 2247.89 toks/s, output: 2405.43 toks/s]Processed prompts:  96%|█████████▌| 46/48 [00:05<00:00, 10.77it/s, est. speed input: 2235.53 toks/s, output: 2472.18 toks/s]Processed prompts: 100%|██████████| 48/48 [00:05<00:00, 10.77it/s, est. speed input: 2301.98 toks/s, output: 2595.36 toks/s]Processed prompts: 100%|██████████| 48/48 [00:05<00:00,  8.56it/s, est. speed input: 2301.98 toks/s, output: 2595.36 toks/s]
+[97/380] A llm-same A-UPA-UC-G5    5.6초  출력 314토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[98/380] A llm-same A-UPA-UC-G6-hb    5.6초  출력 410토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[99/380] A llm-same A-UPA-UC-G6-anc    5.6초  출력 417토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[100/380] A llm-same A-UPA-UC-G6-alc    5.6초  출력 409토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[101/380] A llm-same A-UPA-UC-G7    5.6초  출력 283토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[102/380] A llm-same A-UPA-UC-E    5.6초  출력 307토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[103/380] A llm-same A-OZA-UC-G3    5.6초  출력 178토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[104/380] A llm-same A-OZA-UC-G4    5.6초  출력 272토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[105/380] A llm-same A-OZA-UC-G5    5.6초  출력 289토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[106/380] A llm-same A-OZA-UC-G7    5.6초  출력 336토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[107/380] A llm-same A-OZA-UC-E    5.6초  출력 211토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[108/380] A2 llm-same A2-GEN-R1    5.6초  출력 225토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[109/380] A2 llm-same A2-GEN-R2    5.6초  출력 387토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[110/380] A2 llm-same A2-GEN-R3    5.6초  출력 452토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[111/380] A2 llm-same A2-GEN-R4    5.6초  출력 229토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[112/380] A2 llm-same A2-GEN-P1    5.6초  출력 444토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[113/380] A2 llm-same A2-GEN-P2    5.6초  출력 239토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[114/380] A2 llm-same A2-GEN-T1    5.6초  출력 374토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[115/380] A2 llm-same A2-GEN-T2    5.6초  출력 283토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[116/380] A2 llm-same A2-IFX-IV-CD-adult-D    5.6초  출력 262토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[117/380] A2 llm-same A2-IFX-IV-CD-ped-D    5.6초  출력 232토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[118/380] A2 llm-same A2-IFX-IV-CD-fistula-D    5.6초  출력 357토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[119/380] A2 llm-same A2-IFX-SC-CD-adult-L    5.6초  출력 215토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[120/380] A2 llm-same A2-IFX-SC-CD-adult-J    5.6초  출력 333토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[121/380] A2 llm-same A2-IFX-SC-CD-fistula-L    5.6초  출력 280토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[122/380] A2 llm-same A2-IFX-SC-CD-fistula-J    5.6초  출력 269토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[123/380] A2 llm-same A2-IFX-SC-UC-adult-L    5.6초  출력 392토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[124/380] A2 llm-same A2-IFX-SC-UC-adult-J    5.6초  출력 240토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[125/380] A2 llm-same A2-ADA-CD-adult-L    5.6초  출력 242토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[126/380] A2 llm-same A2-ADA-CD-adult-D    5.6초  출력 366토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[127/380] A2 llm-same A2-ADA-CD-ped-L    5.6초  출력 369토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[128/380] A2 llm-same A2-ADA-CD-ped-D    5.6초  출력 310토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[129/380] A2 llm-same A2-ADA-UC-L    5.6초  출력 200토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[130/380] A2 llm-same A2-ADA-UC-D    5.6초  출력 240토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[131/380] A2 llm-same A2-ADA-GIBD-L    5.6초  출력 310토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[132/380] A2 llm-same A2-GOL-UC-L    5.6초  출력 254토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[133/380] A2 llm-same A2-VEDO-IV-CD-W    5.6초  출력 347토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[134/380] A2 llm-same A2-VEDO-IV-CD-D    5.6초  출력 340토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[135/380] A2 llm-same A2-VEDO-IV-UC-W    5.6초  출력 447토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[136/380] A2 llm-same A2-VEDO-IV-UC-D    5.6초  출력 194토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[137/380] A2 llm-same A2-VEDO-SC-CD-W    5.6초  출력 243토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[138/380] A2 llm-same A2-VEDO-SC-CD-L    5.6초  출력 273토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[139/380] A2 llm-same A2-VEDO-SC-UC-W    5.6초  출력 197토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[140/380] A2 llm-same A2-VEDO-SC-UC-L    5.6초  출력 274토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[141/380] A2 llm-same A2-UST-CD-D    5.6초  출력 283토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[142/380] A2 llm-same A2-UST-UC-D    5.6초  출력 333토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[143/380] A2 llm-same A2-TOF-UC-D    5.6초  출력 326토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+[144/380] A2 llm-same A2-UPA-CD-D    5.6초  출력 365토큰  누적 0.4분    → 답: 가이드북에 적혀 있지 않다
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1221.81it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:02<01:44,  2.23s/it, est. speed input: 124.10 toks/s, output: 64.51 toks/s]Processed prompts:   4%|▍         | 2/48 [00:04<01:40,  2.17s/it, est. speed input: 130.30 toks/s, output: 102.82 toks/s]Processed prompts:   6%|▋         | 3/48 [00:04<00:58,  1.31s/it, est. speed input: 184.46 toks/s, output: 166.81 toks/s]Processed prompts:   8%|▊         | 4/48 [00:04<00:39,  1.12it/s, est. speed input: 233.69 toks/s, output: 228.59 toks/s]Processed prompts:  12%|█▎        | 6/48 [00:05<00:21,  1.99it/s, est. speed input: 351.54 toks/s, output: 352.69 toks/s]Processed prompts:  15%|█▍        | 7/48 [00:05<00:16,  2.49it/s, est. speed input: 412.22 toks/s, output: 414.47 toks/s]Processed prompts:  17%|█▋        | 8/48 [00:05<00:13,  3.03it/s, est. speed input: 465.24 toks/s, output: 474.15 toks/s]Processed prompts:  21%|██        | 10/48 [00:05<00:07,  4.85it/s, est. speed input: 591.54 toks/s, output: 605.83 toks/s]Processed prompts:  27%|██▋       | 13/48 [00:06<00:06,  5.80it/s, est. speed input: 740.58 toks/s, output: 768.36 toks/s]Processed prompts:  33%|███▎      | 16/48 [00:06<00:03,  8.51it/s, est. speed input: 892.21 toks/s, output: 965.49 toks/s]Processed prompts:  40%|███▉      | 19/48 [00:06<00:03,  9.64it/s, est. speed input: 1015.71 toks/s, output: 1139.30 toks/s]Processed prompts:  48%|████▊     | 23/48 [00:06<00:02, 12.29it/s, est. speed input: 1179.32 toks/s, output: 1387.49 toks/s]Processed prompts:  54%|█████▍    | 26/48 [00:06<00:01, 14.78it/s, est. speed input: 1315.04 toks/s, output: 1579.24 toks/s]Processed prompts:  58%|█████▊    | 28/48 [00:07<00:02,  8.52it/s, est. speed input: 1298.60 toks/s, output: 1594.01 toks/s]Processed prompts:  62%|██████▎   | 30/48 [00:07<00:01,  9.80it/s, est. speed input: 1379.17 toks/s, output: 1715.83 toks/s]Processed prompts:  67%|██████▋   | 32/48 [00:07<00:01,  9.35it/s, est. speed input: 1421.28 toks/s, output: 1805.76 toks/s]Processed prompts:  71%|███████   | 34/48 [00:08<00:02,  6.60it/s, est. speed input: 1418.85 toks/s, output: 1827.76 toks/s]Processed prompts:  75%|███████▌  | 36/48 [00:08<00:02,  5.65it/s, est. speed input: 1423.41 toks/s, output: 1873.24 toks/s]Processed prompts:  79%|███████▉  | 38/48 [00:09<00:02,  4.74it/s, est. speed input: 1413.44 toks/s, output: 1898.52 toks/s]Processed prompts:  83%|████████▎ | 40/48 [00:09<00:01,  5.45it/s, est. speed input: 1452.94 toks/s, output: 2002.25 toks/s]Processed prompts:  85%|████████▌ | 41/48 [00:10<00:01,  4.03it/s, est. speed input: 1401.14 toks/s, output: 1966.56 toks/s]Processed prompts:  90%|████████▉ | 43/48 [00:10<00:00,  5.45it/s, est. speed input: 1454.78 toks/s, output: 2099.27 toks/s]Processed prompts:  92%|█████████▏| 44/48 [00:10<00:00,  5.82it/s, est. speed input: 1471.53 toks/s, output: 2151.11 toks/s]Processed prompts:  96%|█████████▌| 46/48 [00:12<00:01,  1.92it/s, est. speed input: 1257.05 toks/s, output: 1895.91 toks/s]Processed prompts:  98%|█████████▊| 47/48 [00:13<00:00,  1.62it/s, est. speed input: 1192.73 toks/s, output: 1837.37 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  1.79it/s, est. speed input: 1188.21 toks/s, output: 1870.77 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  1.79it/s, est. speed input: 1188.21 toks/s, output: 1870.77 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  3.45it/s, est. speed input: 1188.21 toks/s, output: 1870.77 toks/s]
+[145/380] A2 llm-same A2-UPA-UC-D   14.0초  출력 144토큰  누적 0.7분    → 답: 가이드북에 적혀 있지 않다
+[146/380] C llm-same C-IFX-IV-CD-adult-base   14.0초  출력 462토큰  누적 0.7분    → 판정: 예  
+[147/380] C llm-same C-IFX-IV-CD-adult-act-low   14.0초  출력 635토큰  누적 0.7분    → 판정: 예  
+[148/380] C llm-same C-IFX-IV-CD-adult-act-missing   14.0초  출력 1129토큰  누적 0.7분    → 판정: 예  
+[149/380] C llm-same C-IFX-IV-CD-adult-prior-short   14.0초  출력 389토큰  누적 0.7분    → 판정: 예  
+[150/380] C llm-same C-IFX-IV-CD-adult-prior-intol   14.0초  출력 378토큰  누적 0.7분    → 판정: 예  
+[151/380] C llm-same C-IFX-IV-CD-adult-maint-ok   14.0초  출력 767토큰  누적 0.7분    → 판정: 판단 불가  
+[152/380] C llm-same C-IFX-IV-CD-adult-maint-ng   14.0초  출력 542토큰  누적 0.7분    → 판정: 판단 불가  
+[153/380] C llm-same C-IFX-IV-CD-adult-maint-missing   14.0초  출력 326토큰  누적 0.7분    → 판정: 판단 불가  
+[154/380] C llm-same C-IFX-IV-CD-ped-base   14.0초  출력 534토큰  누적 0.7분    → 판정: 판단 불가  
+[155/380] C llm-same C-IFX-IV-CD-ped-act-low   14.0초  출력 557토큰  누적 0.7분    → 판정: 판단 불가  
+[156/380] C llm-same C-IFX-IV-CD-ped-act-missing   14.0초  출력 428토큰  누적 0.7분    → 판정: 판단 불가  
+[157/380] C llm-same C-IFX-IV-CD-ped-prior-short   14.0초  출력 787토큰  누적 0.7분    → 판정: 판단 불가  
+[158/380] C llm-same C-IFX-IV-CD-ped-prior-intol   14.0초  출력 481토큰  누적 0.7분    → 판정: 예  
+[159/380] C llm-same C-IFX-IV-CD-ped-maint-ok   14.0초  출력 480토큰  누적 0.7분    → 판정: 아니오  
+[160/380] C llm-same C-IFX-IV-CD-ped-maint-ng   14.0초  출력 705토큰  누적 0.7분    → 판정: 판단 불가  
+[161/380] C llm-same C-IFX-IV-CD-ped-maint-missing   14.0초  출력 345토큰  누적 0.7분    → 판정: 판단 불가  
+[162/380] C llm-same C-IFX-IV-CD-fistula-base   14.0초  출력 397토큰  누적 0.7분    → 판정: 예  
+[163/380] C llm-same C-IFX-IV-CD-fistula-prior-short   14.0초  출력 794토큰  누적 0.7분    → 판정: 예  
+[164/380] C llm-same C-IFX-IV-CD-fistula-maint-ok   14.0초  출력 776토큰  누적 0.7분    → 판정: 판단 불가  
+[165/380] C llm-same C-IFX-IV-CD-fistula-maint-ng   14.0초  출력 462토큰  누적 0.7분    → 판정: 판단 불가  
+[166/380] C llm-same C-IFX-IV-CD-fistula-maint-missing   14.0초  출력 472토큰  누적 0.7분    → 판정: 판단 불가  
+[167/380] C llm-same C-IFX-IV-UC-adult-base   14.0초  출력 472토큰  누적 0.7분    → 판정: 예  
+[168/380] C llm-same C-IFX-IV-UC-adult-act-low   14.0초  출력 646토큰  누적 0.7분    → 판정: 판단 불가  
+[169/380] C llm-same C-IFX-IV-UC-adult-act-missing   14.0초  출력 537토큰  누적 0.7분    → 판정: 판단 불가  
+[170/380] C llm-same C-IFX-IV-UC-adult-prior-short   14.0초  출력 1095토큰  누적 0.7분    → 판정: 예  
+[171/380] C llm-same C-IFX-IV-UC-adult-prior-intol   14.0초  출력 768토큰  누적 0.7분    → 판정: 판단 불가  
+[172/380] C llm-same C-IFX-IV-UC-adult-maint-ok   14.0초  출력 460토큰  누적 0.7분    → 판정: 판단 불가  
+[173/380] C llm-same C-IFX-IV-UC-adult-maint-ng   14.0초  출력 528토큰  누적 0.7분    → 판정: 판단 불가  
+[174/380] C llm-same C-IFX-IV-UC-adult-maint-missing   14.0초  출력 305토큰  누적 0.7분    → 판정: 판단 불가  
+[175/380] C llm-same C-IFX-IV-UC-ped-base   14.0초  출력 442토큰  누적 0.7분    → 판정: 예  
+[176/380] C llm-same C-IFX-IV-UC-ped-act-low   14.0초  출력 1002토큰  누적 0.7분    → 판정: 판단 불가  
+[177/380] C llm-same C-IFX-IV-UC-ped-act-missing   14.0초  출력 647토큰  누적 0.7분    → 판정: 예  
+[178/380] C llm-same C-IFX-IV-UC-ped-prior-short   14.0초  출력 368토큰  누적 0.7분    → 판정: 판단 불가  
+[179/380] C llm-same C-IFX-IV-UC-ped-prior-intol   14.0초  출력 433토큰  누적 0.7분    → 판정: 예  
+[180/380] C llm-same C-IFX-IV-UC-ped-maint-ok   14.0초  출력 350토큰  누적 0.7분    → 판정: 판단 불가  
+[181/380] C llm-same C-IFX-IV-UC-ped-maint-ng   14.0초  출력 428토큰  누적 0.7분    → 판정: 판단 불가  
+[182/380] C llm-same C-IFX-IV-UC-ped-maint-missing   14.0초  출력 456토큰  누적 0.7분    → 판정: 판단 불가  
+[183/380] C llm-same C-IFX-IV-GIBD-base   14.0초  출력 399토큰  누적 0.7분    → 판정: 예  
+[184/380] C llm-same C-IFX-IV-GIBD-prior-short   14.0초  출력 697토큰  누적 0.7분    → 판정: 판단 불가  
+[185/380] C llm-same C-IFX-IV-GIBD-prior-intol   14.0초  출력 604토큰  누적 0.7분    → 판정: 예  
+[186/380] C llm-same C-IFX-IV-GIBD-age-low   14.0초  출력 557토큰  누적 0.7분    → 판정: 예  
+[187/380] C llm-same C-IFX-IV-GIBD-maint-ok   14.0초  출력 437토큰  누적 0.7분    → 판정: 판단 불가  
+[188/380] C llm-same C-IFX-IV-GIBD-maint-ng   14.0초  출력 441토큰  누적 0.7분    → 판정: 판단 불가  
+[189/380] C llm-same C-IFX-IV-GIBD-maint-missing   14.0초  출력 486토큰  누적 0.7분    → 판정: 판단 불가  
+[190/380] C llm-same C-IFX-SC-CD-adult-base   14.0초  출력 390토큰  누적 0.7분    → 판정: 예  
+[191/380] C llm-same C-IFX-SC-CD-adult-act-low   14.0초  출력 399토큰  누적 0.7분    → 판정: 예  
+[192/380] C llm-same C-IFX-SC-CD-adult-act-missing   14.0초  출력 717토큰  누적 0.7분    → 판정: 판단 불가  
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1179.66it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:04<03:39,  4.67s/it, est. speed input: 78.56 toks/s, output: 70.00 toks/s]Processed prompts:   4%|▍         | 2/48 [00:05<01:40,  2.19s/it, est. speed input: 144.79 toks/s, output: 134.07 toks/s]Processed prompts:   8%|▊         | 4/48 [00:05<00:38,  1.13it/s, est. speed input: 280.56 toks/s, output: 268.19 toks/s]Processed prompts:  10%|█         | 5/48 [00:05<00:28,  1.51it/s, est. speed input: 339.37 toks/s, output: 330.30 toks/s]Processed prompts:  15%|█▍        | 7/48 [00:05<00:19,  2.16it/s, est. speed input: 424.43 toks/s, output: 440.30 toks/s]Processed prompts:  17%|█▋        | 8/48 [00:06<00:15,  2.55it/s, est. speed input: 471.69 toks/s, output: 498.64 toks/s]Processed prompts:  19%|█▉        | 9/48 [00:06<00:13,  2.90it/s, est. speed input: 502.27 toks/s, output: 552.76 toks/s]Processed prompts:  21%|██        | 10/48 [00:06<00:10,  3.57it/s, est. speed input: 541.94 toks/s, output: 614.56 toks/s]Processed prompts:  23%|██▎       | 11/48 [00:06<00:09,  3.82it/s, est. speed input: 572.39 toks/s, output: 666.12 toks/s]Processed prompts:  27%|██▋       | 13/48 [00:06<00:06,  5.25it/s, est. speed input: 654.83 toks/s, output: 787.82 toks/s]Processed prompts:  29%|██▉       | 14/48 [00:07<00:06,  5.65it/s, est. speed input: 700.71 toks/s, output: 844.10 toks/s]Processed prompts:  31%|███▏      | 15/48 [00:07<00:05,  6.16it/s, est. speed input: 740.60 toks/s, output: 901.26 toks/s]Processed prompts:  35%|███▌      | 17/48 [00:07<00:03,  7.76it/s, est. speed input: 829.09 toks/s, output: 1022.43 toks/s]Processed prompts:  38%|███▊      | 18/48 [00:07<00:03,  7.78it/s, est. speed input: 865.60 toks/s, output: 1076.56 toks/s]Processed prompts:  40%|███▉      | 19/48 [00:07<00:05,  5.58it/s, est. speed input: 876.88 toks/s, output: 1102.62 toks/s]Processed prompts:  42%|████▏     | 20/48 [00:08<00:05,  4.87it/s, est. speed input: 886.24 toks/s, output: 1136.66 toks/s]Processed prompts:  46%|████▌     | 22/48 [00:08<00:03,  6.90it/s, est. speed input: 967.91 toks/s, output: 1262.98 toks/s]Processed prompts:  50%|█████     | 24/48 [00:08<00:02,  8.44it/s, est. speed input: 1033.06 toks/s, output: 1384.45 toks/s]Processed prompts:  58%|█████▊    | 28/48 [00:08<00:01, 13.14it/s, est. speed input: 1176.98 toks/s, output: 1647.91 toks/s]Processed prompts:  62%|██████▎   | 30/48 [00:08<00:01, 14.19it/s, est. speed input: 1247.77 toks/s, output: 1771.95 toks/s]Processed prompts:  67%|██████▋   | 32/48 [00:09<00:01,  8.50it/s, est. speed input: 1259.44 toks/s, output: 1821.59 toks/s]Processed prompts:  71%|███████   | 34/48 [00:09<00:01,  9.29it/s, est. speed input: 1303.73 toks/s, output: 1934.72 toks/s]Processed prompts:  75%|███████▌  | 36/48 [00:09<00:01,  8.28it/s, est. speed input: 1325.03 toks/s, output: 2018.96 toks/s]Processed prompts:  79%|███████▉  | 38/48 [00:09<00:01,  9.77it/s, est. speed input: 1382.43 toks/s, output: 2141.51 toks/s]Processed prompts:  83%|████████▎ | 40/48 [00:10<00:02,  3.99it/s, est. speed input: 1293.29 toks/s, output: 2044.24 toks/s]Processed prompts:  88%|████████▊ | 42/48 [00:10<00:01,  5.18it/s, est. speed input: 1352.25 toks/s, output: 2173.19 toks/s]Processed prompts:  92%|█████████▏| 44/48 [00:11<00:00,  4.56it/s, est. speed input: 1349.40 toks/s, output: 2218.75 toks/s]Processed prompts:  94%|█████████▍| 45/48 [00:11<00:00,  4.37it/s, est. speed input: 1349.51 toks/s, output: 2244.00 toks/s]Processed prompts:  96%|█████████▌| 46/48 [00:11<00:00,  4.69it/s, est. speed input: 1361.54 toks/s, output: 2292.10 toks/s]Processed prompts:  98%|█████████▊| 47/48 [00:12<00:00,  3.93it/s, est. speed input: 1351.58 toks/s, output: 2295.70 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  2.56it/s, est. speed input: 1295.96 toks/s, output: 2231.62 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  2.56it/s, est. speed input: 1295.96 toks/s, output: 2231.62 toks/s]Processed prompts: 100%|██████████| 48/48 [00:13<00:00,  3.64it/s, est. speed input: 1295.96 toks/s, output: 2231.62 toks/s]
+[193/380] C llm-same C-IFX-SC-CD-adult-prior-short   13.2초  출력 593토큰  누적 0.9분    → 판정: 예  
+[194/380] C llm-same C-IFX-SC-CD-adult-prior-intol   13.2초  출력 502토큰  누적 0.9분    → 판정: 예  
+[195/380] C llm-same C-IFX-SC-CD-adult-maint-ok   13.2초  출력 678토큰  누적 0.9분    → 판정: 아니오  
+[196/380] C llm-same C-IFX-SC-CD-adult-maint-ng   13.2초  출력 704토큰  누적 0.9분    → 판정: 판단 불가  
+[197/380] C llm-same C-IFX-SC-CD-fistula-base   13.2초  출력 376토큰  누적 0.9분    → 판정: 예  
+[198/380] C llm-same C-IFX-SC-CD-fistula-prior-short   13.2초  출력 588토큰  누적 0.9분    → 판정: 판단 불가  
+[199/380] C llm-same C-IFX-SC-CD-fistula-maint-ok   13.2초  출력 604토큰  누적 0.9분    → 판정: 판단 불가  
+[200/380] C llm-same C-IFX-SC-CD-fistula-maint-ng   13.2초  출력 582토큰  누적 0.9분    → 판정: 판단 불가  
+[201/380] C llm-same C-IFX-SC-UC-adult-base   13.2초  출력 610토큰  누적 0.9분    → 판정: 판단 불가  
+[202/380] C llm-same C-IFX-SC-UC-adult-act-low   13.2초  출력 878토큰  누적 0.9분    → 판정: 예  
+[203/380] C llm-same C-IFX-SC-UC-adult-act-missing   13.2초  출력 524토큰  누적 0.9분    → 판정: 예  
+[204/380] C llm-same C-IFX-SC-UC-adult-prior-short   13.2초  출력 954토큰  누적 0.9분    → 판정: 판단 불가  
+[205/380] C llm-same C-IFX-SC-UC-adult-prior-intol   13.2초  출력 828토큰  누적 0.9분    → 판정: 예  
+[206/380] C llm-same C-IFX-SC-UC-adult-maint-ok   13.2초  출력 718토큰  누적 0.9분    → 판정: 판단 불가  
+[207/380] C llm-same C-IFX-SC-UC-adult-maint-ng   13.2초  출력 636토큰  누적 0.9분    → 판정: 판단 불가  
+[208/380] C llm-same C-ADA-CD-adult-base   13.2초  출력 367토큰  누적 0.9분    → 판정: 예  
+[209/380] C llm-same C-ADA-CD-adult-act-low   13.2초  출력 513토큰  누적 0.9분    → 판정: 예  
+[210/380] C llm-same C-ADA-CD-adult-act-missing   13.2초  출력 327토큰  누적 0.9분    → 판정: 판단 불가  
+[211/380] C llm-same C-ADA-CD-adult-prior-short   13.2초  출력 424토큰  누적 0.9분    → 판정: 예  
+[212/380] C llm-same C-ADA-CD-adult-prior-intol   13.2초  출력 1031토큰  누적 0.9분    → 판정: 예  
+[213/380] C llm-same C-ADA-CD-adult-maint-ok   13.2초  출력 453토큰  누적 0.9분    → 판정: 판단 불가  
+[214/380] C llm-same C-ADA-CD-adult-maint-ng   13.2초  출력 692토큰  누적 0.9분    → 판정: 예  
+[215/380] C llm-same C-ADA-CD-ped-base   13.2초  출력 714토큰  누적 0.9분    → 판정: 예  
+[216/380] C llm-same C-ADA-CD-ped-act-low   13.2초  출력 704토큰  누적 0.9분    → 판정: 판단 불가  
+[217/380] C llm-same C-ADA-CD-ped-act-missing   13.2초  출력 437토큰  누적 0.9분    → 판정: 예  
+[218/380] C llm-same C-ADA-CD-ped-prior-short   13.2초  출력 917토큰  누적 0.9분    → 판정: 예  
+[219/380] C llm-same C-ADA-CD-ped-prior-intol   13.2초  출력 599토큰  누적 0.9분    → 판정: 예  
+[220/380] C llm-same C-ADA-CD-ped-maint-ok   13.2초  출력 608토큰  누적 0.9분    → 판정: 판단 불가  
+[221/380] C llm-same C-ADA-CD-ped-maint-ng   13.2초  출력 616토큰  누적 0.9분    → 판정: 판단 불가  
+[222/380] C llm-same C-ADA-UC-base   13.2초  출력 624토큰  누적 0.9분    → 판정: 예  
+[223/380] C llm-same C-ADA-UC-act-low   13.2초  출력 511토큰  누적 0.9분    → 판정: 예  
+[224/380] C llm-same C-ADA-UC-act-missing   13.2초  출력 361토큰  누적 0.9분    → 판정: 예  
+[225/380] C llm-same C-ADA-UC-prior-short   13.2초  출력 608토큰  누적 0.9분    → 판정: 예  
+[226/380] C llm-same C-ADA-UC-prior-intol   13.2초  출력 534토큰  누적 0.9분    → 판정: 예  
+[227/380] C llm-same C-ADA-UC-maint-ok   13.2초  출력 668토큰  누적 0.9분    → 판정: 판단 불가  
+[228/380] C llm-same C-ADA-UC-maint-ng   13.2초  출력 461토큰  누적 0.9분    → 판정: 판단 불가  
+[229/380] C llm-same C-ADA-GIBD-base   13.2초  출력 389토큰  누적 0.9분    → 판정: 판단 불가  
+[230/380] C llm-same C-ADA-GIBD-prior-short   13.2초  출력 483토큰  누적 0.9분    → 판정: 예  
+[231/380] C llm-same C-ADA-GIBD-prior-intol   13.2초  출력 818토큰  누적 0.9분    → 판정: 예  
+[232/380] C llm-same C-ADA-GIBD-maint-ok   13.2초  출력 492토큰  누적 0.9분    → 판정: 판단 불가  
+[233/380] C llm-same C-ADA-GIBD-maint-ng   13.2초  출력 391토큰  누적 0.9분    → 판정: 판단 불가  
+[234/380] C llm-same C-GOL-UC-base   13.2초  출력 625토큰  누적 0.9분    → 판정: 예  
+[235/380] C llm-same C-GOL-UC-act-low   13.2초  출력 903토큰  누적 0.9분    → 판정: 판단 불가  
+[236/380] C llm-same C-GOL-UC-act-missing   13.2초  출력 560토큰  누적 0.9분    → 판정: 판단 불가  
+[237/380] C llm-same C-GOL-UC-prior-short   13.2초  출력 820토큰  누적 0.9분    → 판정: 아니오  
+[238/380] C llm-same C-GOL-UC-prior-intol   13.2초  출력 664토큰  누적 0.9분    → 판정: 판단 불가  
+[239/380] C llm-same C-GOL-UC-maint-ok   13.2초  출력 873토큰  누적 0.9분    → 판정: 판단 불가  
+[240/380] C llm-same C-GOL-UC-maint-ng   13.2초  출력 477토큰  누적 0.9분    → 판정: 판단 불가  
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1116.21it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:05<04:21,  5.56s/it, est. speed input: 56.13 toks/s, output: 69.26 toks/s]Processed prompts:   4%|▍         | 2/48 [00:05<01:53,  2.48s/it, est. speed input: 107.56 toks/s, output: 134.96 toks/s]Processed prompts:   8%|▊         | 4/48 [00:06<00:46,  1.05s/it, est. speed input: 231.51 toks/s, output: 262.10 toks/s]Processed prompts:  10%|█         | 5/48 [00:06<00:32,  1.31it/s, est. speed input: 275.02 toks/s, output: 326.74 toks/s]Processed prompts:  12%|█▎        | 6/48 [00:06<00:26,  1.57it/s, est. speed input: 319.36 toks/s, output: 379.30 toks/s]Processed prompts:  15%|█▍        | 7/48 [00:07<00:23,  1.71it/s, est. speed input: 358.63 toks/s, output: 425.14 toks/s]Processed prompts:  17%|█▋        | 8/48 [00:07<00:18,  2.19it/s, est. speed input: 404.64 toks/s, output: 485.64 toks/s]Processed prompts:  19%|█▉        | 9/48 [00:07<00:14,  2.78it/s, est. speed input: 450.09 toks/s, output: 546.91 toks/s]Processed prompts:  25%|██▌       | 12/48 [00:07<00:06,  5.63it/s, est. speed input: 601.30 toks/s, output: 748.64 toks/s]Processed prompts:  29%|██▉       | 14/48 [00:08<00:06,  5.15it/s, est. speed input: 667.64 toks/s, output: 843.92 toks/s]Processed prompts:  33%|███▎      | 16/48 [00:08<00:06,  4.99it/s, est. speed input: 714.46 toks/s, output: 939.09 toks/s]Processed prompts:  35%|███▌      | 17/48 [00:08<00:06,  4.56it/s, est. speed input: 738.64 toks/s, output: 978.04 toks/s]Processed prompts:  40%|███▉      | 19/48 [00:09<00:06,  4.70it/s, est. speed input: 784.86 toks/s, output: 1074.44 toks/s]Processed prompts:  44%|████▍     | 21/48 [00:09<00:04,  6.22it/s, est. speed input: 841.28 toks/s, output: 1202.47 toks/s]Processed prompts:  46%|████▌     | 22/48 [00:09<00:04,  5.43it/s, est. speed input: 862.12 toks/s, output: 1238.40 toks/s]Processed prompts:  48%|████▊     | 23/48 [00:09<00:04,  5.14it/s, est. speed input: 879.80 toks/s, output: 1280.65 toks/s]Processed prompts:  52%|█████▏    | 25/48 [00:10<00:03,  6.02it/s, est. speed input: 917.88 toks/s, output: 1391.86 toks/s]Processed prompts:  56%|█████▋    | 27/48 [00:10<00:03,  6.12it/s, est. speed input: 964.46 toks/s, output: 1490.92 toks/s]Processed prompts:  60%|██████    | 29/48 [00:10<00:02,  7.60it/s, est. speed input: 1023.53 toks/s, output: 1614.41 toks/s]Processed prompts:  62%|██████▎   | 30/48 [00:10<00:02,  7.01it/s, est. speed input: 1042.47 toks/s, output: 1658.14 toks/s]Processed prompts:  65%|██████▍   | 31/48 [00:10<00:02,  6.12it/s, est. speed input: 1047.84 toks/s, output: 1694.39 toks/s]Processed prompts:  67%|██████▋   | 32/48 [00:11<00:03,  5.26it/s, est. speed input: 1056.65 toks/s, output: 1725.11 toks/s]Processed prompts:  73%|███████▎  | 35/48 [00:11<00:01,  8.74it/s, est. speed input: 1141.16 toks/s, output: 1924.10 toks/s]Processed prompts:  77%|███████▋  | 37/48 [00:11<00:01,  8.23it/s, est. speed input: 1178.33 toks/s, output: 2024.47 toks/s]Processed prompts:  81%|████████▏ | 39/48 [00:11<00:01,  8.18it/s, est. speed input: 1223.59 toks/s, output: 2127.56 toks/s]Processed prompts:  83%|████████▎ | 40/48 [00:12<00:01,  7.10it/s, est. speed input: 1236.24 toks/s, output: 2161.65 toks/s]Processed prompts:  85%|████████▌ | 41/48 [00:12<00:01,  6.80it/s, est. speed input: 1250.78 toks/s, output: 2205.03 toks/s]Processed prompts:  90%|████████▉ | 43/48 [00:12<00:00,  6.16it/s, est. speed input: 1276.52 toks/s, output: 2285.49 toks/s]Processed prompts:  94%|█████████▍| 45/48 [00:14<00:01,  2.39it/s, est. speed input: 1174.09 toks/s, output: 2142.58 toks/s]Processed prompts:  96%|█████████▌| 46/48 [00:14<00:00,  2.33it/s, est. speed input: 1165.56 toks/s, output: 2150.55 toks/s]Processed prompts:  98%|█████████▊| 47/48 [00:15<00:00,  2.04it/s, est. speed input: 1138.31 toks/s, output: 2131.55 toks/s]Processed prompts: 100%|██████████| 48/48 [00:16<00:00,  1.94it/s, est. speed input: 1122.03 toks/s, output: 2131.09 toks/s]Processed prompts: 100%|██████████| 48/48 [00:16<00:00,  1.94it/s, est. speed input: 1122.03 toks/s, output: 2131.09 toks/s]Processed prompts: 100%|██████████| 48/48 [00:16<00:00,  2.96it/s, est. speed input: 1122.03 toks/s, output: 2131.09 toks/s]
+[241/380] C llm-same C-VEDO-IV-CD-base   16.3초  출력 569토큰  누적 1.2분    → 판정: 판단 불가  
+[242/380] C llm-same C-VEDO-IV-CD-act-low   16.3초  출력 822토큰  누적 1.2분    → 판정: 아니오  
+[243/380] C llm-same C-VEDO-IV-CD-act-missing   16.3초  출력 568토큰  누적 1.2분    → 판정: 판단 불가  
+[244/380] C llm-same C-VEDO-IV-CD-prior-short   16.3초  출력 847토큰  누적 1.2분    → 판정: 판단 불가  
+[245/380] C llm-same C-VEDO-IV-CD-prior-intol   16.3초  출력 814토큰  누적 1.2분    → 판정: 아니오  
+[246/380] C llm-same C-VEDO-IV-CD-maint-ok   16.3초  출력 722토큰  누적 1.2분    → 판정: 판단 불가  
+[247/380] C llm-same C-VEDO-IV-CD-maint-ng   16.3초  출력 600토큰  누적 1.2분    → 판정: 판단 불가  
+[248/380] C llm-same C-VEDO-IV-UC-base   16.3초  출력 530토큰  누적 1.2분    → 판정: 예  
+[249/380] C llm-same C-VEDO-IV-UC-act-low   16.3초  출력 415토큰  누적 1.2분    → 판정: 판단 불가  
+[250/380] C llm-same C-VEDO-IV-UC-act-missing   16.3초  출력 527토큰  누적 1.2분    → 판정: 예  
+[251/380] C llm-same C-VEDO-IV-UC-prior-short   16.3초  출력 517토큰  누적 1.2분    → 판정: 아니오  
+[252/380] C llm-same C-VEDO-IV-UC-prior-intol   16.3초  출력 868토큰  누적 1.2분    → 판정: 예  
+[253/380] C llm-same C-VEDO-IV-UC-old-control   16.3초  출력 824토큰  누적 1.2분    → 판정: 예  
+[254/380] C llm-same C-VEDO-IV-UC-maint-ok   16.3초  출력 385토큰  누적 1.2분    → 판정: 판단 불가  
+[255/380] C llm-same C-VEDO-IV-UC-maint-ng   16.3초  출력 654토큰  누적 1.2분    → 판정: 판단 불가  
+[256/380] C llm-same C-VEDO-SC-CD-base   16.3초  출력 1264토큰  누적 1.2분    → 판정: 아니오  
+[257/380] C llm-same C-VEDO-SC-CD-act-low   16.3초  출력 1099토큰  누적 1.2분    → 판정: 판단 불가  
+[258/380] C llm-same C-VEDO-SC-CD-act-missing   16.3초  출력 935토큰  누적 1.2분    → 판정: 판단 불가  
+[259/380] C llm-same C-VEDO-SC-CD-prior-short   16.3초  출력 626토큰  누적 1.2분    → 판정: 아니오  
+[260/380] C llm-same C-VEDO-SC-CD-prior-intol   16.3초  출력 505토큰  누적 1.2분    → 판정: 예  
+[261/380] C llm-same C-VEDO-SC-CD-maint-ok   16.3초  출력 446토큰  누적 1.2분    → 판정: 판단 불가  
+[262/380] C llm-same C-VEDO-SC-CD-maint-ng   16.3초  출력 792토큰  누적 1.2분    → 판정: 아니오  
+[263/380] C llm-same C-VEDO-SC-UC-base   16.3초  출력 437토큰  누적 1.2분    → 판정: 예  
+[264/380] C llm-same C-VEDO-SC-UC-act-low   16.3초  출력 857토큰  누적 1.2분    → 판정: 판단 불가  
+[265/380] C llm-same C-VEDO-SC-UC-act-missing   16.3초  출력 758토큰  누적 1.2분    → 판정: 판단 불가  
+[266/380] C llm-same C-VEDO-SC-UC-prior-short   16.3초  출력 685토큰  누적 1.2분    → 판정: 아니오  
+[267/380] C llm-same C-VEDO-SC-UC-prior-intol   16.3초  출력 534토큰  누적 1.2분    → 판정: 판단 불가  
+[268/380] C llm-same C-VEDO-SC-UC-maint-ok   16.3초  출력 408토큰  누적 1.2분    → 판정: 판단 불가  
+[269/380] C llm-same C-VEDO-SC-UC-maint-ng   16.3초  출력 818토큰  누적 1.2분    → 판정: 아니오  
+[270/380] C llm-same C-UST-CD-base   16.3초  출력 844토큰  누적 1.2분    → 판정: 아니오  
+[271/380] C llm-same C-UST-CD-act-low   16.3초  출력 703토큰  누적 1.2분    → 판정: 판단 불가  
+[272/380] C llm-same C-UST-CD-act-missing   16.3초  출력 747토큰  누적 1.2분    → 판정: 판단 불가  
+[273/380] C llm-same C-UST-CD-prior-short   16.3초  출력 910토큰  누적 1.2분    → 판정: 아니오  
+[274/380] C llm-same C-UST-CD-prior-intol   16.3초  출력 722토큰  누적 1.2분    → 판정: 아니오  
+[275/380] C llm-same C-UST-CD-old-control   16.3초  출력 535토큰  누적 1.2분    → 판정: 아니오  
+[276/380] C llm-same C-UST-CD-maint-ok   16.3초  출력 706토큰  누적 1.2분    → 판정: 판단 불가  
+[277/380] C llm-same C-UST-CD-maint-ng   16.3초  출력 655토큰  누적 1.2분    → 판정: 판단 불가  
+[278/380] C llm-same C-UST-UC-base   16.3초  출력 1208토큰  누적 1.2분    → 판정: 판단 불가  
+[279/380] C llm-same C-UST-UC-act-low   16.3초  출력 902토큰  누적 1.2분    → 판정: 아니오  
+[280/380] C llm-same C-UST-UC-act-missing   16.3초  출력 773토큰  누적 1.2분    → 판정: 판단 불가  
+[281/380] C llm-same C-UST-UC-prior-short   16.3초  출력 941토큰  누적 1.2분    → 판정: 아니오  
+[282/380] C llm-same C-UST-UC-prior-intol   16.3초  출력 472토큰  누적 1.2분    → 판정: 판단 불가  
+[283/380] C llm-same C-UST-UC-maint-ok   16.3초  출력 663토큰  누적 1.2분    → 판정: 판단 불가  
+[284/380] C llm-same C-UST-UC-maint-ng   16.3초  출력 748토큰  누적 1.2분    → 판정: 아니오  
+[285/380] C llm-same C-FIL-UC-base   16.3초  출력 887토큰  누적 1.2분    → 판정: 아니오  
+[286/380] C llm-same C-FIL-UC-act-low   16.3초  출력 623토큰  누적 1.2분    → 판정: 판단 불가  
+[287/380] C llm-same C-FIL-UC-act-missing   16.3초  출력 537토큰  누적 1.2분    → 판정: 판단 불가  
+[288/380] C llm-same C-FIL-UC-prior-short   16.3초  출력 1143토큰  누적 1.2분    → 판정: 아니오  
+Rendering prompts:   0%|          | 0/48 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 48/48 [00:00<00:00, 1118.77it/s]
+Processed prompts:   0%|          | 0/48 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/48 [00:05<04:23,  5.61s/it, est. speed input: 75.96 toks/s, output: 69.01 toks/s]Processed prompts:   4%|▍         | 2/48 [00:06<01:58,  2.57s/it, est. speed input: 140.71 toks/s, output: 133.27 toks/s]Processed prompts:  10%|█         | 5/48 [00:06<00:33,  1.27it/s, est. speed input: 333.34 toks/s, output: 333.18 toks/s]Processed prompts:  12%|█▎        | 6/48 [00:06<00:25,  1.62it/s, est. speed input: 376.27 toks/s, output: 396.25 toks/s]Processed prompts:  25%|██▌       | 12/48 [00:06<00:08,  4.33it/s, est. speed input: 719.90 toks/s, output: 780.82 toks/s]Processed prompts:  29%|██▉       | 14/48 [00:06<00:06,  5.29it/s, est. speed input: 816.70 toks/s, output: 906.62 toks/s]Processed prompts:  33%|███▎      | 16/48 [00:06<00:04,  6.50it/s, est. speed input: 922.05 toks/s, output: 1032.13 toks/s]Processed prompts:  38%|███▊      | 18/48 [00:07<00:04,  6.97it/s, est. speed input: 995.44 toks/s, output: 1137.58 toks/s]Processed prompts:  42%|████▏     | 20/48 [00:07<00:03,  7.79it/s, est. speed input: 1085.38 toks/s, output: 1249.87 toks/s]Processed prompts:  46%|████▌     | 22/48 [00:07<00:02,  9.41it/s, est. speed input: 1183.76 toks/s, output: 1373.46 toks/s]Processed prompts:  50%|█████     | 24/48 [00:07<00:03,  7.67it/s, est. speed input: 1235.72 toks/s, output: 1447.85 toks/s]Processed prompts:  54%|█████▍    | 26/48 [00:08<00:03,  6.49it/s, est. speed input: 1259.96 toks/s, output: 1514.07 toks/s]Processed prompts:  58%|█████▊    | 28/48 [00:08<00:02,  7.55it/s, est. speed input: 1337.69 toks/s, output: 1627.25 toks/s]Processed prompts:  62%|██████▎   | 30/48 [00:08<00:02,  6.42it/s, est. speed input: 1358.03 toks/s, output: 1690.16 toks/s]Processed prompts:  65%|██████▍   | 31/48 [00:09<00:02,  5.82it/s, est. speed input: 1367.73 toks/s, output: 1716.30 toks/s]Processed prompts:  67%|██████▋   | 32/48 [00:09<00:03,  4.42it/s, est. speed input: 1346.73 toks/s, output: 1708.78 toks/s]Processed prompts:  71%|███████   | 34/48 [00:09<00:02,  5.89it/s, est. speed input: 1403.48 toks/s, output: 1828.58 toks/s]Processed prompts:  73%|███████▎  | 35/48 [00:09<00:02,  5.11it/s, est. speed input: 1405.36 toks/s, output: 1847.76 toks/s]Processed prompts:  75%|███████▌  | 36/48 [00:10<00:03,  3.85it/s, est. speed input: 1381.99 toks/s, output: 1836.98 toks/s]Processed prompts:  77%|███████▋  | 37/48 [00:11<00:04,  2.61it/s, est. speed input: 1324.62 toks/s, output: 1786.08 toks/s]Processed prompts:  79%|███████▉  | 38/48 [00:11<00:03,  2.87it/s, est. speed input: 1332.91 toks/s, output: 1822.27 toks/s]Processed prompts:  81%|████████▏ | 39/48 [00:11<00:02,  3.03it/s, est. speed input: 1326.25 toks/s, output: 1853.47 toks/s]Processed prompts:  83%|████████▎ | 40/48 [00:12<00:03,  2.45it/s, est. speed input: 1295.05 toks/s, output: 1837.33 toks/s]Processed prompts:  85%|████████▌ | 41/48 [00:13<00:04,  1.69it/s, est. speed input: 1225.40 toks/s, output: 1769.65 toks/s]Processed prompts:  88%|████████▊ | 42/48 [00:13<00:03,  1.77it/s, est. speed input: 1212.49 toks/s, output: 1783.52 toks/s]Processed prompts:  90%|████████▉ | 43/48 [00:14<00:02,  1.71it/s, est. speed input: 1189.27 toks/s, output: 1783.46 toks/s]Processed prompts:  92%|█████████▏| 44/48 [00:14<00:02,  1.94it/s, est. speed input: 1189.88 toks/s, output: 1818.34 toks/s]Processed prompts:  94%|█████████▍| 45/48 [00:15<00:01,  2.37it/s, est. speed input: 1203.02 toks/s, output: 1872.34 toks/s]Processed prompts:  96%|█████████▌| 46/48 [00:15<00:01,  1.88it/s, est. speed input: 1167.41 toks/s, output: 1857.30 toks/s]Processed prompts:  98%|█████████▊| 47/48 [00:19<00:01,  1.31s/it, est. speed input: 997.65 toks/s, output: 1632.60 toks/s] Processed prompts: 100%|██████████| 48/48 [00:21<00:00,  1.54s/it, est. speed input: 919.33 toks/s, output: 1552.92 toks/s]Processed prompts: 100%|██████████| 48/48 [00:21<00:00,  1.54s/it, est. speed input: 919.33 toks/s, output: 1552.92 toks/s]Processed prompts: 100%|██████████| 48/48 [00:21<00:00,  2.27it/s, est. speed input: 919.33 toks/s, output: 1552.92 toks/s]
+[289/380] C llm-same C-FIL-UC-prior-intol   21.2초  출력 1157토큰  누적 1.5분    → 판정: 판단 불가  
+[290/380] C llm-same C-FIL-UC-old-nobio   21.2초  출력 590토큰  누적 1.5분    → 판정: 판단 불가  
+[291/380] C llm-same C-FIL-UC-old-biofail   21.2초  출력 518토큰  누적 1.5분    → 판정: 예  
+[292/380] C llm-same C-FIL-UC-hb-85   21.2초  출력 549토큰  누적 1.5분    → 판정: 판단 불가  
+[293/380] C llm-same C-FIL-UC-hb-low   21.2초  출력 770토큰  누적 1.5분    → 판정: 예  
+[294/380] C llm-same C-FIL-UC-anc-low   21.2초  출력 603토큰  누적 1.5분    → 판정: 판단 불가  
+[295/380] C llm-same C-FIL-UC-alc-low   21.2초  출력 932토큰  누적 1.5분    → 판정: 판단 불가  
+[296/380] C llm-same C-FIL-UC-maint-ok   21.2초  출력 606토큰  누적 1.5분    → 판정: 판단 불가  
+[297/380] C llm-same C-FIL-UC-maint-ng   21.2초  출력 504토큰  누적 1.5분    → 판정: 판단 불가  
+[298/380] C llm-same C-TOF-UC-base   21.2초  출력 493토큰  누적 1.5분    → 판정: 판단 불가  
+[299/380] C llm-same C-TOF-UC-act-low   21.2초  출력 425토큰  누적 1.5분    → 판정: 예  
+[300/380] C llm-same C-TOF-UC-act-missing   21.2초  출력 730토큰  누적 1.5분    → 판정: 예  
+[301/380] C llm-same C-TOF-UC-prior-short   21.2초  출력 1734토큰  누적 1.5분    → 판정: 아니오  
+[302/380] C llm-same C-TOF-UC-prior-intol   21.2초  출력 526토큰  누적 1.5분    → 판정: 예  
+[303/380] C llm-same C-TOF-UC-old-nobio   21.2초  출력 469토큰  누적 1.5분    → 판정: 예  
+[304/380] C llm-same C-TOF-UC-old-biofail   21.2초  출력 637토큰  누적 1.5분    → 판정: 예  
+[305/380] C llm-same C-TOF-UC-hb-low   21.2초  출력 1124토큰  누적 1.5분    → 판정: 아니오  
+[306/380] C llm-same C-TOF-UC-anc-low   21.2초  출력 1538토큰  누적 1.5분    → 판정: 예  
+[307/380] C llm-same C-TOF-UC-alc-low   21.2초  출력 705토큰  누적 1.5분    → 판정: 판단 불가  
+[308/380] C llm-same C-TOF-UC-maint-ok   21.2초  출력 446토큰  누적 1.5분    → 판정: 판단 불가  
+[309/380] C llm-same C-TOF-UC-maint-ng   21.2초  출력 478토큰  누적 1.5분    → 판정: 판단 불가  
+[310/380] C llm-same C-UPA-CD-base   21.2초  출력 512토큰  누적 1.5분    → 판정: 판단 불가  
+[311/380] C llm-same C-UPA-CD-act-low   21.2초  출력 524토큰  누적 1.5분    → 판정: 판단 불가  
+[312/380] C llm-same C-UPA-CD-act-missing   21.2초  출력 856토큰  누적 1.5분    → 판정: 판단 불가  
+[313/380] C llm-same C-UPA-CD-prior-short   21.2초  출력 426토큰  누적 1.5분    → 판정: 아니오  
+[314/380] C llm-same C-UPA-CD-prior-intol   21.2초  출력 387토큰  누적 1.5분    → 판정: 판단 불가  
+[315/380] C llm-same C-UPA-CD-old-nobio   21.2초  출력 436토큰  누적 1.5분    → 판정: 예  
+[316/380] C llm-same C-UPA-CD-old-biofail   21.2초  출력 835토큰  누적 1.5분    → 판정: 예  
+[317/380] C llm-same C-UPA-CD-hb-85   21.2초  출력 447토큰  누적 1.5분    → 판정: 판단 불가  
+[318/380] C llm-same C-UPA-CD-hb-low   21.2초  출력 486토큰  누적 1.5분    → 판정: 판단 불가  
+[319/380] C llm-same C-UPA-CD-anc-low   21.2초  출력 485토큰  누적 1.5분    → 판정: 판단 불가  
+[320/380] C llm-same C-UPA-CD-alc-low   21.2초  출력 693토큰  누적 1.5분    → 판정: 아니오  
+[321/380] C llm-same C-UPA-CD-maint-ok   21.2초  출력 570토큰  누적 1.5분    → 판정: 판단 불가  
+[322/380] C llm-same C-UPA-CD-maint-ng   21.2초  출력 880토큰  누적 1.5분    → 판정: 판단 불가  
+[323/380] C llm-same C-UPA-UC-base   21.2초  출력 1069토큰  누적 1.5분    → 판정: 아니오  
+[324/380] C llm-same C-UPA-UC-act-low   21.2초  출력 452토큰  누적 1.5분    → 판정: 판단 불가  
+[325/380] C llm-same C-UPA-UC-act-missing   21.2초  출력 1174토큰  누적 1.5분    → 판정: 판단 불가  
+[326/380] C llm-same C-UPA-UC-prior-short   21.2초  출력 478토큰  누적 1.5분    → 판정: 판단 불가  
+[327/380] C llm-same C-UPA-UC-prior-intol   21.2초  출력 596토큰  누적 1.5분    → 판정: 판단 불가  
+[328/380] C llm-same C-UPA-UC-old-nobio   21.2초  출력 452토큰  누적 1.5분    → 판정: 판단 불가  
+[329/380] C llm-same C-UPA-UC-old-biofail   21.2초  출력 556토큰  누적 1.5분    → 판정: 예  
+[330/380] C llm-same C-UPA-UC-hb-85   21.2초  출력 1025토큰  누적 1.5분    → 판정: 아니오  
+[331/380] C llm-same C-UPA-UC-hb-low   21.2초  출력 451토큰  누적 1.5분    → 판정: 판단 불가  
+[332/380] C llm-same C-UPA-UC-anc-low   21.2초  출력 419토큰  누적 1.5분    → 판정: 예  
+[333/380] C llm-same C-UPA-UC-alc-low   21.2초  출력 657토큰  누적 1.5분    → 판정: 아니오  
+[334/380] C llm-same C-UPA-UC-maint-ok   21.2초  출력 697토큰  누적 1.5분    → 판정: 판단 불가  
+[335/380] C llm-same C-UPA-UC-maint-ng   21.2초  출력 445토큰  누적 1.5분    → 판정: 판단 불가  
+[336/380] C llm-same C-OZA-UC-base   21.2초  출력 1247토큰  누적 1.5분    → 판정: 예  
+Rendering prompts:   0%|          | 0/44 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 44/44 [00:00<00:00, 1081.45it/s]
+Processed prompts:   0%|          | 0/44 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   2%|▏         | 1/44 [00:05<04:16,  5.96s/it, est. speed input: 66.60 toks/s, output: 68.44 toks/s]Processed prompts:   7%|▋         | 3/44 [00:06<01:13,  1.79s/it, est. speed input: 167.34 toks/s, output: 192.06 toks/s]Processed prompts:   9%|▉         | 4/44 [00:07<01:02,  1.57s/it, est. speed input: 196.19 toks/s, output: 232.91 toks/s]Processed prompts:  11%|█▏        | 5/44 [00:09<00:57,  1.48s/it, est. speed input: 211.82 toks/s, output: 269.26 toks/s]Processed prompts:  14%|█▎        | 6/44 [00:09<00:40,  1.06s/it, est. speed input: 253.16 toks/s, output: 334.41 toks/s]Processed prompts:  16%|█▌        | 7/44 [00:09<00:31,  1.19it/s, est. speed input: 287.03 toks/s, output: 391.41 toks/s]Processed prompts:  18%|█▊        | 8/44 [00:09<00:23,  1.51it/s, est. speed input: 327.65 toks/s, output: 450.56 toks/s]Processed prompts:  20%|██        | 9/44 [00:10<00:23,  1.47it/s, est. speed input: 345.64 toks/s, output: 489.73 toks/s]Processed prompts:  25%|██▌       | 11/44 [00:10<00:13,  2.53it/s, est. speed input: 415.29 toks/s, output: 622.28 toks/s]Processed prompts:  27%|██▋       | 12/44 [00:11<00:12,  2.53it/s, est. speed input: 441.57 toks/s, output: 670.12 toks/s]Processed prompts:  32%|███▏      | 14/44 [00:11<00:07,  3.87it/s, est. speed input: 504.03 toks/s, output: 801.82 toks/s]Processed prompts:  34%|███▍      | 15/44 [00:11<00:06,  4.19it/s, est. speed input: 534.75 toks/s, output: 859.90 toks/s]Processed prompts:  36%|███▋      | 16/44 [00:11<00:05,  4.86it/s, est. speed input: 568.47 toks/s, output: 922.17 toks/s]Processed prompts:  39%|███▊      | 17/44 [00:12<00:07,  3.53it/s, est. speed input: 581.79 toks/s, output: 954.10 toks/s]Processed prompts:  41%|████      | 18/44 [00:12<00:06,  4.25it/s, est. speed input: 614.27 toks/s, output: 1016.14 toks/s]Processed prompts:  45%|████▌     | 20/44 [00:12<00:04,  5.26it/s, est. speed input: 669.18 toks/s, output: 1134.16 toks/s]Processed prompts:  48%|████▊     | 21/44 [00:12<00:05,  4.33it/s, est. speed input: 685.11 toks/s, output: 1172.75 toks/s]Processed prompts:  52%|█████▏    | 23/44 [00:13<00:04,  5.20it/s, est. speed input: 739.20 toks/s, output: 1288.79 toks/s]Processed prompts:  55%|█████▍    | 24/44 [00:13<00:03,  5.80it/s, est. speed input: 765.69 toks/s, output: 1349.57 toks/s]Processed prompts:  59%|█████▉    | 26/44 [00:13<00:03,  4.64it/s, est. speed input: 801.61 toks/s, output: 1433.63 toks/s]Processed prompts:  61%|██████▏   | 27/44 [00:14<00:06,  2.64it/s, est. speed input: 778.27 toks/s, output: 1410.79 toks/s]Processed prompts:  64%|██████▎   | 28/44 [00:15<00:06,  2.48it/s, est. speed input: 780.69 toks/s, output: 1438.21 toks/s]Processed prompts:  66%|██████▌   | 29/44 [00:16<00:08,  1.70it/s, est. speed input: 753.63 toks/s, output: 1410.69 toks/s]Processed prompts:  73%|███████▎  | 32/44 [00:16<00:03,  3.26it/s, est. speed input: 829.73 toks/s, output: 1615.49 toks/s]Processed prompts:  75%|███████▌  | 33/44 [00:16<00:03,  3.57it/s, est. speed input: 848.58 toks/s, output: 1671.70 toks/s]Processed prompts:  80%|███████▉  | 35/44 [00:16<00:01,  4.64it/s, est. speed input: 893.05 toks/s, output: 1796.21 toks/s]Processed prompts:  82%|████████▏ | 36/44 [00:16<00:01,  5.11it/s, est. speed input: 913.21 toks/s, output: 1856.46 toks/s]Processed prompts:  84%|████████▍ | 37/44 [00:17<00:01,  5.18it/s, est. speed input: 927.80 toks/s, output: 1909.57 toks/s]Processed prompts:  86%|████████▋ | 38/44 [00:17<00:01,  3.57it/s, est. speed input: 924.75 toks/s, output: 1923.68 toks/s]Processed prompts:  89%|████████▊ | 39/44 [00:17<00:01,  3.65it/s, est. speed input: 937.65 toks/s, output: 1970.01 toks/s]Processed prompts:  91%|█████████ | 40/44 [00:19<00:02,  1.95it/s, est. speed input: 904.47 toks/s, output: 1925.05 toks/s]Processed prompts:  93%|█████████▎| 41/44 [00:21<00:03,  1.03s/it, est. speed input: 826.20 toks/s, output: 1789.83 toks/s]Processed prompts:  95%|█████████▌| 42/44 [00:23<00:02,  1.44s/it, est. speed input: 759.92 toks/s, output: 1682.85 toks/s]Processed prompts:  98%|█████████▊| 43/44 [00:24<00:01,  1.31s/it, est. speed input: 747.67 toks/s, output: 1693.67 toks/s]Processed prompts: 100%|██████████| 44/44 [00:25<00:00,  1.08s/it, est. speed input: 750.14 toks/s, output: 1738.15 toks/s]Processed prompts: 100%|██████████| 44/44 [00:25<00:00,  1.08s/it, est. speed input: 750.14 toks/s, output: 1738.15 toks/s]Processed prompts: 100%|██████████| 44/44 [00:25<00:00,  1.73it/s, est. speed input: 750.14 toks/s, output: 1738.15 toks/s]
+[337/380] C llm-same C-OZA-UC-act-low   25.5초  출력 751토큰  누적 1.9분    → 판정: 판단 불가  
+[338/380] C llm-same C-OZA-UC-act-missing   25.5초  출력 457토큰  누적 1.9분    → 판정: 판단 불가  
+[339/380] C llm-same C-OZA-UC-prior-short   25.5초  출력 633토큰  누적 1.9분    → 판정: 아니오  
+[340/380] C llm-same C-OZA-UC-prior-intol   25.5초  출력 408토큰  누적 1.9분    → 판정: 판단 불가  
+[341/380] C llm-same C-OZA-UC-old-control   25.5초  출력 876토큰  누적 1.9분    → 판정: 판단 불가  
+[342/380] C llm-same C-OZA-UC-maint-ok   25.5초  출력 785토큰  누적 1.9분    → 판정: 판단 불가  
+[343/380] C llm-same C-OZA-UC-maint-ng   25.5초  출력 409토큰  누적 1.9분    → 판정: 판단 불가  
+[344/380] D llm-same D-cd-base   25.5초  출력 848토큰  누적 1.9분    → 인정: 없음  
+[345/380] D llm-same D-cd-cdai219   25.5초  출력 810토큰  누적 1.9분    → 인정: 없음  
+[346/380] D llm-same D-cd-prior1   25.5초  출력 802토큰  누적 1.9분    → 인정: 없음  
+[347/380] D llm-same D-cd-intol   25.5초  출력 856토큰  누적 1.9분    → 인정: 인플릭시마브, 아다리무맙, 벡도리주맙  
+[348/380] D llm-same D-cd-68   25.5초  출력 789토큰  누적 1.9분    → 인정: 없음  
+[349/380] D llm-same D-cd-68-tnf   25.5초  출력 1235토큰  누적 1.9분    → 인정: 없음  
+[350/380] D llm-same D-cd-cv   25.5초  출력 925토큰  누적 1.9분    → 인정: 없음  
+[351/380] D llm-same D-cd-malig-tnf   25.5초  출력 1321토큰  누적 1.9분    → 인정: 없음  
+[352/380] D llm-same D-cd-hb75   25.5초  출력 2001토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 고리무맙  
+[353/380] D llm-same D-cd-anc900   25.5초  출력 1182토큰  누적 1.9분    → 인정: 없음  
+[354/380] D llm-same D-cd-hb85   25.5초  출력 1194토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 유스티키눔브  
+[355/380] D llm-same D-cd-68-tnf-hb75   25.5초  출력 938토큰  누적 1.9분    → 인정: 없음  
+[356/380] D llm-same D-uc-base   25.5초  출력 1861토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 베도리주맙, 투파시티닙  
+[357/380] D llm-same D-uc-mayo5   25.5초  출력 858토큰  누적 1.9분    → 인정: 토타시닙  
+[358/380] D llm-same D-uc-endo1   25.5초  출력 1953토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 베도리자맙, 토크시티닙  
+[359/380] D llm-same D-uc-5asa   25.5초  출력 904토큰  누적 1.9분    → 인정: 인플릭시맙, 아달리무맙, 베도리주맙, 우스테키누맙  
+[360/380] D llm-same D-uc-intol   25.5초  출력 1212토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 베도리주맙, 우스테키누맙  
+[361/380] D llm-same D-uc-68   25.5초  출력 1208토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 베도리주맙, 우스테키눔맙, 토파시티닙 
+[362/380] D llm-same D-uc-68-tnf   25.5초  출력 779토큰  누적 1.9분    → 인정: 없음  
+[363/380] D llm-same D-uc-cv   25.5초  출력 977토큰  누적 1.9분    → 인정: 없음  
+[364/380] D llm-same D-uc-recent-mi   25.5초  출력 689토큰  누적 1.9분    → 인정: 없음  
+[365/380] D llm-same D-uc-hb85   25.5초  출력 1299토큰  누적 1.9분    → 인정: 벡로리주맙, 우스테키누맙  
+[366/380] D llm-same D-uc-hb75   25.5초  출력 1225토큰  누적 1.9분    → 인정: 없음  
+[367/380] D llm-same D-uc-anc900   25.5초  출력 1424토큰  누적 1.9분    → 인정: 없음  
+[368/380] D llm-same D-uc-alc450   25.5초  출력 1637토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무맙, 벡도리주맙, 유스테킨وم브, 투파시티닙
+[369/380] D llm-same D-uc-68-hb85   25.5초  출력 1189토큰  누적 1.9분    → 인정: 없음  
+[370/380] D llm-same D-uc-tnf-hb85   25.5초  출력 1190토큰  누적 1.9분    → 인정: 베도리주맙, 우스테키눔브  
+[371/380] D llm-same D-pcd-base   25.5초  출력 742토큰  누적 1.9분    → 인정: 없음  
+[372/380] D llm-same D-pcd-29   25.5초  출력 1089토큰  누적 1.9분    → 인정: 없음  
+[373/380] D llm-same D-puc-base   25.5초  출력 1251토큰  누적 1.9분    → 인정: 인플릭시마브, 아달리무마브, 베도리주맙, 우스테키눔라브, 토파시티
+[374/380] D llm-same D-puc-45   25.5초  출력 670토큰  누적 1.9분    → 인정: 없음  
+[375/380] D llm-same D-fcd-base   25.5초  출력 740토큰  누적 1.9분    → 인정: 없음  
+[376/380] D llm-same D-fcd-abx   25.5초  출력 540토큰  누적 1.9분    → 인정: 없음  
+[377/380] D llm-same D-bd-base   25.5초  출력 933토큰  누적 1.9분    → 인정: 없음  
+[378/380] D llm-same D-bd-18   25.5초  출력 908토큰  누적 1.9분    → 인정: 인플릭시맙, 아달리무맙  
+[379/380] D llm-same D-bd-prior1   25.5초  출력 644토큰  누적 1.9분    → 인정: 없음  
+[380/380] D llm-same D-bd-intol   25.5초  출력 1052토큰  누적 1.9분    → 인정: 인플릭시마브, 아다리무맙, 벡도리주맙  
+(MainProcess pid=1111280) INFO 11-23 13:53:20 [utils.py:628] [shutdown] Process manager: send sigterm to process EngineCore
+(EngineCore pid=1111934) INFO 11-23 13:53:20 [core.py:1525] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=1111934) INFO 11-23 13:53:20 [core.py:1712] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=1111934) INFO 11-23 13:53:20 [core.py:1743] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=1111934) INFO 11-23 13:53:20 [core.py:1573] [shutdown] EngineCore: exiting busy loop
