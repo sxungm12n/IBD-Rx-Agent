@@ -1,0 +1,20 @@
+[2026-11-24 14:55:47] vLLM 러너 시작 (GPU 1, pid 3823301, 로그 logs/qwen_local.log)
+[2026-11-24 14:55:47] STUDENT=qwen SOURCE=pdf ARMS=opus ADD_TYPES=없음 RAG_RERANK_DEVICE=cuda:0
+[2026-11-24 14:55:47] opus fetch: 받을 배치가 없습니다.
+[2026-11-24 14:55:48] opus next: 아직 받지 않은 배치가 있습니다: 03_teacher_r2 (submit/fetch 먼저)
+제출함: 03_teacher_r2 msgbatch_01W1ZMmuCjpNQRTZh6MjhZQi 상태 in_progress
+[2026-11-24 14:57:54] opus fetch: 03_teacher_r2: {'통과': 91, '다시 읽어': 43, '더 찾아': 19} · 실패 0 · 토큰 입력 1,072,079 출력 79,041 · $2.93
+다음: next
+[2026-11-24 14:58:10] opus next: 쪽 찾기 19문항 (코드)…
+[opus-g] 04_student_r2: student 요청 62개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 461,611자
+다음: submit --arm opus --student qwen --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/opus-g/batches/04_student_r2
+로컬 실행 표시함: 04_student_r2. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/opus-g/batches/04_student_r2
+[2026-11-24 15:01:10] opus fetch: 04_student_r2: {'재답': 62} · 실패 0 · 토큰 입력 296,535 출력 55,133
+다음: next
+[2026-11-24 15:01:10] opus next: 할 일 없음 {'passed': 318, 'done': 62}. 다음: finalize
+loop-opus-g_qwen3-14b-bf16: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-opus-g_qwen3-14b-bf16: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-opus-g_qwen3-14b-bf16: 198개 → 채점: score_cases.py …
+d_loop-opus-g_qwen3-14b-bf16: 37개 → 채점: score_cases.py …
+[2026-11-24 15:01:11] opus 끝 (finalize·report 완료)
+[2026-11-24 15:02:11] 루프 끝. 다음: 채점 (GPU_SERVER_RUN_PLAN.md 5단계)

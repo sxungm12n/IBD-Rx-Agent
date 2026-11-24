@@ -1,0 +1,238 @@
+{
+ "arm": "qwen",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": [
+  "local",
+  "Qwen/Qwen3-14B"
+ ],
+ "teacher_prompt": "일반(g)",
+ "source": "csv",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "csvrag",
+ "student": "gpt-5.6-terra",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "2a67f52f823b",
+ "created": "2026-11-24T15:33:20",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_teacher_r1",
+   "kind": "teacher",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 380,
+   "built": "2026-11-24T15:33:20",
+   "batch_id": "local",
+   "submitted": "2026-11-24T15:33:28",
+   "fetched": "2026-11-24T16:04:34",
+   "usage": {
+    "input_tokens": 3763986,
+    "output_tokens": 288440
+   },
+   "failed": 2,
+   "결과": {
+    "통과": 286,
+    "더 찾아": 4,
+    "다시 읽어": 68,
+    "선생 오류": 22
+   }
+  },
+  {
+   "name": "02_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 72,
+   "built": "2026-11-24T16:04:48",
+   "batch_id": "batch_6b053714e8fc8190a4ffce521eb41033",
+   "input_file_id": "file-GKEkaLReHwz8EgDD3nCz1i",
+   "submitted": "2026-11-24T16:04:53",
+   "fetched": "2026-11-24T16:06:56",
+   "usage": {
+    "input_tokens": 583382,
+    "output_tokens": 8138,
+    "cost_usd": 0.6322
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 72
+   }
+  },
+  {
+   "name": "03_teacher_r2",
+   "kind": "teacher",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 72,
+   "built": "2026-11-24T16:06:57",
+   "batch_id": "local",
+   "submitted": "2026-11-24T16:06:57",
+   "fetched": "2026-11-24T16:12:58",
+   "usage": {
+    "input_tokens": 719925,
+    "output_tokens": 64699
+   },
+   "failed": 0,
+   "결과": {
+    "더 찾아": 4,
+    "통과": 44,
+    "다시 읽어": 24
+   }
+  },
+  {
+   "name": "04_student_r2",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 28,
+   "built": "2026-11-24T16:13:12",
+   "batch_id": "batch_6b05390b9f9c819098e80a9353da92ab",
+   "input_file_id": "file-B1RVSxwAwa7hLNHgPqzGCN",
+   "submitted": "2026-11-24T16:13:15",
+   "fetched": "2026-11-24T16:15:18",
+   "usage": {
+    "input_tokens": 232485,
+    "output_tokens": 4203,
+    "cost_usd": 0.2577
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 28
+   }
+  }
+ ],
+ "pending": null,
+ "reparse": [
+  {
+   "시각": "2026-11-24T16:19:43",
+   "결과": {
+    "통과": 22
+   },
+   "문항": [
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-IFX-IV-CD-ped-G4",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-IFX-IV-UC-adult-G4",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-FIL-UC-G3",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-FIL-UC-G6-anc",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-TOF-UC-G6-alc",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-UPA-CD-G5",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A-UPA-CD-G6-hb",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "A2-IFX-SC-CD-fistula-L",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-IFX-IV-CD-ped-act-missing",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-IFX-IV-CD-fistula-base",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-IFX-IV-UC-adult-maint-ok",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-IFX-IV-UC-ped-prior-short",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-IFX-IV-GIBD-prior-intol",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-VEDO-IV-UC-prior-intol",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-CD-base",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-CD-prior-intol",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-CD-old-nobio",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-CD-hb-low",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-CD-maint-ok",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-UC-anc-low",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-OZA-UC-maint-ng",
+     "판정": "통과"
+    },
+    {
+     "batch": "01_teacher_r1",
+     "id": "D-uc-base",
+     "판정": "통과"
+    }
+   ]
+  }
+ ]
+}

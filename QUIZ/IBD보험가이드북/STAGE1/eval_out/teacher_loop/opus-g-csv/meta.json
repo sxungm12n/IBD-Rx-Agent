@@ -14,6 +14,9 @@
  "teacher_prompt": "일반(g)",
  "source": "csv",
  "types": [
+  "A",
+  "A2",
+  "C",
   "D"
  ],
  "round0": "csvrag",
@@ -110,7 +113,81 @@
    "결과": {
     "재답": 16
    }
+  },
+  {
+   "name": "05_teacher_r1",
+   "kind": "teacher",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "requests": 343,
+   "built": "2026-11-24T15:51:16",
+   "batch_id": "msgbatch_01H8V8uwSDvMNgBQtym1JKVX",
+   "submitted": "2026-11-24T15:51:28",
+   "fetched": "2026-11-24T15:55:07",
+   "usage": {
+    "input_tokens": 4631061,
+    "output_tokens": 49235,
+    "cost_usd": 9.7545
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 333,
+    "다시 읽어": 9,
+    "더 찾아": 1
+   }
+  },
+  {
+   "name": "06_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 10,
+   "built": "2026-11-24T15:55:32",
+   "batch_id": "batch_6b0534e7a42c8190bf00fcac453fc669",
+   "input_file_id": "file-92bRiwXJ1Xu6PVqzS2qhKo",
+   "submitted": "2026-11-24T15:55:35",
+   "fetched": "2026-11-24T15:57:45",
+   "usage": {
+    "input_tokens": 87381,
+    "output_tokens": 1020,
+    "cost_usd": 0.0935
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 10
+   }
+  },
+  {
+   "name": "07_teacher_r2",
+   "kind": "teacher",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "requests": 10,
+   "built": "2026-11-24T15:57:46",
+   "batch_id": "msgbatch_018FELYot9SVvRnLK66Khovi",
+   "submitted": "2026-11-24T15:57:48",
+   "fetched": "2026-11-24T15:59:57",
+   "usage": {
+    "input_tokens": 144552,
+    "output_tokens": 2703,
+    "cost_usd": 0.3161
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 10
+   }
   }
  ],
- "pending": null
+ "pending": null,
+ "추가": [
+  {
+   "types": [
+    "A",
+    "A2",
+    "C"
+   ],
+   "문항": 343,
+   "added": "2026-11-24T15:51:16"
+  }
+ ]
 }

@@ -1,0 +1,32 @@
+[2026-11-24 15:09:22] vLLM 러너 시작 (GPU 1, pid 3848328, 로그 logs/qwen_local.log)
+[2026-11-24 15:09:22] STUDENT=qwen SOURCE=pdf ARMS=gpt ADD_TYPES=없음 RAG_RERANK_DEVICE=cuda:0
+[2026-11-24 15:09:22] gpt fetch: 받을 배치가 없습니다.
+[2026-11-24 15:09:22] gpt next: 아직 받지 않은 배치가 있습니다: 01_teacher_r1 (submit/fetch 먼저)
+제출함: 01_teacher_r1 batch_6b052a177614819085a9a83dedf5e774 상태 validating
+[2026-11-24 15:13:36] gpt fetch: 01_teacher_r1: {'통과': 258, '더 찾아': 49, '다시 읽어': 73} · 실패 0 · 토큰 입력 1,425,571 출력 98,194 · $2.01
+다음: next
+[2026-11-24 15:13:56] gpt next: 쪽 찾기 49문항 (코드)…
+[gpt-g] 02_student_r1: student 요청 122개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 732,075자
+다음: submit --arm gpt --student qwen --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/gpt-g/batches/02_student_r1
+로컬 실행 표시함: 02_student_r1. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/gpt-g/batches/02_student_r1
+[2026-11-24 15:18:57] gpt fetch: 02_student_r1: {'재답': 122} · 실패 0 · 토큰 입력 468,505 출력 92,639
+다음: next
+[2026-11-24 15:18:57] gpt next: [gpt-g] 03_teacher_r2: teacher 요청 122개 · gpt-5.6-terra · 입력 약 912,788자 → 약 557K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 500~1500토큰/요청 가정): $0.92 ~ $1.65
+API 안 씀. 제출: submit --arm gpt --student qwen --yes
+제출함: 03_teacher_r2 batch_6b052c5387c08190a250faab1eef6c40 상태 validating
+[2026-11-24 15:23:05] gpt fetch: 03_teacher_r2: {'통과': 65, '다시 읽어': 36, '더 찾아': 21} · 실패 0 · 토큰 입력 506,170 출력 56,492 · $0.85
+다음: next
+[2026-11-24 15:23:27] gpt next: 쪽 찾기 18문항 (코드)…
+[gpt-g] 04_student_r2: student 요청 57개 · 로컬 Qwen/Qwen3-14B (요금 없음) · 입력 약 400,967자
+다음: submit --arm gpt --student qwen --yes → run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/gpt-g/batches/04_student_r2
+로컬 실행 표시함: 04_student_r2. 답 채우기: run_local_batch.py --dir /home/seongmin/IBDRX/IBD-Rx-Agent/QUIZ/IBD보험가이드북/STAGE1/eval_out/teacher_loop_qwen3-14b-bf16/gpt-g/batches/04_student_r2
+[2026-11-24 15:27:28] gpt fetch: 04_student_r2: {'재답': 57} · 실패 0 · 토큰 입력 256,985 출력 58,047
+다음: next
+[2026-11-24 15:27:28] gpt next: 할 일 없음 {'passed': 323, 'done': 57}. 다음: finalize
+loop-gpt-g_qwen3-14b-bf16: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-gpt-g_qwen3-14b-bf16: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-gpt-g_qwen3-14b-bf16: 198개 → 채점: score_cases.py …
+d_loop-gpt-g_qwen3-14b-bf16: 37개 → 채점: score_cases.py …
+[2026-11-24 15:27:28] gpt 끝 (finalize·report 완료)
+[2026-11-24 15:28:28] 루프 끝. 다음: 채점 (GPU_SERVER_RUN_PLAN.md 5단계)

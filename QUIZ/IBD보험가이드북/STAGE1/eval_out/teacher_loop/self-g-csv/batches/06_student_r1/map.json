@@ -1,0 +1,20 @@
+{
+ "s00000": "A-TOF-UC-G3",
+ "s00001": "A-UPA-UC-G3",
+ "s00002": "A2-ADA-GIBD-L",
+ "s00003": "C-IFX-IV-CD-adult-maint-ok",
+ "s00004": "C-IFX-IV-UC-ped-maint-missing",
+ "s00005": "C-IFX-SC-CD-adult-maint-ok",
+ "s00006": "C-IFX-SC-CD-fistula-base",
+ "s00007": "C-GOL-UC-prior-short",
+ "s00008": "C-VEDO-IV-UC-prior-short",
+ "s00009": "C-VEDO-SC-CD-prior-short",
+ "s00010": "C-VEDO-SC-CD-maint-ok",
+ "s00011": "C-UST-UC-prior-short",
+ "s00012": "C-FIL-UC-prior-intol",
+ "s00013": "C-TOF-UC-act-missing",
+ "s00014": "C-UPA-CD-base",
+ "s00015": "C-UPA-CD-act-missing",
+ "s00016": "C-UPA-CD-prior-intol",
+ "s00017": "C-UPA-UC-prior-intol"
+}

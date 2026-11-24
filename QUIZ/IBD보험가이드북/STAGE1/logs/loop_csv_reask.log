@@ -1,0 +1,13 @@
+[2026-11-24 15:13:29] STUDENT=gpt SOURCE=csv ARMS=reask ADD_TYPES=없음 RAG_RERANK_DEVICE=auto
+[2026-11-24 15:13:29] reask fetch: 받을 배치가 없습니다.
+[2026-11-24 15:13:29] reask next: 아직 받지 않은 배치가 있습니다: 01_student_r1 (submit/fetch 먼저)
+제출함: 01_student_r1 batch_6b052b0ed3e08190921f7187985cbb94 상태 validating
+[2026-11-24 15:15:38] reask fetch: 01_student_r1: {'재답': 380} · 실패 0 · 토큰 입력 2,941,786 출력 31,467 · $3.13
+다음: next
+[2026-11-24 15:15:38] reask next: 할 일 없음 {'done': 380}. 다음: finalize
+loop-reask-csv_gpt-5.6-terra: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-reask-csv_gpt-5.6-terra: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-reask-csv_gpt-5.6-terra: 198개 → 채점: score_cases.py …
+d_loop-reask-csv_gpt-5.6-terra: 37개 → 채점: score_cases.py …
+[2026-11-24 15:15:38] reask 끝 (finalize·report 완료)
+[2026-11-24 15:16:38] 루프 끝. 다음: 채점 (GPU_SERVER_RUN_PLAN.md 5단계)

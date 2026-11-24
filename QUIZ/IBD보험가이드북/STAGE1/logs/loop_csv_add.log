@@ -1,0 +1,56 @@
+[2026-11-24 15:51:25] STUDENT=gpt SOURCE=csv ARMS=opus self ADD_TYPES=없음 RAG_RERANK_DEVICE=cuda:0
+[2026-11-24 15:51:25] opus fetch: 받을 배치가 없습니다.
+[2026-11-24 15:51:25] opus next: 아직 받지 않은 배치가 있습니다: 05_teacher_r1 (submit/fetch 먼저)
+제출함: 05_teacher_r1 msgbatch_01H8V8uwSDvMNgBQtym1JKVX 상태 in_progress
+[2026-11-24 15:51:28] self fetch: 받을 배치가 없습니다.
+[2026-11-24 15:51:29] self next: 아직 받지 않은 배치가 있습니다: 05_teacher_r1 (submit/fetch 먼저)
+제출함: 05_teacher_r1 batch_6b0533f6d01c8190b3da4d5ea47fdbfd 상태 validating
+[2026-11-24 15:53:52] self fetch: 05_teacher_r1: {'통과': 325, '다시 읽어': 16, '더 찾아': 2} · 실패 0 · 토큰 입력 2,975,649 출력 28,710 · $3.15
+다음: next
+[2026-11-24 15:53:52] self next: 쪽 찾기 2문항 (코드)…
+[self-g-csv] 06_student_r1: student 요청 18개 · gpt-5.6-terra · 입력 약 249,009자 → 약 152K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 300~2000토큰/요청 가정): $0.18 ~ $0.37
+API 안 씀. 제출: submit --arm self --student gpt --source csv --yes
+제출함: 06_student_r1 batch_6b05348235cc81909551319236cb1083 상태 validating
+[2026-11-24 15:55:07] opus fetch: 05_teacher_r1: {'통과': 333, '다시 읽어': 9, '더 찾아': 1} · 실패 0 · 토큰 입력 4,631,061 출력 49,235 · $9.75
+다음: next
+[2026-11-24 15:55:34] opus next: 쪽 찾기 1문항 (코드)…
+[opus-g-csv] 06_student_r1: student 요청 10개 · gpt-5.6-terra · 입력 약 143,465자 → 약 88K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 300~2000토큰/요청 가정): $0.11 ~ $0.21
+API 안 씀. 제출: submit --arm opus --student gpt --source csv --yes
+제출함: 06_student_r1 batch_6b0534e7a42c8190bf00fcac453fc669 상태 validating
+[2026-11-24 15:55:37] self fetch: 06_student_r1: {'재답': 18} · 실패 0 · 토큰 입력 149,749 출력 1,654 · $0.16
+다음: next
+[2026-11-24 15:55:38] self next: [self-g-csv] 07_teacher_r2: teacher 요청 18개 · gpt-5.6-terra · 입력 약 273,793자 → 약 167K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 500~1500토큰/요청 가정): $0.22 ~ $0.33
+API 안 씀. 제출: submit --arm self --student gpt --source csv --yes
+제출함: 07_teacher_r2 batch_6b0534ec88f48190af190eb9ad79b847 상태 validating
+[2026-11-24 15:57:46] opus fetch: 06_student_r1: {'재답': 10} · 실패 0 · 토큰 입력 87,381 출력 1,020 · $0.09
+다음: next
+[2026-11-24 15:57:46] opus next: [opus-g-csv] 07_teacher_r2: teacher 요청 10개 · claude-opus-5-5 · 입력 약 155,952자 → 약 137K 토큰 (실측 비율 0.88토큰/자)
+  예상 비용(배치 50%, 출력 500~1500토큰/요청 가정): $0.32 ~ $0.42
+API 안 씀. 제출: submit --arm opus --student gpt --source csv --yes
+제출함: 07_teacher_r2 msgbatch_018FELYot9SVvRnLK66Khovi 상태 in_progress
+[2026-11-24 15:57:50] self fetch: 07_teacher_r2: {'통과': 17, '다시 읽어': 1} · 실패 0 · 토큰 입력 161,746 출력 3,833 · $0.18
+다음: next
+[2026-11-24 15:57:50] self next: [self-g-csv] 08_student_r2: student 요청 1개 · gpt-5.6-terra · 입력 약 12,251자 → 약 7K 토큰 (실측 비율 0.61토큰/자)
+  예상 비용(배치 50%, 출력 300~2000토큰/요청 가정): $0.01 ~ $0.02
+API 안 씀. 제출: submit --arm self --student gpt --source csv --yes
+제출함: 08_student_r2 batch_6b05356fe2a48190aa6bbc8d8b7c0370 상태 validating
+[2026-11-24 15:59:57] opus fetch: 07_teacher_r2: {'통과': 10} · 실패 0 · 토큰 입력 144,552 출력 2,703 · $0.32
+다음: next
+[2026-11-24 15:59:57] opus next: 할 일 없음 {'passed': 364, 'done': 16}. 다음: finalize
+d_loop-opus-g-csv_gpt-5.6-terra: 37개 → 채점: score_cases.py …
+loop-opus-g-csv_gpt-5.6-terra: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-opus-g-csv_gpt-5.6-terra: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-opus-g-csv_gpt-5.6-terra: 198개 → 채점: score_cases.py …
+[2026-11-24 15:59:57] opus 끝 (finalize·report 완료)
+[2026-11-24 15:59:59] self fetch: 08_student_r2: {'재답': 1} · 실패 0 · 토큰 입력 7,562 출력 114 · $0.01
+다음: next
+[2026-11-24 15:59:59] self next: 할 일 없음 {'passed': 359, 'done': 21}. 다음: finalize
+d_loop-self-g-csv_gpt-5.6-terra: 37개 → 채점: score_cases.py …
+loop-self-g-csv_gpt-5.6-terra: 107개 → 채점: regrade_v2_batch.py build --job …
+a2_loop-self-g-csv_gpt-5.6-terra: 38개 → 채점: regrade_v2_batch.py build --job …
+c_loop-self-g-csv_gpt-5.6-terra: 198개 → 채점: score_cases.py …
+[2026-11-24 16:00:00] self 끝 (finalize·report 완료)
+[2026-11-24 16:01:00] 루프 끝. 다음: 채점 (GPU_SERVER_RUN_PLAN.md 5단계)

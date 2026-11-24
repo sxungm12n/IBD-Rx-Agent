@@ -114,5 +114,20 @@
    }
   }
  ],
- "pending": null
+ "pending": null,
+ "reparse": [
+  {
+   "시각": "2026-11-24T16:22:23",
+   "결과": {
+    "통과": 1
+   },
+   "문항": [
+    {
+     "batch": "01_teacher_r1",
+     "id": "C-UPA-UC-prior-short",
+     "판정": "통과"
+    }
+   ]
+  }
+ ]
 }

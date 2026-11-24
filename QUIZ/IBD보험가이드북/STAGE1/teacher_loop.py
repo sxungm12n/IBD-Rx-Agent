@@ -738,15 +738,35 @@ def output_text(body: dict) -> str:
                    for part in item.get("content", []) if part.get("type") in ("output_text", "text"))
 
 
+VERDICTS = ("통과", "다시 읽어", "더 찾아")
+
+
 def local_json(text: str) -> str:
-    """로컬 선생 출력에서 JSON 객체를 꺼낸다 (생각 부분은 run_local_batch.py가 이미 뗌). 못 꺼내면 빈 문자열."""
-    a, b = text.find("{"), text.rfind("}")
-    if a < 0 or b <= a:
-        return ""
-    try:
-        return json.dumps(json.loads(text[a:b + 1]), ensure_ascii=False)
-    except json.JSONDecodeError:
-        return ""
+    """로컬 선생 출력에서 판정 JSON 객체를 꺼낸다 (생각 부분은 run_local_batch.py가 이미 뗌). 못 꺼내면 빈 문자열.
+
+    Qwen은 지시문 끝에 붙인 스키마를 따라 쓰는 일이 있다 (2026-11-24 CSV 루프 1회차 380건 중 22건):
+      (가) 스키마 원문을 한 번 베낀 뒤 진짜 답 객체를 이어 씀 → 최상위 객체를 모두 읽고 '판정'이 있는 마지막 것을 쓴다.
+      (나) 스키마 틀 안 properties에 값을 넣음 {"type":"object",…,"properties":{"판정":"통과",…}} → properties를 답으로 쓴다.
+    """
+    dec = json.JSONDecoder()
+    objs, i = [], text.find("{")
+    while 0 <= i < len(text):
+        try:
+            obj, end = dec.raw_decode(text, i)
+        except json.JSONDecodeError:
+            i = text.find("{", i + 1)
+            continue
+        if isinstance(obj, dict):
+            objs.append(obj)
+        i = text.find("{", end)
+    for obj in reversed(objs):
+        if obj.get("판정") in VERDICTS:
+            return json.dumps(obj, ensure_ascii=False)
+    for obj in reversed(objs):
+        props = obj.get("properties")
+        if isinstance(props, dict) and props.get("판정") in VERDICTS:
+            return json.dumps(props, ensure_ascii=False)
+    return ""
 
 
 def collect(p: dict, bd: Path) -> tuple[dict, list, dict]:
@@ -878,6 +898,52 @@ def fetch(a) -> int:
     return 0
 
 
+def reparse(a) -> int:
+    """이미 받은 로컬 선생 배치를 지금 local_json으로 다시 읽어, '선생 오류'로 확정된 문항을 되살린다 (API 안 씀).
+
+    대상: 그 배치의 오류 검토가 마지막 검토이고 상태가 done인 문항. 판정을 읽으면 fetch와 같은 규칙으로
+    passed / expand / student로 바꾼다 → 이어서 next로 루프를 계속한다. 이전 오류 문장은 '재처리 전 오류'로 남긴다.
+    """
+    d = resolve_dir(a)
+    meta, state = load(d)
+    if meta["pending"]:
+        print(f"아직 받지 않은 배치가 있습니다: {meta['pending']['name']} (fetch 먼저)")
+        return 1
+    counts, log = {}, []
+    for b in meta["batches"]:
+        if b["provider"] != "local" or b["kind"] != "teacher":
+            continue
+        bd = d / "batches" / b["name"]
+        rnd = int(b["name"].rsplit("_r", 1)[1])
+        rows = {r["custom_id"]: r for r in jl(bd / "results_local.jsonl")}
+        mapping = json.loads((bd / "map.json").read_text(encoding="utf-8"))
+        for cid, iid in mapping.items():
+            st = state[iid]
+            rv = st["reviews"][-1] if st["reviews"] else None
+            if not rv or rv.get("round") != rnd or "오류" not in rv or st["status"] != "done":
+                continue
+            text = local_json((rows.get(cid, {}).get("text") or "").strip())
+            if not text:
+                counts["여전히 오류"] = counts.get("여전히 오류", 0) + 1
+                continue
+            out = json.loads(text)
+            st["reviews"][-1] = {"round": rnd, "출력": out, "누설 의심": leak_flags(st, out), "선생": b["model"],
+                                 "batch": rv.get("batch"), "재처리 전 오류": rv["오류"]}
+            v = out["판정"]
+            if v == "통과":
+                st["status"] = "passed"
+            elif v == "더 찾아" and out.get("찾기"):
+                st["status"] = "expand"
+            else:
+                st["status"] = "student"
+            counts[v] = counts.get(v, 0) + 1
+            log.append({"batch": b["name"], "id": iid, "판정": v})
+    meta.setdefault("reparse", []).append({"시각": datetime.now().isoformat(timespec="seconds"), "결과": counts, "문항": log})
+    save(d, meta, state)
+    print(f"[{d.name}] 다시 읽음: {counts}. 다음: next (되살린 문항이 '다시 읽어'·'더 찾아'면 루프를 이어 감)")
+    return 0
+
+
 # ---------------------------------------------------------------- finalize / report (무료)
 
 
@@ -934,7 +1000,7 @@ def report(a) -> int:
 def main() -> int:
     p = argparse.ArgumentParser(description="선생–학생 검토·재검색 루프 (배치)")
     sub = p.add_subparsers(dest="cmd", required=True)
-    for name in ("init", "next", "submit", "status", "fetch", "finalize", "report"):
+    for name in ("init", "next", "submit", "status", "fetch", "reparse", "finalize", "report"):
         x = sub.add_parser(name)
         x.add_argument("--arm", required=True, choices=ARMS)
         x.add_argument("--student", default="gpt", choices=list(STUDENTS), help="학생 모델: gpt(gpt-5.6-terra, 배치) / qwen(로컬 Qwen3-14B) / opus(Claude Opus 5.5, 배치)")
@@ -960,7 +1026,7 @@ def main() -> int:
     if STUDENT != "gpt":
         ROOT = EV / f"teacher_loop_{student_label()}"
     return {"init": init, "next": nxt, "submit": submit, "status": status, "fetch": fetch,
-            "finalize": finalize, "report": report}[a.cmd](a)
+            "reparse": reparse, "finalize": finalize, "report": report}[a.cmd](a)
 
 
 if __name__ == "__main__":

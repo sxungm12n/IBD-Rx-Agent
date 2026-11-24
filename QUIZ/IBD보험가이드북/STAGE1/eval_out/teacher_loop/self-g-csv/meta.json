@@ -14,6 +14,9 @@
  "teacher_prompt": "일반(g)",
  "source": "csv",
  "types": [
+  "A",
+  "A2",
+  "C",
   "D"
  ],
  "round0": "csvrag",
@@ -111,7 +114,105 @@
    "결과": {
     "재답": 20
    }
+  },
+  {
+   "name": "05_teacher_r1",
+   "kind": "teacher",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 343,
+   "built": "2026-11-24T15:51:17",
+   "batch_id": "batch_6b0533f6d01c8190b3da4d5ea47fdbfd",
+   "input_file_id": "file-K8nZG7uCRjAnTYffxNMT3J",
+   "submitted": "2026-11-24T15:51:35",
+   "fetched": "2026-11-24T15:53:52",
+   "usage": {
+    "input_tokens": 2975649,
+    "output_tokens": 28710,
+    "cost_usd": 3.1479
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 325,
+    "다시 읽어": 16,
+    "더 찾아": 2
+   }
+  },
+  {
+   "name": "06_student_r1",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 18,
+   "built": "2026-11-24T15:53:52",
+   "batch_id": "batch_6b05348235cc81909551319236cb1083",
+   "input_file_id": "file-KurnQvj4zDKX6ENJwmYmfw",
+   "submitted": "2026-11-24T15:53:54",
+   "fetched": "2026-11-24T15:55:37",
+   "usage": {
+    "input_tokens": 149749,
+    "output_tokens": 1654,
+    "cost_usd": 0.1597
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 18
+   }
+  },
+  {
+   "name": "07_teacher_r2",
+   "kind": "teacher",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 18,
+   "built": "2026-11-24T15:55:38",
+   "batch_id": "batch_6b0534ec88f48190af190eb9ad79b847",
+   "input_file_id": "file-BAJtN7jSLJpBafLEiMdCPt",
+   "submitted": "2026-11-24T15:55:40",
+   "fetched": "2026-11-24T15:57:50",
+   "usage": {
+    "input_tokens": 161746,
+    "output_tokens": 3833,
+    "cost_usd": 0.1847
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 17,
+    "다시 읽어": 1
+   }
+  },
+  {
+   "name": "08_student_r2",
+   "kind": "student",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 1,
+   "built": "2026-11-24T15:57:50",
+   "batch_id": "batch_6b05356fe2a48190aa6bbc8d8b7c0370",
+   "input_file_id": "file-GsSjZaQUvahsgzkrUK2vsk",
+   "submitted": "2026-11-24T15:57:52",
+   "fetched": "2026-11-24T15:59:59",
+   "usage": {
+    "input_tokens": 7562,
+    "output_tokens": 114,
+    "cost_usd": 0.0082
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 1
+   }
   }
  ],
- "pending": null
+ "pending": null,
+ "추가": [
+  {
+   "types": [
+    "A",
+    "A2",
+    "C"
+   ],
+   "문항": 343,
+   "added": "2026-11-24T15:51:16"
+  }
+ ]
 }

@@ -1,0 +1,117 @@
+{
+ "arm": "gpt",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": [
+  "openai",
+  "gpt-5.6-terra"
+ ],
+ "teacher_prompt": "일반(g)",
+ "source": "pdf",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "agent",
+ "student": "qwen3-14b-bf16",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-24T15:09:15",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_teacher_r1",
+   "kind": "teacher",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 380,
+   "built": "2026-11-24T15:09:15",
+   "batch_id": "batch_6b052a177614819085a9a83dedf5e774",
+   "input_file_id": "file-3zHuqpA5yp4u2DYRcpkGxm",
+   "submitted": "2026-11-24T15:09:27",
+   "fetched": "2026-11-24T15:13:36",
+   "usage": {
+    "input_tokens": 1425571,
+    "output_tokens": 98194,
+    "cost_usd": 2.0147
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 258,
+    "더 찾아": 49,
+    "다시 읽어": 73
+   }
+  },
+  {
+   "name": "02_student_r1",
+   "kind": "student",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 122,
+   "built": "2026-11-24T15:13:54",
+   "batch_id": "local",
+   "submitted": "2026-11-24T15:13:56",
+   "fetched": "2026-11-24T15:18:57",
+   "usage": {
+    "input_tokens": 468505,
+    "output_tokens": 92639
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 122
+   }
+  },
+  {
+   "name": "03_teacher_r2",
+   "kind": "teacher",
+   "provider": "openai",
+   "model": "gpt-5.6-terra",
+   "requests": 122,
+   "built": "2026-11-24T15:18:57",
+   "batch_id": "batch_6b052c5387c08190a250faab1eef6c40",
+   "input_file_id": "file-UGepm2wBjqXcdLnDEKu8qH",
+   "submitted": "2026-11-24T15:18:59",
+   "fetched": "2026-11-24T15:23:05",
+   "usage": {
+    "input_tokens": 506170,
+    "output_tokens": 56492,
+    "cost_usd": 0.8451
+   },
+   "failed": 0,
+   "결과": {
+    "통과": 65,
+    "다시 읽어": 36,
+    "더 찾아": 21
+   }
+  },
+  {
+   "name": "04_student_r2",
+   "kind": "student",
+   "provider": "local",
+   "model": "Qwen/Qwen3-14B",
+   "requests": 57,
+   "built": "2026-11-24T15:23:25",
+   "batch_id": "local",
+   "submitted": "2026-11-24T15:23:27",
+   "fetched": "2026-11-24T15:27:28",
+   "usage": {
+    "input_tokens": 256985,
+    "output_tokens": 58047
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 57
+   }
+  }
+ ],
+ "pending": null
+}
