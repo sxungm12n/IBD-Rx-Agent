@@ -1,0 +1,50 @@
+{
+ "arm": "reask",
+ "pilot": false,
+ "표본": {
+  "pilot": 0,
+  "오답": 0,
+  "정답": 0
+ },
+ "seed": null,
+ "teacher": null,
+ "teacher_prompt": null,
+ "source": "pdf",
+ "types": [
+  "A",
+  "A2",
+  "C",
+  "D"
+ ],
+ "round0": "agent",
+ "student": "claude-opus-5-5",
+ "max_rounds": 2,
+ "per_request": 2,
+ "per_round": 4,
+ "prompt_hash": "60e30c0dc140",
+ "created": "2026-11-24T16:26:58",
+ "skipped(질문 다름·답 없음)": [],
+ "batches": [
+  {
+   "name": "01_student_r1",
+   "kind": "student",
+   "provider": "anthropic",
+   "model": "claude-opus-5-5",
+   "requests": 380,
+   "built": "2026-11-24T16:26:59",
+   "batch_id": "msgbatch_01RhJqP1bEgJgMoBK87xCzF7",
+   "submitted": "2026-11-24T16:27:10",
+   "fetched": "2026-11-24T16:30:20",
+   "usage": {
+    "input_tokens": 1520784,
+    "output_tokens": 102627,
+    "cost_usd": 4.0678
+   },
+   "failed": 0,
+   "결과": {
+    "재답": 380
+   }
+  }
+ ],
+ "pending": null
+}
