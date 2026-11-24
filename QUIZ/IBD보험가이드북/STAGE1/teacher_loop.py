@@ -8,10 +8,14 @@
   self   선생 = gpt-5.6-terra (자기 검토)            OpenAI Batch               폴더·실행 이름 self-g
   opus   선생 = claude-opus-5-5 (강한 선생)          Anthropic Message Batches  폴더·실행 이름 opus-g
   qwen   선생 = 로컬 Qwen3-14B (작은 공개 모델 선생)  run_local_batch.py        폴더·실행 이름 qwen-g
+  gpt    선생 = gpt-5.6-terra (학생이 gpt가 아닐 때, 예: Qwen 학생 + gpt 선생)  OpenAI Batch  폴더·실행 이름 gpt-g
+         (학생이 gpt면 self와 같으므로 self를 쓴다. 2026-11-24 추가)
   선생은 일반 지시문(TEACHER_TAG "g", 2026-11-23)을 쓴다. 2026-11-20 파일럿의 맞춤 지시문 결과는 self_pilot·opus_pilot.
   reask  선생 없음. 쪽도 붙이지 않고 같은 발췌·같은 지시문으로 학생이 한 번 더 답함 (다시 묻기만 대조군)
   route  선생 없음. 규칙 B(질문의 약·질환 → 고시·체크리스트·투약간격 쪽)로 쪽을 한 번 붙이고 학생이 한 번 답함
-학생은 세 조건 모두 gpt-5.6-terra (OpenAI Batch). 0회차 학생 답은 기존 에이전트 답(eval_out/<유형>_agent_gpt-5.6-terra)을 재사용.
+학생은 기본 gpt-5.6-terra (OpenAI Batch). --student qwen(로컬)·opus(Anthropic Batch)로 바꿀 수 있다.
+0회차 학생 답은 그 학생의 기존 에이전트 답(eval_out/<유형>_agent_<학생>)을 재사용. --source csv면 CSV-RAG 답.
+이미 끝난 폴더에 유형을 더하려면 init --add --types … (예: D형만 한 CSV 루프에 A A2 C).
 
 사용 (STAGE1에서, .venv_rag)
   .venv_rag/bin/python teacher_loop.py init   --arm opus [--pilot 5]   # 상태 만들기 (무료). --pilot N: 유형마다 N문항 (시드 고정)
@@ -55,7 +59,10 @@ FORMAT_NAME = {"A": "단답 (첫 줄 '답:')", "A2": "단답 (첫 줄 '답:')", 
 STUDENT_MODEL = "gpt-5.6-terra"
 # 학생 모델 (--student). qwen: 로컬 Qwen3-14B (GPU 서버 vLLM bf16 또는 Mac MLX). 요청 파일을 만들면 run_local_batch.py가 답을 채운다.
 # 0회차 답은 그 모델의 기존 PDF 에이전트 답(agent_<라벨>), 상태 폴더는 eval_out/teacher_loop_<라벨>/, 결과 폴더는 …_<라벨>.
-STUDENTS = {"gpt": ("openai", "gpt-5.6-terra", "gpt-5.6-terra"), "qwen": ("local", "Qwen/Qwen3-14B", "qwen3-14b-bf16")}
+# opus (2026-11-24): Claude Opus 5.5 학생 (Anthropic Message Batches). 0회차 = agent_claude-opus-5-5 (gpt 에이전트와 같은 5쪽).
+#   --student opus --arm route 는 '규칙으로 쪽 추가'의 Opus 판, --arm self 는 Opus가 Opus를 검토하는 자기 검토.
+STUDENTS = {"gpt": ("openai", "gpt-5.6-terra", "gpt-5.6-terra"), "qwen": ("local", "Qwen/Qwen3-14B", "qwen3-14b-bf16"),
+            "opus": ("anthropic", "claude-opus-5-5", "claude-opus-5-5")}
 STUDENT = "gpt"         # main()에서 --student로 정함
 
 
@@ -67,10 +74,13 @@ def teacher_of(arm: str) -> tuple[str, str]:
     """self 선생 = 학생과 같은 모델 (qwen 학생이면 로컬 Qwen). opus 선생은 그대로 Claude Opus."""
     if arm == "self" and STUDENT != "gpt":
         return STUDENTS[STUDENT][0], STUDENTS[STUDENT][1]
+    if arm == "gpt" and STUDENT == "gpt":
+        sys.exit("학생이 gpt면 gpt 선생은 자기 검토(--arm self)와 같습니다. --arm self를 쓰세요.")
     return TEACHERS[arm]
 TEACHERS = {"self": ("openai", "gpt-5.6-terra"), "opus": ("anthropic", "claude-opus-5-5"),
-            "qwen": ("local", "Qwen/Qwen3-14B")}   # qwen: 로컬 Qwen3-14B 선생 (학생은 --student로, 예: gpt 학생 + Qwen 선생)
-ARMS = ["self", "opus", "qwen", "route", "reask"]
+            "qwen": ("local", "Qwen/Qwen3-14B"),   # qwen: 로컬 Qwen3-14B 선생 (학생은 --student로, 예: gpt 학생 + Qwen 선생)
+            "gpt": ("openai", "gpt-5.6-terra")}    # gpt: gpt 선생 + 다른 학생 (예: Qwen 학생), 2026-11-24
+ARMS = ["self", "opus", "qwen", "gpt", "route", "reask"]
 NO_TEACHER = ("route", "reask")   # 선생 없이 학생이 한 번 다시 답함 (reask: 쪽도 안 붙임 = 다시 묻기만 대조군)
 MAX_ROUNDS = 2          # 학생이 고쳐 쓰는 최대 횟수
 PER_REQUEST = 2         # 찾기 요청 하나에 붙이는 최대 발췌 수
@@ -374,8 +384,32 @@ def rule_b(item: dict, sources: list[dict]) -> list[dict]:
 def init(a) -> int:
     pilot = bool(a.pilot or a.pick_wrong or a.pick_right)
     d = ROOT / (f"{arm_name(a.arm)}_pilot" if pilot else arm_name(a.arm))
+    old_meta, old_state = None, {}
     if (d / "state.jsonl").exists():
-        print(f"이미 있음: {d} (다시 하려면 폴더를 옮기세요)", file=sys.stderr)
+        if not a.add:
+            print(f"이미 있음: {d} (다시 하려면 폴더를 옮기세요. 다른 유형을 더하려면 --add --types …)", file=sys.stderr)
+            return 1
+        # --add (2026-11-24): 끝난 폴더에 아직 없는 유형만 더한다. 기존 문항 상태는 그대로 두고, 새 문항만 0회차부터 돈다.
+        old_meta, old_state = load(d)
+        have = {s["type"] for s in old_state.values()}
+        problems = []
+        if old_meta.get("pending"):
+            problems.append(f"아직 받지 않은 배치 {old_meta['pending']['name']} (fetch 먼저)")
+        if pilot or old_meta.get("pilot"):
+            problems.append("파일럿에는 더하지 않음")
+        if old_meta.get("source") != SOURCE or old_meta.get("student") != student_label():
+            problems.append(f"출처·학생이 다름 (폴더: {old_meta.get('source')}·{old_meta.get('student')})")
+        if old_meta.get("prompt_hash") != prompt_hash():
+            problems.append(f"지시문 해시가 다름 (폴더 {old_meta.get('prompt_hash')} / 지금 {prompt_hash()})")
+        if not a.types:
+            problems.append("더할 유형을 --types로 지정")
+        elif set(a.types) & have:
+            problems.append(f"이미 있는 유형: {sorted(set(a.types) & have)}")
+        if problems:
+            print(f"더할 수 없음: {d}\n  - " + "\n  - ".join(problems), file=sys.stderr)
+            return 1
+    elif a.add:
+        print(f"--add는 이미 있는 폴더에만 씁니다: {d}", file=sys.stderr)
         return 1
     old_q = {r["id"]: r["question"] for r in jl(A_BACKUP)}
     state, skipped, orig = {}, [], {}
@@ -418,18 +452,27 @@ def init(a) -> int:
                 st["status"] = "student"
             state[it["id"]] = st
     d.mkdir(parents=True, exist_ok=True)
-    meta = {"arm": a.arm, "pilot": pilot, "표본": {"pilot": a.pilot, "오답": a.pick_wrong, "정답": a.pick_right},
-            "seed": PILOT_SEED if pilot else None, "teacher": None if a.arm in NO_TEACHER else teacher_of(a.arm),
-            "teacher_prompt": None if a.arm in NO_TEACHER else f"일반({TEACHER_TAG})",
-            "source": SOURCE, "types": a.types or list(TYPES), "round0": base_run,
-            "student": student_label(), "max_rounds": MAX_ROUNDS, "per_request": PER_REQUEST, "per_round": PER_ROUND,
-            "prompt_hash": prompt_hash(), "created": datetime.now().isoformat(timespec="seconds"),
-            "skipped(질문 다름·답 없음)": skipped, "batches": [], "pending": None}
+    new_n = len(state)
+    if old_meta is not None:
+        meta = old_meta
+        meta["types"] = [t for t in TYPES if t in set(meta["types"]) | set(a.types)]
+        meta["skipped(질문 다름·답 없음)"] = meta.get("skipped(질문 다름·답 없음)", []) + skipped
+        meta.setdefault("추가", []).append({"types": a.types, "문항": new_n, "added": datetime.now().isoformat(timespec="seconds")})
+        state = {**old_state, **state}
+    else:
+        meta = {"arm": a.arm, "pilot": pilot, "표본": {"pilot": a.pilot, "오답": a.pick_wrong, "정답": a.pick_right},
+                "seed": PILOT_SEED if pilot else None, "teacher": None if a.arm in NO_TEACHER else teacher_of(a.arm),
+                "teacher_prompt": None if a.arm in NO_TEACHER else f"일반({TEACHER_TAG})",
+                "source": SOURCE, "types": a.types or list(TYPES), "round0": base_run,
+                "student": student_label(), "max_rounds": MAX_ROUNDS, "per_request": PER_REQUEST, "per_round": PER_ROUND,
+                "prompt_hash": prompt_hash(), "created": datetime.now().isoformat(timespec="seconds"),
+                "skipped(질문 다름·답 없음)": skipped, "batches": [], "pending": None}
     save(d, meta, state)
     by = {}
     for s in state.values():
         by[s["type"]] = by.get(s["type"], 0) + 1
-    print(f"[{d.name}] 문항 {len(state)} {by} · 건너뜀 {len(skipped)} · 지시문 해시 {meta['prompt_hash']}")
+    added = f" (이번에 더한 문항 {new_n})" if old_meta is not None else ""
+    print(f"[{d.name}] 문항 {len(state)} {by}{added} · 건너뜀 {len(skipped)} · 지시문 해시 {meta['prompt_hash']}")
     print("다음: next")
     return 0
 
@@ -495,6 +538,10 @@ def student_request(cid: str, st: dict) -> dict:
     system, user = student_messages(st)
     if STUDENTS[STUDENT][0] == "local":
         return local_request(cid, "student", system, user, STUDENTS[STUDENT][1])
+    if STUDENTS[STUDENT][0] == "anthropic":   # eval_claude_batch.py 에이전트 답과 같은 설정 (effort medium, 최대 16,000)
+        return {"custom_id": cid, "params": {
+            "model": STUDENTS[STUDENT][1], "max_tokens": OPUS_MAX_TOKENS, "output_config": {"effort": OPUS_EFFORT},
+            "system": system, "messages": [{"role": "user", "content": user}]}}
     return {"custom_id": cid, "method": "POST", "url": "/v1/responses",
             "body": {"model": STUDENT_MODEL, "input": [{"role": "system", "content": system},
                                                        {"role": "user", "content": user}]}}
@@ -594,9 +641,10 @@ def nxt(a) -> int:
     meta["pending"] = {"name": name, "kind": kind, "provider": provider, "model": model, "requests": len(reqs),
                        "built": datetime.now().isoformat(timespec="seconds")}
     save(d, meta, state)
+    flags = f"--arm {a.arm} --student {STUDENT}" + (" --source csv" if SOURCE == "csv" else "")   # 폴더를 고르는 옵션을 빠짐없이
     if provider == "local":
         print(f"[{d.name}] {name}: {kind} 요청 {len(reqs)}개 · 로컬 {model} (요금 없음) · 입력 약 {chars:,}자")
-        print(f"다음: submit --arm {a.arm} --student {STUDENT} --yes → run_local_batch.py --dir {bd}")
+        print(f"다음: submit {flags} --yes → run_local_batch.py --dir {bd}")
         return 0
     tin = chars * TOKENS_PER_CHAR[provider]
     print(f"[{d.name}] {name}: {kind} 요청 {len(reqs)}개 · {model} · 입력 약 {chars:,}자 → 약 {tin / 1e3:,.0f}K 토큰 "
@@ -607,7 +655,7 @@ def nxt(a) -> int:
         print(f"  예상 비용(배치 50%, 출력 {OUTPUT_PER_REQ[kind][0]}~{OUTPUT_PER_REQ[kind][1]}토큰/요청 가정): ${lo:.2f} ~ ${hi:.2f}")
     else:
         print(f"  {model} 단가가 기록에 없어 금액은 계산하지 않음 (fetch 뒤 실제 토큰을 보고)")
-    print(f"API 안 씀. 제출: submit --arm {a.arm} --yes")
+    print(f"API 안 씀. 제출: submit {flags} --yes")
     return 0
 
 
@@ -889,7 +937,7 @@ def main() -> int:
     for name in ("init", "next", "submit", "status", "fetch", "finalize", "report"):
         x = sub.add_parser(name)
         x.add_argument("--arm", required=True, choices=ARMS)
-        x.add_argument("--student", default="gpt", choices=list(STUDENTS), help="학생 모델: gpt(gpt-5.6-terra, 배치) / qwen(로컬 Qwen3-14B)")
+        x.add_argument("--student", default="gpt", choices=list(STUDENTS), help="학생 모델: gpt(gpt-5.6-terra, 배치) / qwen(로컬 Qwen3-14B) / opus(Claude Opus 5.5, 배치)")
         x.add_argument("--source", default="pdf", choices=["pdf", "csv"], help="발췌 출처: pdf(가이드북 쪽) / csv(CSV 행, 0회차 = CSV-RAG 답)")
         x.add_argument("--pilot-dir", action="store_true", help="전체 폴더가 있어도 <arm>_pilot을 고름")
         if name == "init":
@@ -897,6 +945,7 @@ def main() -> int:
             x.add_argument("--pick-wrong", type=int, default=0, help="파일럿: 유형마다 기존 에이전트 오답(틀림·부분) N문항")
             x.add_argument("--types", nargs="+", choices=list(TYPES), help="이 유형만")
             x.add_argument("--pick-right", type=int, default=0, help="파일럿: 유형마다 기존 에이전트 정답 N문항")
+            x.add_argument("--add", action="store_true", help="이미 있는 폴더에 --types의 새 유형만 더함 (예: D형만 한 CSV 루프에 A A2 C)")
         if name == "submit":
             x.add_argument("--yes", action="store_true")
     a = p.parse_args()

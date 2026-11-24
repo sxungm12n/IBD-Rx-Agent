@@ -24,8 +24,10 @@
   .venv_claude/bin/python eval_claude_batch.py fetch  --tag pilot                # 결과 받아 answers.jsonl에 저장 (무료)
   python3 score_cases.py --run c_agent_claude-opus-5-5 --items output/c_items.jsonl   # C·D형 코드 채점 (API 없음)
   python3 regrade_v2.py --run agent_claude-opus-5-5 --items output/a_items.jsonl        # A·A2형 gpt-6-sol 채점 (OpenAI 과금)
+  같은 틀 기본 AI (2026-11-24): build --tag same --arms llm-same
+    RAG 에이전트와 같은 지시문 틀에 발췌 칸만 '없음' (no_rag_prompt, eval_csvrag_batch.py --arm llm-same와 같은 문자열).
 
-결과 폴더: eval_out/{,a2_,c_,d_}{llm,agent}_<모델>/answers.jsonl (기존 gpt 결과와 같은 이름 규칙·모양)
+결과 폴더: eval_out/{,a2_,c_,d_}{llm,llm-same,agent}_<모델>/answers.jsonl (기존 gpt 결과와 같은 이름 규칙·모양)
 요청·원본 결과: eval_out/claude_batch/<tag>/
 """
 import argparse
@@ -140,6 +142,8 @@ def build(a) -> int:
                         skipped.append(f"{typ} {item['id']}: gpt 에이전트 발췌 없음 또는 질문 다름")
                         continue
                     system, user = agent_prompt(item, sources)
+                elif arm == "llm-same":
+                    system, user = no_rag_prompt(item)
                 else:
                     system, user = llm_prompt(item)
                 cid = f"{typ}-{arm}-{len(requests):04d}"
@@ -280,7 +284,7 @@ def main() -> int:
     b.add_argument("--tag", required=True)
     b.add_argument("--model", default="claude-opus-5-5", choices=sorted(PRICE))
     b.add_argument("--types", nargs="+", default=list(TYPES), choices=list(TYPES))
-    b.add_argument("--arms", nargs="+", default=["llm", "agent"], choices=["llm", "agent"])
+    b.add_argument("--arms", nargs="+", default=["llm", "agent"], choices=["llm", "llm-same", "agent"])
     b.add_argument("--limit", type=int, help="유형마다 앞에서 N문항만 (파일럿)")
     b.add_argument("--redo", action="store_true", help="이미 답이 있는 문항도 다시")
     b.add_argument("--dry", action="store_true", help="파일을 쓰지 않고 개수·예상 비용만")
