@@ -38,12 +38,21 @@ NEED_LOCAL=0
 [ "$STUDENT" = qwen ] && NEED_LOCAL=1
 for arm in "${ARMS[@]}"; do [ "$arm" = qwen ] && NEED_LOCAL=1; done
 RUNNER=""
+# 러너를 자기 프로세스 그룹(setsid)으로 띄우고, 끝날 때 그룹째 끈다.
+# 러너만 끄면 vLLM 엔진 하위 프로세스(VLLM::EngineCore)가 남아 GPU 메모리를 계속 잡는다 (2026-11-24 1·2·3번 실행 때 GPU 1에 50G씩 남음).
+stop_runner() {
+  [ -n "$RUNNER" ] || return 0
+  kill -TERM -- "-$RUNNER" 2>/dev/null || return 0
+  for _ in $(seq 30); do kill -0 -- "-$RUNNER" 2>/dev/null || return 0; sleep 1; done
+  kill -KILL -- "-$RUNNER" 2>/dev/null
+  say "vLLM 러너 그룹이 30초 안에 끝나지 않아 강제 종료함 (pid $RUNNER)"
+}
 if [ "$NEED_LOCAL" = 1 ]; then
   CUDA_DEVICE_ORDER=PCI_BUS_ID CUDA_VISIBLE_DEVICES=$GPU VLLM_USE_FLASHINFER_SAMPLER=0 \
-    .venv_cuda/bin/python -u run_local_batch.py --watch >> logs/qwen_local.log 2>&1 &
+    setsid .venv_cuda/bin/python -u run_local_batch.py --watch >> logs/qwen_local.log 2>&1 &
   RUNNER=$!
-  trap "kill $RUNNER 2>/dev/null" EXIT
-  say "vLLM 러너 시작 (GPU $GPU, pid $RUNNER, 로그 logs/qwen_local.log)"
+  trap stop_runner EXIT
+  say "vLLM 러너 시작 (GPU $GPU, pid $RUNNER = 프로세스 그룹, 로그 logs/qwen_local.log)"
 fi
 say "STUDENT=$STUDENT SOURCE=$SOURCE ARMS=${ARMS[*]} ADD_TYPES=${ADD_TYPES:-없음} RAG_RERANK_DEVICE=$RAG_RERANK_DEVICE"
 

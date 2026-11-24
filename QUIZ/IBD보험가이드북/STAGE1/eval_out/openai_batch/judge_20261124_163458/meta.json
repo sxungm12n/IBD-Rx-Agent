@@ -1,0 +1,26 @@
+{
+ "tag": "judge_20261124_163458",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "loop-opus-g_qwen3-14b-bf16:output/a_items.jsonl",
+  "a2_loop-opus-g_qwen3-14b-bf16:output/a2_items.jsonl",
+  "loop-gpt-g_qwen3-14b-bf16:output/a_items.jsonl",
+  "a2_loop-gpt-g_qwen3-14b-bf16:output/a2_items.jsonl",
+  "loop-qwen-g-csv_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-qwen-g-csv_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-opus-g-csv_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-opus-g-csv_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-self-g-csv_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-self-g-csv_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-reask-csv_gpt-5.6-terra:output/a_items.jsonl",
+  "a2_loop-reask-csv_gpt-5.6-terra:output/a2_items.jsonl",
+  "loop-route_claude-opus-5-5:output/a_items.jsonl",
+  "a2_loop-route_claude-opus-5-5:output/a2_items.jsonl",
+  "loop-reask_claude-opus-5-5:output/a_items.jsonl",
+  "a2_loop-reask_claude-opus-5-5:output/a2_items.jsonl"
+ ],
+ "requests": 1160,
+ "built": "2026-11-24T16:34:59"
+}

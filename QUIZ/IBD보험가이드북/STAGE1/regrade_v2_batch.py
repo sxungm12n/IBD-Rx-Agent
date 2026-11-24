@@ -30,6 +30,11 @@ EV = HERE / "eval_out"
 BATCH_ROOT = EV / "openai_batch"
 # gpt-6-sol 100만 토큰당 달러 (2차 출처 기준 정가 $2/$10, 2026-11). 배치는 절반.
 PRICE = {"gpt-6-sol": (2.0, 10.0)}
+# 예상 비용 가정 (실측, 2026-11-24): 지금까지 받은 채점 배치 8개(요청 20~725개)에서
+#   입력 토큰/글자 0.593~0.611, 출력 토큰/요청 176~262 → 실제 비용 요청 100개당 $0.60~0.70.
+# 예전 가정(0.9~1.2토큰/자, 800~2000토큰/요청)은 실제의 2~3배를 내서 '예상이 범위를 넘으면 멈춤' 규칙이 잘못 걸렸다.
+TOKENS_PER_CHAR = (0.58, 0.65)
+OUTPUT_PER_REQ = (150, 400)
 
 
 def judge_request(item: dict, answer: str, pages, model: str) -> dict:
@@ -78,9 +83,10 @@ def build(a) -> int:
     print("\n".join(report))
     if model in PRICE and lines:
         pin, pout = PRICE[model]
-        lo = (chars * 0.9 * pin + len(lines) * 800 * pout) / 1e6 * 0.5
-        hi = (chars * 1.2 * pin + len(lines) * 2000 * pout) / 1e6 * 0.5
-        print(f"  예상 비용(배치 50%, 거친 추정): ${lo:.2f} ~ ${hi:.2f}")
+        lo = (chars * TOKENS_PER_CHAR[0] * pin + len(lines) * OUTPUT_PER_REQ[0] * pout) / 1e6 * 0.5
+        hi = (chars * TOKENS_PER_CHAR[1] * pin + len(lines) * OUTPUT_PER_REQ[1] * pout) / 1e6 * 0.5
+        print(f"  예상 비용(배치 50%, 실측 비율 {TOKENS_PER_CHAR[0]}~{TOKENS_PER_CHAR[1]}토큰/자 · "
+              f"출력 {OUTPUT_PER_REQ[0]}~{OUTPUT_PER_REQ[1]}토큰/요청): ${lo:.2f} ~ ${hi:.2f}")
     if a.dry or not lines:
         print("파일을 쓰지 않았습니다 (미리보기)." if a.dry else "보낼 요청이 없습니다.")
         return 0

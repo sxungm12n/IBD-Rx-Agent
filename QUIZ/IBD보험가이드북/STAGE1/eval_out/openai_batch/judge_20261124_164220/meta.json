@@ -1,0 +1,12 @@
+{
+ "tag": "judge_20261124_164220",
+ "model": "gpt-6-sol",
+ "version": "v2.1",
+ "k": 0,
+ "jobs": [
+  "llm-same_claude-opus-5-5:output/a_items.jsonl",
+  "a2_llm-same_claude-opus-5-5:output/a2_items.jsonl"
+ ],
+ "requests": 145,
+ "built": "2026-11-24T16:42:20"
+}
